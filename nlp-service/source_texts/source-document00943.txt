@@ -1,0 +1,12 @@
+More...
+The Global Positioning System (GPS) is a network of 24 satellites orbiting the earth, and represents a $13 billion investment from the U. S. Government. Each satellite carries on-board triple-redundant atomic clocks which are maintained accurate and traceable to UTC (Universal Coordinated time) by the U.S. Department of Defense and the U. S. Naval Observatory. The Spectracom NetClock/GTP (Global Time Provider) Master Clock automatically tracks up to eight satellites simultaneously, and provides extremely accurate timing by synchronizing to the satellites atomic clocks. Because the GPS satellite system blankets the earth, the NetClock/GTP can be used anywhere on our planet. A variety of time code outputs are available to meet the requirements of numerous systems. NetClock/GTP is ideally suited for delivering system-wide split-second timing information to computer and IRIG B synchronized systems. An international power supply is available for applications outside North America.
+8183A NetClock/GTP
+NetClock / GTP Master Clock - Model 8183A
+FAA-Approved GPS TOY Clock
+Installed in FAA Mode-S and ARSR-4 Radar Systems
+Worldwide Precision Timing from GPS Satellite
+Replaces old GOES TOY Satellite Clocks
+Ideal for Synchronizing Differential FAA IRIG B Systems and Computer Networks
+Automatic Adjustment for Local Time, Daylight Saving Time and Year
+Accurate to Within 500 Nanoseconds of UTC Anywhere on Earth
+5-Year Warranty

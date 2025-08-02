@@ -1,0 +1,11 @@
+ 
+News
+Note: the information below is from an abstract of a study presented at the annual meeting of The Society for Healthcare Epidemiology of America.
+Impact of Bacterial Contamination on Transmissibility from Computers April 2005
+By: Northwestern Memorial Hospital , Chicago , IL
+Clare Cameron, Susan Collins, MT, Anna O'Donnell, RN, Mary Lankford, RN, Teresa Zembower, MD, Gary Noskin, MD
+Background: Computes have become an indespensible component of the healthcare environment as more hospitals implement electronic solutions to improve patient safety. These technological advances, however, bring unique challenges to protecting patients from potential transmission of pathogenic organisms that are found in the environment.
+Objectives: To study both computer keyboards and keyboard covers to determine their ability to harbor vancomycin-resistant Enterococcus faecium (VRE) methicillin-resistant Staphylococcus aureus (MSRA), and Psuedomonas aeruginosa (PSAC), their ability to transmit these organisms to gloved and ungloved hands, and the efficacy of cleaning methods with hospital approved disinfectants.
+Results: All samples obtained from the keyboads and keyboard covers revealed growth of MRSA and VRE at 24hrs. . Transmission studies revealed that increased contact with the innoculated keyboards (from 1 to 5 touches) increased recovery of bacteria on hands. . The transmissibility rate from keyboard covers was not appreciably different. The germicide with a 10 minute dwell time was successful in disinfecting the keyboard. .
+Conclusions: VRE and MRSA . are capable of prolonged survivial on both computer keyboards and keyboard covers. After any contact with computer keyboards, both gloved and ungloved hands frequently become contaminated.
+ 

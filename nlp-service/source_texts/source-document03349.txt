@@ -1,0 +1,25 @@
+P. Hugh R. Barrett
+From Metabolic Research Center, School of Medicine and Pharmacology, University of Western Australia, Perth, Australia.
+Correspondence to Professor Gerald F Watts, School of Medicine and Pharmacology, University of Western Australia, Royal Perth Hospital, GPO Box X2213, Perth, WA 6847, Australia. E-mailgfwatts{at}cyllene.uwa.edu.au
+We investigated the associations between plasmavery-low-density lipoprotein (VLDL)apolipoprotein (apo)C-IIIand apoA-V concentrations and the kinetics of VLDLapoB-100and VLDL triglycerides in 15 men. We also explored the relationshipbetween these parameters of VLDL metabolism and VLDLapoC-IIIkinetics.Objective
+ApoC-III, apoB, and triglyceridekinetics in VLDL were determined using stable isotopes and multicompartmentalmodeling to estimate production rate (PR) and fractional catabolicrate (FCR). Plasma VLDLapoC-III concentration was significantlyand inversely associated with the FCRs of VLDL triglycerides(=0.610) and VLDLapoB (=0.791), and positivelycorrelated with the PR of VLDLapoC-III (=0.842). However,apoA-V concentration was not significantly associated with anyof the kinetic variables. There was a significant association(<0.01) between the PRs of VLDL triglycerides and VLDLapoB(=0.641), and between the FCRs of VLDL triglycerides and VLDLapoB(=0.737). In multiple regression analysis, plasma VLDLapoC-IIIconcentration was a significant predictor of VLDL triglycerideFCR (ß-coefficient=0.575) and VLDLapoBFCR (ß-coefficient=0.839).Methods and ResultsrrrPrr
+Our findings suggest that increased VLDLapoC-IIIconcentrations resulting from an overproduction of VLDLapoC-IIIare strongly associated with the delayed catabolism of triglyceridesand apoB in VLDL. We also demonstrated that the kinetics ofVLDL triglycerides and apoB are closely coupled. Our data donot support a role for plasma apoA-V in regulating VLDL kinetics.Conclusions
+We investigated the associations between plasma VLDL-apoC-IIIand apoA-V concentrations and the kinetics of VLDL-apoB-100and VLDL triglyceride in 15 men. Increased VLDL-apoC-III concentrationsresulting from an overproduction of VLDL-apoC-III was a predictorof the delayed catabolism of VLDL triglyceride and VLDL-apoB.However, apo-V concentration was not significantly associatedwith VLDL kinetics.
+apoA-V  apoC-III  cardiovascular disease  lipoprotein metabolism
+Key Words:
+This article has been cited by other articles:
+M. Pavlic, R. Valero, H. Duez, C. Xiao, L. Szeto, B. W. Patterson, and G. F. Lewis Arterioscler. Thromb. Vasc. Biol., September 1, 2008; 28(9): 1660 - 1665.
+Triglyceride-Rich Lipoprotein-Associated Apolipoprotein C-III Production Is Stimulated by Plasma Free Fatty Acids in Humans
+M. Adiels, S.-O. Olofsson, M.-R. Taskinen, and J. Boren Arterioscler. Thromb. Vasc. Biol., July 1, 2008; 28(7): 1225 - 1236.
+Overproduction of Very Low-Density Lipoproteins Is the Hallmark of the Dyslipidemia in the Metabolic Syndrome
+[Abstract] [Full Text] [PDF]
+D. C. Chan, M. N. Nguyen, G. F. Watts, and P. H. R. Barrett J. Clin. Endocrinol. Metab., February 1, 2008; 93(2): 557 - 564.
+Plasma Apolipoprotein C-III Transport in Centrally Obese Men: Associations with Very Low-Density Lipoprotein Apolipoprotein B and High-Density Lipoprotein Apolipoprotein A-I Metabolism
+[Abstract] [Full Text] [PDF]
+J. Kahri, J. Fruchart-Najib, N. Matikainen, J.-C. Fruchart, J. Vakkilainen, and M.-R. Taskinen Diabetes Care, August 1, 2007; 30(8): 2083 - 2085.
+The Increase of Apolipoprotein A-V During Postprandial Lipemia Parallels the Response of Triglyceride-Rich Lipoproteins in Type 2 Diabetes: No relationship between apoA-V and postheparin plasma lipolytic activity
+C. Zheng, C. Khoo, K. Ikewaki, and F. M. Sacks J. Lipid Res., May 1, 2007; 48(5): 1190 - 1203.
+Rapid turnover of apolipoprotein C-III-containing triglyceride-rich lipoproteins contributing to the formation of LDL subfractions
+[Abstract] [Full Text] [PDF]
+M. N. Nguyen, D. C. Chan, K. P. Dwyer, P. Bolitho, G. F. Watts, and P. H. R. Barrett J. Lipid Res., June 1, 2006; 47(6): 1274 - 1280.
+Use of Intralipid for kinetic analysis of HDL apoC-III: evidence for a homogeneous kinetic pool of apoC-III in plasma

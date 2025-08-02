@@ -1,0 +1,15 @@
+Jump to: , navigation search
+{{quotation| Humphrey Bogart is the greatest actor that ever lived.Example:[]citation needed
+The "citation needed" link you just followed was placed there because a feels that the preceding statement needs an . If you cannot find a source for the claim, exercise extra caution when using the flagged information. somebody inline citation
+How to improve a passage that has a "citation needed" flag
+If the statement violates Wikipedia's policy on , delete the statement immediately. biographies of living persons
+If you can provide a source to back up the statement, please and add it. You can then remove the tag which generated the "citation needed" message. be bold
+To learn how to change or discuss articles, visit . Wikipedia's editing tutorial
+How to cite sources
+is one of Wikipedia's most fundamental policies. Verifiability
+explains what constitutes a reliable source for Wikipedia Reliable sources
+- How and why to cite sources on Wikipedia Citing sources
+- How to use footnotes on Wikipedia Footnotes
+- Standardized formatting for citations Citation templates
+How to produce the "citation needed" flag
+To learn more about the "citation needed" template itself, including when and how to use it, see . Template:Fact

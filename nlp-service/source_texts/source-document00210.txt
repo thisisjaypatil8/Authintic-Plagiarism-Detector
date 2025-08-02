@@ -1,0 +1,7 @@
+Tuesday, July 11, 2006 at 11:18:00 AM
+Posted by Liz Xu, Software Engineer
+Today we're enabling some new zoom features on Google Maps. We're making these features available to API v2 users as well, so please test them out and send us your feedback!
+Instead of double-clicking to recenter the map, we now support left double-clicking to recenter and zoom in one level, and right double-clicking to zoom out one level. This can be enabled or disabled by calling enableDoubleClickZoom() or disableDoubleClickZoom() from a GMap2 instance. By default, double-click to zoom is disabled for API sites, since navigation in some API applications relies on the old behavior.Double-click to zoom.
+For users of Firefox and Internet Explorer on Windows, we provide a smooth, continuous zoom animation when you zoom in one level. We turn off overlays during the zoom animation, so this may not be suitable for all API sites. To enable or disable continuous zoom, call enableContinuousZoom() or disableContinuousZoom() from a GMap2 instance. By default, continuous zoom is off.Continuous zoom.
+For more details on zooming, please see the . Don't forget to let us know what you think via the Maps API discussion forum. documentation
+Happy zooming!

@@ -1,0 +1,15 @@
+Add a city
+, California, USASan Francisco
+You are looking at San Francisco , California in USA. The city has a population of 7228948 residents. It is located on -121.59 degrees longitude, and 37.78 latitude.
+San Francisco, city info() submit new info
+San Francisco , General info: 8/10
+Founded in 1776. San Francisco lies at the northern tip of a peninsula in the Western US State of California. It is part of the much larger San Francisco Bay Area. The Bay Area has a population of approximately 7.2 million people. San Francisco is famous for his step rolling hills and mediterranean climate. It is one of the most visited cities in the US.
+San Francisco , Don't miss: 9/10
+Golden Gate Bridge, Alacatraz Island, cable cars, Coit Tower, Chinatown, Golden Gate Park, Alamo Square, Palace of Fine Arts,Union Square, as well as some of its beautiful neighborhoods such as Russian Hill, Nob Hill, North Beach, Pacific Heights, SOMA and the Mission District.
+San Francisco , Food: 10/10
+San Francisco is renowned for its restaurants. "The City" as it is called by locals has some of the best Asian and Californian Cuisine around. It also has large variety of other kinds of ethnic food.
+San Francisco , Hotels: 10/10
+There are beautiful hotels everywhere in the city. Some of the more famous (and expensive) are: The Fairmount, Ritz Carlton, The Mark Hopkins Intercontental, The Palace, Standford Court, The Huntington and Hotel Nikko.
+San Francisco , Safety: 7/10
+Like most large American cities some neighborhoods are safer than others. If you stick to the main tourist areas you should be quite safe. Just be careful in the Tenderloin at night.
+User images

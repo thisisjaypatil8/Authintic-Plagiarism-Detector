@@ -1,0 +1,19 @@
+ 
+GPS Information from the Stanford GPS Lab
+The works with the Federal Aviation Administration, U.S. Navy, U.S. Air Force, Arinc, NASA and U.S. Coast Guard to pioneer systems that augment the Global Positioning System (GPS) and Galileo. These augmentations broadcast differential corrections to improve accuracy, provide error bounds in real time, and/or mitigate radio frequency interference. Specific projects include:GPS Research Laboratory
+The already supports millions of land and marine users across North America. It became operational for aviation in July of 2003.  Wide Area Augmentation System (WAAS)
+Currently, we are working with the FAA to help define the L5 WAAS design.  We are researching different options to bring to the L5 signal as part of the GEAS.  The goal is to achieve worldwide LPV-200 approach capabilities. 
+The will support aircraft landings on aircraft carriers and military air fields. Joint Precision Approach and Landing System (JPALS)
+Technologies that address the vulnerability of satellite navigation to radio frequency interference are of interest. These include the integration of existing terrestrial radio navigation systems like - now called enhanced Loran or eLoran. The lab is also very active in the investigation of software receivers that integrate inertial navigation and adaptive antennas. Loran
+Earlier, the laboratory worked with the U.S. Coast Guard to design a medium frequency radio system to broadcast differential corrections to maritime users of GPS. Today, this system covers much of the world's coastline and provides differential GPS data to 1.5 million users.
+ 
+Overview of the Laboratory and Student Research
+The Stanford GPS Laboratory, headed by Professor Per Enge, has a staff of professional researchers, over 10 Ph.D. students as well as graduate students seeking other degrees.  For an overview of the Stanford GPS Laboratory, check out this website and this .  Examples of recent student work are given in the links below. presentation
+1) Next generation GNSS, new signals, and signal monitoring.  We provide description of the derived from data measurements as well as the new (SGMS).  Most current information added is on the and . Galileo code/code generator Stanford GNSS Monitor Station GIOVE-B L1 code generator GIOVE-B E5 code generator
+2) Controlled Reception Pattern Antenna (CRPA).  CRPA antenna technology uses an array of antenna and signal processing to increase resistance to interference and jamming.  to see a presentation by Ph.D. student David De Lorenzo on his current research in processing signals from a CRPA Click here
+3) Position Navigation Time (PNT) based Encryption (Geoencryption).  Location information can be used to provide a cryptographic key allowing content to be controlled.  Hence decryption can be regulated to occur at specified locations or times only.  to see a presentation by Ph.D. student Di Qiu on her current research in signal authentication and geoencryption. Click here
+A description of the Code from data collected from the SGMS. Compass/Beidou E2
+GPS Textbook for AA272C Satellite Navigation and AA272D Advanced topics in Satellite Navigation
+a textbook by Pratap Misra and Per Enge, provides a comprehensive introduction to GPS., "Global Positioning System: Signals, Measurements and Performance"
+Global Positioning System (GPS) LabDept of Aeronautics and Astronautics Stanford University, Stanford, CA 94305
+Copyright © 2004 Stanford University. Site design Site suggestions by the

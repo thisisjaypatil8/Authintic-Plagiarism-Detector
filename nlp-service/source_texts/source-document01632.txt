@@ -1,0 +1,39 @@
+The Reverbiage widget, created to demonstrate NPR's Open API, mashes news headlines with geographical data.
+Take a look at ‘distributed distribution’NPR’s Open API:
+Originally published in , July 28, 2008Current
+By Steve Behrens
+‘A technical fog can descend over stories like this, but it shouldn’t,” says Louisville Public Media exec Todd Mundt.
+Drum roll: “This is a BIG deal,” says Mundt.
+On July 17, NPR offered Internet tinkerers worldwide, as well as member stations, the key to its online trove of 250,000 audio reports and related text produced since 1995.
+Not that the stuff was impossible to get, since it’s already neatly indexed and displayed on NPR.org for anyone to hear.
+Now, however, webheads can sign on with NPR to distribute their custom selections of radio material, old or new — recent Talk of the Nations, summer books advice, that story about health care in Germany, or all there is about Peggy Lee.
+To make it work, NPR is offering an Open API, or application program interface, with hopes that it will send fevered coders scurrying to their lairs. That's what happened with the Google Maps API, which bred notable geographic mashups like . And Apple’s recent iPhone API, which of free and cheap modules. EveryBlock.com prompted software developers to create hundreds
+NPR's content comes with some restrictions — it can’t be used commercially or without attribution or otherwise abused — and NPR retained the legal and technical ability to identify and cut off users who violate the agreement.
+And the network gives special access to member stations. Users who register though the restricted site have the option of downloading MP3 audio files, according to Daniel Jacobson, NPR’s director of application development, while nonstation users can get only streaming audio files from the API. NPRstations.org
+“I don’t think we’re even close to imagining everything that can be done with it,” says acting CEO Dennis Haarsager. “It unlocks the imagination of a lot of users out there.”
+The API gives part of the distribution job to thousands of individuals, raising the odds that something cool and useful will develop.
+“It’s making possible what I call distributed distribution,” says Haarsager.
+Widgets may become an especially important outlet for NPR material because they’re well suited to cell phones and other mobile devices. They fit the small screens and the “one-thing-at-a-time” functionality that people want in their pockets, observes Andrew Kuklewicz, senior web applications developer at Public Radio Exchange in Cambridge, Mass.
+Back to Louisville — why is Mundt so excited? He explains in his blog: The average pubradio listener may visit a station website only twice a month, but that listener checks her 10 favorite blogs twice a day. “If even one of those blogs uses the API to 'curate' a selection of your stories, or installs a widget ..., guess how much you’ve increased the potential of listeners discovering your content? And clicking over to your website to read more?”
+Have your widget do the math.
+To demonstrate what a smart techie can do with this API on short notice, NPR gave a little head start to some Washington-area coders.
+Geoff Gaudreault, a Flash artist [] who has just moved to an animation job in San Francisco, promptly created the Reverbiage widget with a revolving globe (embedded at top of page), which shines a spotlight on the locales of news stories as NPR text headlines pop up. for free. his blog
+Embed it in your site
+Axiom Software Inc., a Virginia company that got NPR’s call in June, quickly knotted the NPR and iPhone APIs together, creating a Searchable Radio miniprogram that lets users of the Apple phone search the NPR archive for stories. for your iPhone. Download it
+Station webmasters also have dived in. John Tynan at KJZZ/KBAQ in Phoenix, mashed up the API with MIT’s Simile Timeline widget, yielding a timeline with news- event pop-ups [ and ]. Like NPR’s web execs, he was rushing to prepare a demo for a web technology conference in Portland, Ore., last week.
+information demo
+In St. Paul, Minnesota Public Radio used the API to reunite on its web archive, at last, the local and national elements of its and broadcasts. If you search the Minnesota network’s site, or browse, you can find stories that came from NPR as well as MPR, says Mike Bettison, director of new media. [Here's the for July 17.]Morning EditionAll Things Considered resulting online archive
+Even the sole proprietor of a blog can rig up access to a feed of NPR stories on appropriate topics. Haarsager used the Open API to create a new outlet for selected NPR stories on media topics in the left column of his blog A query generator on NPR’s website spat out a section of code to insert in his website, specifying content by topic, program and date from NPR’s database. The whole task took 10 minutes, though he admits it might take longer without the help of guys from NPR Digital Media. Technology360.
+Release of an API was endorsed by pub-radio’s Digital Distribution Consortium task force, according to Mundt.
+NPR will invite stations to make their programming available through the API, says Haarsager. And if stations join in, the result could begin to resemble the unified, comprehensive library of all public radio content, as in the Public Service Publisher setup advocated by Haarsager several years ago.
+NPR initially developed the API to run its own website, putting it in service in November, according to Jacobson, but NPR techies were soon discussing release of the API for external use. He says that was before they heard their counterparts at the predicting that the newspaper would release an API late in 2008.New York Times
+As NPR techies were briefing the NPR Board May 20-21 on API plans, MediaBistro.com was reporting about the ' plans May 21 andTimes 23.
+On the 21st, MediaBistro quoted the ’ editor of interactive news, Aron Pilhofer: “What does every website out there want? Content. Great, great content. We have content a go-go.”Times
+The board wasn't talking about the API for a policy decision, Haarsager says. That decision essentially had been made earlier when the board approved podcasting and RSS feeds.
+Past worries that the Web would bypass broadcasters and take content directly to listeners have receded, he says. "Frankly, I think we’re, in significant ways, moving past that argument. We don’t have it about podcasting. It hasn’t been an issue that’s come to my attention.”
+NPR expects to make additional material available through the API in coming months. Rights issues may hang up music programming and photos acquired from wire services. The initial release does not include programs such as and that are produced by stations for NPR distribution. NPR would like to see their archives released through the Open API, Haarsager says, but didn’t want to delay the project while lawyers studied contracts.Fresh AirThe Diane Rehm Show
+Revenue-generation issues may arise at some point. The technical setup would permit producers to insert underwriting messages to earn revenue, but NPR hasn’t adopted that strategy, Jacobson says.
+In the meantime, other NPR web projects will take the stage. NPR is planning to add social-network elements to its site, Haarsager says.
+Also ahead: a community-building tool for stations, which would help them make partnerships and provide media assistance to local nonprofits. The partnerships, Haarsager says, resemble those created by Twin Cities Public Television with its Minnesota Channel [, ]. link 2005 Current article
+Web page posted July 29, 2008 Copyright 2008 by Current LLC
+What can come of NPR's release of an API giving access to its story database?

@@ -1,0 +1,11 @@
+YDN Yahoo! Search Web Services
+Yahoo! Search Web Services
+Yahoo! Search Web Services allow you to access Yahoo! content and services in your favorite programming languages. This means you can now build Yahoo! directly into your own applications. Get more ideas for what you can build by playing with the applications and mashups featured in our . Search Application Gallery
+How Do I Get Started?
+Read the online documentation and FAQs.
+Get an Application ID
+To access Yahoo! Search web services, you will need to . Like a browser's User-Agent string, the Application ID uniquely identifies your application and has no effect on rate limiting. get an application ID
+Download the SDK
+The includes BSD licensed examples and libraries for various languages: Perl, Python and PHP, Java, JavaScript, and Flash. development kit
+Using the Search Web Service
+Overview

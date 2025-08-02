@@ -1,0 +1,7 @@
+Geotagging blog posts
+Wednesday, January 7, 2009 at 10:40 AM
+As part of the Lat Long blog team, I'm naturally a big fan of both maps and blogs. Recently, the Blogger team launched a feature that combines both of these -- geotagging for your blog posts.
+When you use Blogger in draft, you'll see an option below the post editor to "add location". If you know the exact location, you can simply enter the address, city, or zip code; if you're blogging about the view from the top of a mountain you just hiked or don't have a precise location, you can browse the map or turn on satellite mode and put a marker at the right spot (and the reverse geocoder will label the location for you). The geotag will appear below your published post as a link, which will open up Google Maps. The location will also be included in your blog's RSS and Atom feeds using . GeoRSS
+Read more about geotagging on the . Blogger in draft blog
+Posted by Elaine Filadelfo, Lat Long Blog Team
+ 

@@ -1,0 +1,20 @@
+Ask us a question
+Technology
+Digital Bridge is an innovator in the U.K. to deliver the most complete Internet IPTV solution to existing and new TV Channels, Content Owners, TV Platform Operators and Broadband ISP Distributors.
+We provide a full IPTV solution covering head-end infrastructure, IPTV set-top boxes as well as interactive IPTV applications to manage and deliver IPTV services via set-top boxes and also the web. Our Service includes:
+IPTV hybrid set-top box with support for terrestrial, satellite and cable platforms
+Interactive and fully-customisable EPG (electronic programming guide)
+Wide range of PC on TV applications deliver via set-top box including Instant Messaging, web browsing and mail
+Ability to integrate IP channels with digital channels including Freeview
+Pay-per-view VoD (video on demand) with multicurrency e-commerce
+Support for PVR (Personal Video Recorder) functionality including catch-up and forward TV on demand viewing of terrestrial channels
+Internet IPTV set-top box that supports both Standard and High Definition quality picture
+Subscriber and billing management
+Support for unlimited IP channels with the ability to provide them under separate EPG menu or built-in with terrestrial digital TV
+Comprehensive reporting and monitoring tools to manage service availability, customer experience as well as monitoring IPTV services
+Web-based granular reporting dashboards for managing KPI and service metrics
+The Set Top Box
+Our market leading IPTV set-top boxes is a high performance hybrid set-top box capable of supporting both standard and high-definition quality TV. Our hardware is also very flexible and can have at a minimum a terrestrial TV tuner and basic remote control to a Wifi enabled IPTV box coupled with PVR, smart card support and a small slick keyboard.
+The set top boxes also have our IPTV middleware installed which allow us to update each subscriber’s box with any new applications or software upgrades as and when is required. In addition, we are also able to remotely support and manage these boxes including monitoring what particular channels are viewed on a specific set-top box.
+Because the set-top box is IP enabled, we are also able to open up various PC applications to be used on TV. Our PC on TV applications varies from web browsing and web mail, to instant messaging and video telephony. For office type applications such as Microsoft Word and Microsoft Excel, we use virtualisation technology to deliver these applications. This means that you no longer need to switch on your PC to check your emails or write a quick document to send to someone at work or a friend.
+Contacts

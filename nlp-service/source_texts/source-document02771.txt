@@ -1,0 +1,75 @@
+taxi Kyoto GPS navigation device
+An is a designed for use in . It typically uses a to acquire position data to locate the user on a in the unit's map . Using the road database, the unit can give directions to other locations along roads also in its database. using distance data from sensors attached to the , a and an can be used for greater reliability, as GPS signal loss and/or can occur due to or .automotive navigation system satellite navigation system automobiles GPS navigation device road database Dead reckoning drivetrain gyroscope accelerometer multipath urban canyons tunnels
+Contents
+[] edit History
+Automotive navigation systems were the subject of extensive experimentation, including some efforts to reach mass markets, prior to the availability of commercial . GPS
+Most major technologies required for modern automobile navigation were already established when the microprocessor emerged in the 1970s to support their integration and enhancement by computer software. These technologies subsequently underwent extensive refinement, and a variety of system architectures had been explored by the time practical systems reached the market in the late 1980s. Among the other enhancements of the 1980s was the development of color displays for digital maps and of CD-ROMs for digital map storage. [1]
+However, there is some question about who made the first automotive navigation system. There seems to be little room for doubt that was first to make available a digital system that used map-matching to improve on instrumentation, which arguably made car navigation systems practical for the first time. However, Japanese efforts on both digital and analog systems predate Etak's founding;commercially available Etak dead reckoning [] original research? [] citation needed
+claims to have created the first automotive navigation system in 1981. However, according to the company's own historical timeline, the company claims to have developed an analog automotive navigation product called the , working with . This engineering effort was abandoned in 1985. Although there are reports of the Electro Gyrocator being offered as a dealer option on the Honda Accord in 1981, it's not clear whether an actual product was released, whether any customers took delivery of an Electro Gyrocator-equipped Accord, or even whether the unit appeared in any dealer showrooms; Honda's own official history appears to pronounce the Electro Gyrocator as not "practical". See below for Honda's history of the project. Alpine [2] co- Electro Gyrocator Honda
+claims to have created the first navigation system starting in 1983, and culminating with general availability in the 1990 . The original Electro Gyrocator system used an to navigate using , as the system was not yet generally available. However, it appears from Honda's concessions in their own account of the Electro Gyrocator project that actually trumped Honda's analog effort with a truly practical digital system, albeit one whose effective range of operation was limited by the availability of appropriately digitized street map data. Honda [1] Acura Legend analog accelerometer inertial navigation GPS Etak
+[...] progress in digital technology would not stop simply because Honda had turned its attention to analog. In 1985, for example, the U.S. company ETAK introduced its own digital map navigation system. Although the system's effective range-the area of geographical coverage-was limited, the announcement was a dour one for Nakamura and his staff. Therefore, ultimately the development of a practical analog system was shelved. The staff experienced indescribable feelings of disappointment. The development of [Honda's] digital map navigation system resumed in 1987, following a three-year hiatus. [3]
+Both and claim to be the first with a GPS-based auto navigation system, in . Also in 1990, a was filed within Digital Equipment Co. Ltd. for a multi-function device called PageLink that had real-time maps for use in a car listed as one of its functions. Mitsubishi Electric [2] Pioneer [3] 1990 draft patent application
+, a GPS navigation system manufacturer, claims to have created the first GPS-based vehicle navigation system in the U.S. in . Magellan [4] 1995
+Navigation systems may (or may not) use a combination of any of the following:
+top view for the map
+top view for the map with the map rotating with the automobile (so that "up" on the map always corresponds to "forward" in the vehicle)
+for the map or the next curve bird's-eye view
+linear gauge for distance, which is redundant if a rotating map is used
+numbers for distance
+[] edit Contents
+The road database is a of some area of interest. Street names or numbers and house numbers are encoded as so that the user can find some desired destination by street address (see ). vector map geographic coordinates map database management
+() will also be stored with their geographic coordinates. Point of interest specialties include , , public , and "parked here" (or "you parked here"). Points of interest waypoints speed cameras fuel stations parking
+Contents can be produced by the user base as their cars drive along existing streets () and communicating via the internet, yielding a free and up-to-date map. Wi-Fi
+[] edit Map Formats
+Formats are almost uniformly proprietary; there is no industry standard for satellite navigation maps, although Navteq are currently trying to address this with S-Dal (see below).
+The map data vendors such as and create the base map in a standard format , but each electronics manufacturer compiles it in an optimized, usually proprietary format. GDF is not a CD standard for car navigation systems. GDF is used and converted onto the CD-ROM in the internal format of the navigation system. Tele Atlas NAVTEQ GDF
+[] edit CARiN
+It has been suggested that this section be into a new article. () split Discuss
+CARiN Database Format (CDF) is a proprietary navigation map format created by Car Systems (this branch was sold to Mannesman VDO, in 1998, to Siemens VDO in 2002, and Continental in 2007.) and is used in a number of navigation-equipped vehicles. The 'CARiN' is derived from nformation and avigation. Philips VDO/Dayton portmanteau CarIN
+The first navigation computers using this map format used the OS9000 operating system, however newer variants such as the and VDO/Dayton PN2050 use Microware BMW iDrive Windows CE [4]
+The original system uses -based maps, with encoding for their file system. Map media can be recognized by the presence of the following files on the CD: CD-ROM ISO Level 1
+ABSTRACT
+CARINDB
+COPYRIGH
+Newer derivatives also use and -based maps, for extra capacity and to add support for long file names. Older CARiN-compatible navigation computers are not able to read the newer DVD maps, but the DVD-enabled computers are still able to read the CD-based maps. flash memory DVD-ROM
+Vehicle manufacturers who have used or are still using this format in one or more of their ranges include:
+Philips
+Older CD-based CARiN maps are completely interchangeable between manufacturers; however, differences in the more modern DVD and flash memory maps are starting to change this.
+information can be stored either in the database file itself (usually called "carindb"), or in a separate database under a directory named 'TPD.' Encoding of GPS coordinates in the TPD folder is proprietary and varies between navigation computers (e.g., BMW 'HIGH' vs BMW 'Professional' editions of the navigation map). Editors are now available to customize these POI. Point of Interest
+CARiN media is sometimes referred to colloquially as "Carinet" or "CarinDb," after the names of the files on the navigation media.
+[] edit S-Dal
+This is a proprietary map format by , who released it in the hope that it would become an industry standard for digital navigation maps. Vendors currently using this format include: published Navteq royalty free
+The format has not been very widely adopted by the industry.
+[] edit Physical Storage Format
+The Physical Storage Format (PSF) initiative is an industry grouping of car manufacturers, navigation system suppliers and map data suppliers whose objective is the standardization of the data format used in car navigation systems, as well as allow a map update capability. Standardization would improve interoperability, specifically by allowing the same navigation maps to be used in navigation systems from different manufacturers.. Companies involved include , , , , ADIT, , , , , , Harman Becker, , PTV, , , and . [5] BMW Volkswagen Daimler Renault Alpine Electronics Navigon Bosch DENSO Mitsubishi Panasonic Continental AG Navteq Tele Atlas Zenrin
+[] edit Media
+The road database may be stored in , optical media ( or ), solid state , magnetic media (), or a combination. A common scheme is to have a permanently stored in ROM that can be augmented with detailed information for a region the user is interested in. A ROM is always programmed at the factory; the other media may be preprogrammed, from a or via a or connection (, ), or directly used utilizing a . solid state read-only memory (ROM) CD DVD flash memory hard disk base map downloaded CD DVD computer wireless bluetooth Wi-Fi card reader
+Some navigation device makers provide free map updates for their customers. These updates are often obtained from the vendor's website, which is accessed by connecting the navigation device to a PC.
+Main article: Integration of traffic data with navigation systems
+Some newer systems can not only give precise driving directions, they can also receive and display information on and suggest alternate routes. These may use either , which delivers coded traffic information using radio , or by GPRS/3G data transmission via mobile phones. traffic congestion TMC RDS
+One key type of real-time data is Traffic information, which includes:
+Real-time data about free/full parkings;
+Nearest lines and prices, to go to a destination, when there is a . public transport jam
+Other real-time data includes weather broadcasting, etc.
+[] edit Integration and Other Functions
+The color screens on some automotive navigation systems can also be used to display broadcasts or . LCD television DVD movies
+A few systems integrate (or communicate) with for talking and (i.e., using or ). mobile phones hands-free SMS messaging Bluetooth Wi-Fi
+Automotive navigation systems can include for , which can be combined with a traffic and public transport information system. personal information management meetings
+[] edit Safety Features
+Vehicles produced by and , as well as Lexus' parent company, , lock out many of the features when the vehicle is in motion. The manufacturers claim this is a safety feature to avoid the driver being distracted. Many users have complained that passengers are not able to enter destinations while in motion, even though it is safe to do so. Additionally, drivers have complained that it is often more dangerous to pull off a highway and stop than it would be to enter a destination into the system. Subaru Lexus Toyota
+[] edit Misdirection
+A number of road accidents have been attributed to misdirection by satnav systems. On May 11, 2007, a driver followed satnav instructions in the dark and her car was hit by a train on a rail crossing that was not shown on the system. In , the County Council erected a sign warning drivers to ignore their "sat nav" system and to take another route, because the street was too narrow for vehicular traffic, and property damage resulted from vehicles getting stuck. [6] Exton, Hampshire [7]
+[] edit GPS vs Speed Camera Accuracy
+In July 2007, an Australian man successfully overturned a speeding conviction after evidence from a GPS proved that he did not exceed the speed limit. navigational track [8]
+[] edit Other functions
+may have integrated GPS units tailored to specific golf courses, providing interactive course maps and live readings of distance measurements to the green. Golf Carts
+Many systems can give information on nearby (POIs), such as , and . Some navigation devices use this feature to store the location of known or , and can alert the driver in much the same way as a . may also be integrated into actual radar detection devices to enhance accuracy, and in some cases, implement a logic system where the system only alerts if the driver is traveling above the speed limit or in the direction to be 'caught.' Unlike , -based speed trap warnings are currently not illegal in very many countries. points of interest restaurants cash machines gas stations speed traps speed cameras radar detector GPS radar detectors GPS
+The radio dispatching of taxicabs have been phased out in several countries in favor of GPS technology plus some form of mobile networking with on board computers. The central dispatch computer keeps track of all vehicles in its fleet, and automatically selects the nearest cab to respond to a passenger request.
+Advanced can relay the vehicle's location via cellular phone services in case of loss or theft. The technology can also be used to manage , in which case it's known as . car security vehicle tracking systems fleet vehicles automatic vehicle location
+A very basic form of GPS navigation is used on public buses in , where the location and sequence of bus stops for a particular route are programmed. The computer announces the approaching and upcoming bus stops and repeats the information on a dot-matrix display, all without intervention from the driver. This service was once provided based on tire revolutions and odometer mileage, which is not nearly as reliable as a GPS enabled system. Taipei
+[] edit Retrofitting of GPS
+A vehicle can be with a unit if it did not originally have one. There are three approaches that can be taken here: retrofitted GPS navigation device
+[] edit Portable GPS
+This type of is not permanently integrated into the vehicle, having only a simple bracket to mount the device on the surface of the and powered via the . This class of GPS unit does not require professional installation and can typically be used as handheld device, too. GPS navigation device dashboard car cigarette lighter
+Benefits of this type of GPS unit include low cost as well as the ability to move them easily to other vehicles. Their portability means they are easily stolen if left inside the vehicle but cannot be stolen if the driver takes it with him when he gets out. Furthermore, not having a , or inputs from the vehicle's , means that they cannot navigate as accurately by as some built-in devices when there's no GPS signal. More modern portable devices such as the TomTom 920, have an inbuilt to try to address this. compass accelerometer speed sensors dead reckoning accelerometer
+A portable automotive navigation system kit generally includes:

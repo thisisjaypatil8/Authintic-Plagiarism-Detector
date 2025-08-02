@@ -1,0 +1,16 @@
+Jump to: , navigation search
+A is any device that receives () signals for the purpose of determining the present location. These devices are used in military, commercial aviation, and consumer product applications.GPS navigation device Global Positioning System GPS
+Contents
+Consumer GPS navigation devices come in two variants:
+Stand-alone GPS navigation devices and
+GPS navigation devices that need to be connected to a computer to work
+Some consumer devices (called GPS loggers) will record trip information for download. This is useful for trailblazing and mapping by hikers and cyclists.
+[] edit Stand-alone GPS navigation devices
+It has been suggested that be into this article or section. () Automotive_navigation_system#Alternatives merged Discuss
+A in , equipped with GPS navigation system
+taxi Kyoto
+These devices feature pre-installed embedded software. Most stand-alone devices are mobile, yet special purpose build devices (eg car devices) may be stationary. The software includes interactive street maps (of certain regions) that may also show points of interest, route information, and step-by-step routing directions. Examples include
+[] edit GPS-modules
+A modern SiRFstarIII chip based 20-channel GPS receiver with WAAS/EGNOS support.
+Other GPS-devices need to be connected to a computer in order to work. This computer can be a , or even a , or . Depending on the type of computer and available connectors, connections can be made trough and -cable, as well as , , SD, and the newer . Some PCMCIA/ExpressCard GPS-units also include a . Devices usually do not come with pre-installed , thus once purchased the user must install their own navigation software. As you can choose yourself which navigation software you want, you can match it better to your personal taste. It is very common for a PC based GPS receiver to come pre-bundled with a navigation software suite. Also, GPS-modules are significantly cheaper than complete stand-alone systems (around 50-100 ). The software you install may include maps only for a particular region, or the entire world (if software as Google Maps, , ... is used. home computer laptop PDAs smartphones Serial USB Bluetooth CF PCMCIA ExpressCard [1] wireless modem [2] GPS navigation software Networks in Motion's AtlasBook mobile navigation platform
+For examples of USB GPS devices, see : [3]

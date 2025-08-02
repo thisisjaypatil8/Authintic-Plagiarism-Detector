@@ -1,0 +1,36 @@
+Voyager 1 Titan 3E Centaur
+was originally planned as of the . From the outset, it was designed to take advantage of the then-new technique of . Luckily, the development of interplanetary probes coincided with an alignment of the planets called the . The Grand Tour was a linked series of gravity assists that, with only the minimal fuel needed for course corrections, would enable a single probe to visit all four of the 's : , , , and . The identical and probes were designed with the possibility of a Grand Tour in mind, and their launches were timed to enable the Grand Tour if things went well. However, the two Voyagers were only funded by Congress as Jupiter-Saturn probes. At one time, the program was called the "Mariner Jupiter-Saturn" project.Voyager 1Mariner 11 Mariner program gravity assist Grand Tour solar system gas giant planets Jupiter Saturn Uranus Neptune Voyager 1Voyager 2
+Because of this planetary alignment, could visit each of these planets in just twelve years, instead of the thirty years that would usually be required.Voyager
+was launched on , , by the from aboard a IIIE- , shortly after its twin space probe, on , . Despite being launched after , was sent on a faster trajectory so it reached Jupiter and Saturn before its twin space probe did.Voyager 1 September 5 1977 National Aeronautics and Space Administration Cape Canaveral, Florida Titan Centaur rocket Voyager 2 August 20 1977 Voyager 2Voyager 1
+For details on the instrument packages, see the separate article on the .Voyager Voyager program
+[] edit Jupiter
+began photographing in January 1979. Its closest approach to Jupiter was on , , at a distance of 349,000 (217,000 ) from its center. Due to the greater resolution allowed by close approach, most observations of the moons, rings, magnetic fields, and radiation environment of the Jupiter system were made in the 48-hour period bracketing closest approach. It finished photographing the planet in April.Voyager 1 Jupiter March 5 1979 kilometers miles
+The two spacecraft made a number of important discoveries about Jupiter and its satellites. The most surprising was the existence of on , which had not been observed from the ground or by or .Voyager volcanic activity Io Pioneer 10 11
+time lapse movie of Jupiter approach.Voyager 1
+The as seen from . Great Red Spot Voyager 1
+Color picture of Io, Jupiter's innermost Galilean satellite.
+False color detail of Jupiter's atmosphere, as imaged by .Voyager 1
+Valhalla crater on Callisto. Image taken by in 1979.Voyager 1
+[] edit Saturn
+The gravity assist at Jupiter was successful, and the spacecraft went on to visit . s Saturn flyby occurred in November 1980, with the closest approach on , when it came within 124,000 kilometres (77,000 mi) of the planet's cloud-tops. The craft detected complex structures in Saturn's rings, and studied the atmospheres of Saturn and . Because of the earlier discovery of a thick atmosphere on Titan, the controllers at the elected for to make a close approach of Titan and terminate its Grand Tour. (For the continuation of the Grand Tour, see the Uranus and Neptune sections of the article.) The Titan-approach trajectory caused an additional gravitional deflection that took out of the plane of the , thus ending its planetary science mission. Voyager 1 could have been given an altered trajectory, whereupon the slingshot effect of Saturn's gravity would have propelled the spacecraft to a rendezvous with , but this option was not exercised, because the different trajectory would have prohibited the close fly-by of Titan, which was a higher scientific priority at the time. Saturn Voyager 1' November 12 1980 Titan Voyager Jet Propulsion Laboratory Voyager 1 Voyager 2 Voyager 1 ecliptic Pluto [3]
+image of Saturn from 5.3 million km, four days after its closest approach.Voyager 1
+Layers of haze covering Saturn's satellite Titan.
+Titan's thick haze layer is shown in this enhanced image.Voyager 1
+image of Saturn's F ring.Voyager 1
+[] edit Interstellar mission
+It is estimated that both crafts have sufficient electrical power to operate their radio transmitters until at least after 2025, which will be over 48 years after launch. Voyager 1 is the most distant functioning space probe to receive commands and transmit information to Earth.Voyager [4]
+Year
+End of specific capabilities as a result of the available electrical power limitations
+2007
+Termination of plasma subsystem (PLS)
+2008
+Power off Planetary Radio Astronomy Experiment (PRA)
+2010
+Terminate scan platform and Ultraviolet spectrometer (UVS) observations
+2015
+Termination of Data Tape Recorder (DTR) operations (limited by ability to capture 1.4 kbit/s data using a 70 m/34 m antenna array. This is the minimum rate at which the DTS can read-out data.)
+2016 approx
+Termination of operations gyroscopic
+2020
+Start shutdown of science instruments (as of - the order is undecided but the Low-Energy Charged Particles, Cosmic Ray Subsystem, Magnetometer, and Plasma Wave Subsystem instruments are expected to still be operating) 2008 03-18
+2025 or after

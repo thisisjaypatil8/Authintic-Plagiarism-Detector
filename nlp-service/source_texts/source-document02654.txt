@@ -1,0 +1,5 @@
+  NAVSTAR GPS/Block I - Specs
+Technical Specifications
+The GPS satellite vehicle numbers (SVN) 1 through 11 are designated as Block I. The Block I satellites are/were positioned in the same orbital planes as the Block II, but at an inclination angle of 63 degrees. Block I consisted of the original concept validation satellites and reflect various stages of system development. Lessons learned from the 11 satellites were incorporated into later blocks.
+In 1974 Rockwell International was awarded a contract to build 8 Block I satellites. In 1978 the contract was extended to build an additional 3 Block I satellites.
+NAVSTAR GPS/Block I Satellites

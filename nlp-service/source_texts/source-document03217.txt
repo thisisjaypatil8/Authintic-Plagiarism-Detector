@@ -1,0 +1,9 @@
+August 31, 2005
+Offline Google Earth Use
+For those of you wondering what happens to Google Earth (GE) when you don't have an Internet connection, the amazing thing is that it will work. But, it only works with what you have installed in your cache. If you anticipate taking your laptop somewhere where you won't have a broadband connection, you can still use GE for a limited area of viewing. Or you can use it for doing a demonstration somewhere without an Internet connection.
+First, go to the menu item and select the "" tab. You can make the cache size as large as 2000 MB (i.e. 2 Gigabytes). This will give you more data to work with. Then, you need to move to the area you want data for and zoom into that area. The most recent things you have looked at will be what's in your cache. I think you need to turn on the layers for the information you want cached as well (for example, '' or ''). You also might want to turn on any of your placemarks related to the region you want to look at.Tools->OptionsCacheroadsdining
+It doesn't take much of an area to fill up the cache. Especially if the area you are viewing has lots of high-res pictures. But, I read about someone using this in the with a GPS and a laptop to find his way around. remote areas of Africa
+There is also a tip that you can save your cache(s) under different files and then swap them out to look at different areas (read about it ). Could be useful if you were travelling without Internet access for a prolonged period of time. here
+Posted by FrankTaylor at August 31, 2005 09:11 AM
+Sponsored Ads:
+<![if lt IE 4]> <noscript> <a href="http://webis15.medien.uni-weimar.de/chatnoir/clueweb?href=http%3A%2F%2Fservedbyadbutler.com%2Fgo2%2F%3BID%3D152060%3Bsize%3D300x250%3BsetID%3D100630&token=0acba44edf9b96dc5c2c2062335af51e"> <img src="http://servedbyadbutler.com/adserve/;ID=152060;size=300x250;setID=100630;type=img" border="0" height="250" width="300" alt=""></a> </noscript><![endif]>

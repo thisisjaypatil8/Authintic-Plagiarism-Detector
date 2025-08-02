@@ -1,0 +1,17 @@
+ Speed Test Instructions
+ 
+1.Install Proxyconn Accelerator Client.  If you do not have the Proxyconn Accelerator, you may sign up for a       free trial (credit card is required; ISPs - contact sales at or 949 863 1106 ext.5). sales@proxyconn.com
+2.Make sure that installation is correct.  When installation is correct, the Proxyconn icon is animating, when you browse the Web.      
+3.Open Proxyconn settings and set Images to ow Quality (Maximum Acceleration)      
+4.Connect to your dial-up Internet provider.      
+5.Clear your browser cache.      
+6.Go to CNET       Bandwidth Meter .
+7.Enter your area code and select connection type able Modem or SL(the reason for that is that if you select ial-up the downloaded file is too small for reliable measurement).      
+8.Hit o      
+9.Record the speed from the next page.      
+10.Disable or un-install Proxyconn Accelerator.  
+11.Repeat the steps 5-9.  
+12. Compare speed with and without Proxyconn.
+ 
+The results may vary depending on your location, network load, etc., but most likely the speed with Proxyconn will be 8-11 times higher than without Proxyconn.  For more precise results, repeat the test 10-50 times.  The test is designed for North America and Western Europe.  If you represent an ISP and wish to try Proxyconn Acceleration Server on your network, call949 863 1106 ext.5 (US).
+05/02/2005

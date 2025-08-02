@@ -1,0 +1,115 @@
+survey of map proposals on meta:Maps Wikimedia Wikipedia:Meta
+()Please add additional notes, references and examples here!
+[] edit Advantages of web maps
+A surface weather analysis for the on October 21, 2006.
+Web maps can easily . If maps are generated automatically from , they can display information in almost . They don't need to be , mastered and distributed. Examples:deliver up to date information databases realtime printed
+A map displaying results, as soon as the election results become available. election
+A map displaying the traffic situation near realtime by using traffic data collected by sensor networks.
+A map showing the current locations of vehicles such as or , allowing patrons to minimize their waiting time at stops or stations, or be aware of delays in service. mass transit buses trains
+is cheaply available and many tools exist for producing web maps.and for web maps is cheap. Software hardware infrastructure Web server hardware open source
+. Because web maps distribute both logic and data with each request or loading, product updates can happen every time the web user reloads the application. In traditional , when dealing with printed maps or interactive maps distributed on media (, , etc.), a map update caused serious efforts, triggering a reprint or remastering as well as a redistribution of the media. With web maps, data and product updates are easier, cheaper, and faster, and can occur more often.Product updates can easily be distributed cartography offline CD DVD
+. If web maps are implemented based on , the underlying operating system and browser do not matter.They work across and browsers operating systems open standards
+. Using open standards and documented one can integrate () different data sources, if the , map scale and data quality match. The use of centralized data sources removes the burden for individual organizations to maintain copies of the same data sets. The down side is that one has to rely on and trust the external data sources.Web maps can combine distributed data sources APIs mash up projection system
+. By using , personal filters and personal styling and , users can configure and design their own maps, if the web mapping systems supports personalization. issues can be treated in the same way. If users can store their favourite colors and patterns they can avoid color combinations they can't easily distinguish (e.g. due to ).Web maps allow for personalization user profiles symbolization Accessibility color blindness
+. Similar to the project, web mapping technologies, such as /, , , , etc. enable distributed data acquisition and collaborative efforts. Examples for such projects are the project or the community. As with other open projects, quality assurance is very important, however!Web maps enable collaborative mapping Wikipedia DHTML Ajax SVG Java Adobe Flash OpenStreetMap Google Earth
+. Just like any other or a , web maps can act like an index to other information on the web. Any in a map, a label text, etc. can provide hyperlinks to additional information. As an example a map showing public transport options can directly link to the corresponding section in the online train time table.Web maps support to other information on the web hyperlinking web page wiki sensitive area
+. Current support the of , and (, , , and other ).It is easy to integrate in and with web maps multimedia web browsers playback video audio animation SVG SWF Quicktime multimedia frameworks
+[] edit Disadvantages of web maps and problematic issues
+the reliability of the internet and web server infrastructure is not yet good enough. Esp. if a web map relies on external, distributed data sources, the original author often cannot guarantee the availability of the information.Reliability issues
+Unlike in the US, where geodata collected by governmental institutions is usually available for free or cheap, geodata is usually very expensive in Europe or other parts of the world.Geodata is expensive
+Web maps usually need a relatively high bandwidth.Bandwidth issues
+Like with other screen based maps, web maps have the problem of limited screen space. This is in particular a problem for mobile web maps and location based services where maps have to be displayed in very small screens with resolutions as low as 100 100 pixels. Hopefully, technological advances will help to overcome these limitations.Limited screen space
+Many web maps are of poor quality, both in symbolization, content and data accuracy.Quality and accuracy issues
+Despite the increasing availability of free and commercial tools to create web mapping and web GIS applications, it is still a complex task to create interactive web maps. Many technologies, modules, services and data sources have to be mastered and integrated.Complex to develop
+Compared to the development of standalone applications with integrated development tools, the development and debugging environments of a conglomerate of different web technologies is still awkward and uncomfortable.Immature development tools
+Many people are still reluctant to publish geodata, esp. in the light that geodata is expensive in some parts of the world. They fear copyright infringements of other people using their data without proper requests for permission.Copyright issues
+With detailed information available and the combination of distributed data sources, it is possible to find out and combine a lot of private and personal information of individual persons. Properties and estates of individuals are now accessible through high resolution aerial and satellite images throughout the world to anyone.Privacy issues
+[] edit History of web mapping
+Event types
+Technical events directly related to web mapping
+General technical events
+Events relating to Web standards
+This section contains some of the milestones of web mapping, online mapping services and atlases. Because web mapping depends on enabling technologies of the web, this section also includes a few milestones of the web. [3]
+1989 09: , invented at for the exchange of research documents.Birth of the WWW WWW CERN [4]
+1990 12: , wrote first and .First Web Browser and Web Server Tim Berners-Lee web browser [5] web server
+1991 04: HTTP 0.9 protocol, Initial design of the protocol for communication between browser and server. [6] HTTP
+1991 06: , The first popular web browser. Written for on .0.8 Browser ViolaWWW X11 Unix
+1991 08: , This is regarded as the debut date of the Web. Announced in alt.hypertext. WWW project announced in public newsgroup newsgroup
+1992 06: HTTP 1.0 protocol, Version 1.0 of the HTTP protocol. Introduces the method and . [6] POST persistent connections
+1993 04: , CERN announced that access to the web will be free for all. The web gained .CERN announced web as free [7] critical mass
+1993 06: HTML 1.0. The first version of , published by T. Berners-Lee and . [8] HTML [9] Dan Connolly
+1993 07: , The first mapserver based on /, allowed reprojection styling and definition of map extent. Xerox PARC Map Viewer CGI Perl
+1994 06: , The first version of the National Atlas of Canada was released. Can be regarded as the first . The National Atlas of Canada online atlas
+1994 10: , The first version of the highly popular browser .Netscape Browser 0.9 () Mosaic Netscape Navigator
+1995 03: , The first public version of .Java 1.0 Java
+1995 11: HTML 2.0, Introduced , , and client-side . [8] forms file upload internationalization image maps
+1995 12: , Introduced first script based interactivity.1.0 Javascript
+1996 01: , First version of the JDK.1.0 JDK Sun
+1996 02: , The first popular online Address Matching and Routing Service with mapping output. Mapquest
+1996 06: , The -based MultiMap website launched offering online mapping, routing and location based services. Grew into one of the most popular UK web sites. MultiMap UK
+1996 11: , First version of , already supports vector graphics through the use of ActiveCGM.Geomedia WebMap 1.0 Geomedia WebMap [10]
+1996 12: , First version of the Macromedia Flash plugin.1.0 Macromedia Flash
+1997 01: HTML 3.2, Introduced tables, applets, script elements, multimedia elements, flowtext around images, etc. [8]
+National Atlas of the United States logo
+1997 06: , The received the mandate to coordinate and create the online .US Online National Atlas Initiative USGS National Atlas of the United States of America [3]
+1997 07: , Developed as Part of the ForNet Project. Grew out of the need to deliver data across the web for .UMN 1.0 MapServer NASA remote sensing foresters
+1997 12: HTML 4.0, Introduced styling with , absolute and relative positioning of elements, , object element, etc. [8] CSS frames
+1998 06: , A serving (mainly b+w) and USGS was released. One of the first popular WMS. This service is a joint effort of USGS, and .USA Terraserver Web Map Service aerial images DRGs Microsoft HP
+1998 07: , Added support ().UMN MapServer 2.0 reprojection PROJ.4
+1998 08: , 's entry into the web mapping business. MapObjects Internet Map Server ESRI
+1999 03: HTTP 1.1 protocol, Version 1.1 of the HTTP protocol. Introduces the request pipelining for multiple connections between server and client. This version is still in use as of 2007. [6]
+1999 08: , This new version was launched at the ICA 1999 conference in Ottawa. Introduced many new features and topics. Is being improved gradually, since then, and kept up-to-date with technical advancements.National Atlas of Canada, 6th edition
+2000 02: , The first public release of ESRI's .ArcIMS 3.0 ArcIMS
+2000 06: , ESRI founded Geography Network to distribute data and web map services.ESRI Geography Network
+2000 06: , Developed as part of the NASA Project. This is also the first public, open source release of UMN Mapserver. Added raster support and support for (FreeType).UMN MapServer 3.0 TerraSIP TrueType fonts
+2000 08: , This introduced 1.0 ( compatible).5 Flash Player ActionScript ECMAScript
+2001 06: , Adds a lot of flexibility to UMN MapServer solutions.MapScript 1.0 for UMN MapServer [4]
+2001 09: SVG 1.0 W3C Recommendation, SVG () 1.0 became a W3C Recommendation. [11] Scalable Vector Graphics
+2001 09: , A highly interactive online atlas, the first to be based on the SVG standard. Tirolatlas
+2002 06: , Added support for and . Version 3.6 adds initial support.UMN MapServer 3.5 PostGIS ArcSDE OGC WMS
+2002 07: , Version 4 of the web map server.ArcIMS 4.0 ArcIMS
+2003 01: SVG 1.1 W3C Recommendation, SVG 1.1 became a W3C Recommendation. This introduced the mobile profiles SVG Tiny and SVG Basic. [11] [11] [11]
+Screenshot from
+NASA World Wind
+2003 06: , NASA World Wind Released. An open that loads data from distributed resources across the internet. Terrain and buildings can be viewed 3 dimensionally. The ( based) markup language allows users to integrate their own personal content. This virtual globe needs special software and doesn't run in a web browser. NASA World Wind virtual globe XML
+2003 07: , Adds 24bit raster output support and support for and .UMN MapServer 4.0 PDF SWF
+2003 09: , This introduced 2.0 ( 2.0 compatible (improved object orientation)). Also initial Video Playback support.Flash Player 7 ActionScript ECMAScript
+2004-07: was founded by Steve Coast. OSM is a web based collaborative project to create a world map under a free license. OpenStreetMap
+2005 01: Nikolas Schiller creates the interactive "Inaugural Map" of downtown [12] Washington, DC
+2005 02: , The first version of Google Maps. Based on raster tiles organized in a scheme, data loading done with XMLHttpRequests. This mapping application became highly popular on the web, also because it allowed other people to integrate google map services into their own website. Google Maps quad tree
+2005 04: , Adds support for SVG.UMN MapServer 4.6
+2005 06: , The first version of Google Earth was released building on the virtual globe metaphor. Terrain and buildings can be viewed 3 dimensionally. The ( based) markup language allows users to integrate their own personal content. This virtual globe needs special software and doesn't run in a web browser. Google Earth KML XML
+2005 11: , First release with native SVG support. Supports Scripting but no animation.Firefox 1.5 Firefox
+2006-05: Launched Wikimapia
+2006 06: , releases version 9 with extensive SVG support (including scripting and animation).Opera 9 Opera
+2006 08: SVG 1.2 Mobile Candidate Recommendation, This SVG Mobile Profile introduces improved multimedia support and many features required to build online Rich Internet Applications. [11]
+[] edit Web mapping technologies
+The potential number of technologies to implement web mapping projects is almost infinite. Any programming environment, programming language and serverside framework can be used to implement web mapping projects. In any case, both server and client side technologies have to be used. Following is a list of potential and popular server and client side technologies utilized for web mapping.
+[] edit Server side technologies
+The webserver is responsible for handling http requests by web browsers and other user agents. In the simplest case they serve static files, such as HTML pages or static image files. Web servers also handle authentication, content negotiation, server side includes, URL rewriting and forward requests to dynamic resources, such as CGI applications or serverside scripting languages. The functionality of a webserver can usually be enhanced using modules or extensions. The most popular web server is , followed by and others.Web server Apache Microsoft Internet Information Server
+applications are executables running on the webserver under the environment and user permissions of the webserver user. They may be written in any programming language (compiled) or scripting language (e.g. perl). A CGI application implements the common gateway interface protocol, processes the information sent by the client, does whatever the application should do and sends the result back in a web-readable form to the client. As an example a web browser may send a request to a CGI application for getting a web map with a certain map extent, styling and map layer combination. The result is an image format, e.g. JPEG, PNG or . For performance enhancements one can also install CGI applications as . This loads the application after the web server is started and keeps the application in memory, eliminating the need to spawn a separate process each time a request is being made. CGI (common gateway interface) SVG FastCGI
+Alternatively, one can use as a module, such as PHP, Perl, Python, ASP, Ruby, etc. If built into the web server as a module, the scripting engine is already loaded and doesn't have to be loaded each time a request is being made.scripting languages built into the webserver
+are which connects various software components with the web server and a programming language. As an example, a web application server can enable the communication between the API of a GIS and the webserver, a spatial database or other proprietary applications. Typical web application servers are written in Java, C, C++, C# or other scripting languages. Web application servers are also useful when developing complex realtime web mapping applications or Web GIS.Web application servers middleware
+are usually object relational databases enhanced with geographic data types, methods and properties. They are necessary whenever a web mapping application has to deal with dynamic data (that changes frequently) or with huge amount of geographic data. Spatial databases allow spatial queries, sub selects, reprojections, geometry manipulations and offer various import and export formats. A popular example for an open source spatial database is . also implements some spatial features, although not as mature as PostGIS. Commercial alternatives are or spatial extensions of Microsoft SQL Server and IBM DB2. The Specification is a standard geometry data model and operator set for spatial databases. Most spatial databases implement this OGC standard. Spatial databases PostGIS MySQL Oracle Spatial OGC Simple Features for SQL
+are specialized web mapping servers implemented as a CGI application, Java Servlet or other web application server. They either work as a standalone web server or in collaboration with existing web servers or web application servers (the general case). WMS Servers can generate maps on request, using parameters, such as map layer order, styling/symbolization, map extent, data format, projection, etc. The OGC Consortium defined the standard to define the map requests and return data formats. Typical image formats for the map result are PNG, JPEG, GIF or . There are open source WMS Servers such as and . Commercial alternatives exist from most commercial GIS vendors, such as , Intergraph Geomedia WebMap and others. WMS server WMS SVG UMN Mapserver Mapnik ESRI ArcIMS
+[] edit Client side technologies
+In the simplest setup, only a web browser is required. All modern web browsers support the display of HTML and raster images (JPEG, PNG and GIF format). Some solutions require additional plugins (see below).Web browser
+ECMAScript is the standardized version of JavaScript. It is necessary to implement client side interaction, refactoring of the DOM of a webpage and for doing network requests. ECMAScript is currently part of any modern web browser.ECMAScript support
+Various events are necessary to implement interactive client side maps. Events can trigger script execution or SMIL operations. We distinguish between:Events support
+(mousedown, mouseup, mouseover, mousemove, click)Mouse events
+(keydown, keypress, keyup)Keyboard events
+(load, unload, abort, error)State events
+(reacts on modifications of the DOM tree, e.g. DOMNodeInserted)Mutation events
+(reacts on different states in SMIL animation, beginEvent, endEvent, repeatEvent)SMIL animation events
+(focusin, focusout, activate)UI events
+(SVGZoom, SVGScroll, SVGResize)SVG specific events
+This is necessary to load additional data and content into a web page. Most modern browsers provide the XMLHttpRequest object which allows for get and post http requests and provides some feedback on the data loading state. The data received can be processed by ECMAScript and can be included into the current DOM tree of the web page / web map. SVG user agents alternatively provide the getURL() and postURL() methods for network requests. It is recommended to test for the existence of a network request method and provide alternatives if one method isn't present. As an example, a wrapper function could handle the network requests and test whether XMLHttpRequests or getURL() or alternative methods are available and choose the best one available. These network requests are also known under the term .Network requests Ajax
+The provides a language independent API for the manipulation of the document tree of the webpage. It exposes properties of the individual nodes of the document tree, allows to insert new nodes, delete nodes, reorder nodes and change existing nodes. DOM support is included in any modern web browser. DOM support together with scripting is also known as . and many other web mapping sites use a combination of DHTML, Ajax, SVG and VML.DOM support Document Object Model DHTML or Dynamic HTML Google Maps
+SVG is the abbreviation of "Scalable Vector Graphics" and integrates vector graphics, raster graphics and text. SVG also supports animation, internationalization, interactivity, scripting and XML based extension mechanisms. SVG is a huge step forward when it comes to delivering high quality, interactive maps. At the time of writing (2007 01), SVG is natively supported in Mozilla/Firefox >version 1.5, Opera >version 9 and the developer version of Safari/Webkit. Internet Explorer users still need the Adobe SVG viewer plugin provided by Adobe. For a German book on web mapping with SVG see and for an English paper on SVG mapping see. SVG support or SVG image support [13] [14]
+some browsers still provide old versions of the Java virtual machine. An alternative is the use of the Sun Java Plugin. Java is a full featured programming language that can be used to create very sophisticated and interactive web maps. The Java2D and Java3D libraries provide 2d and 3d vector graphics support. The creation of Java based web maps requires a lot of programming know how. Adrian Herzog ( discusses the use of Java applets for the presentation of interactive choroplethe and cartogram maps.Java support [15]
+Web browser plugins
+provides vector graphics and high quality printing support. Allows toggling of map layers, hyper links, multimedia embedding, some basic interactivity and scripting (ECMAScript). Adobe Acrobat
+provides vector graphics, animation and multimedia support. Allows the creation of sophisticated interactive maps, as with Java and SVG. Features a programming language (ActionScript) which is similar to ECMAScript. Supports Audio and Video. Adobe Flash
+Adds support for additional image formats, video, audio and Quicktime VR (Panorama Images). Only available to Mac OS X and Windows. Apple Quicktime
+provide SVG 1.0 support for web browsers, only required for Internet Explorer Users, because it doesn't yet natively support SVG. The Adobe SVG viewer isn't developed any further and only fills the gap until Internet Explorer gains native SVG support.Adobe SVG viewer
+provides support for newer and advanced Java Features.Sun Java plugin

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "frontend/src/services/authService.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1754053241241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1754053248958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n };\r\n \r\n const authService = {\r\n   register,\r\n-  login, \r\n-  // Add login to the exported object\r\n+  login, // Add login to the exported object\r\n+  \r\n };\r\n \r\n export default authService;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754053256107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,8 @@\n \r\n const authService = {\r\n   register,\r\n   login, // Add login to the exported object\r\n-  \r\n+  logout \r\n };\r\n \r\n export default authService;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754053275483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n };\r\n \r\n const authService = {\r\n   register,\r\n-  login, // Add login to the exported object\r\n-  logout \r\n+  login, \r\n+  logout,\r\n };\r\n \r\n export default authService;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754053401497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,11 +20,16 @@\n   }\r\n   return response.data;\r\n };\r\n \r\n+// This is the function that was missing\r\n+const logout = () => {\r\n+  localStorage.removeItem('user');\r\n+};\r\n+\r\n const authService = {\r\n   register,\r\n-  login, \r\n-  logout,\r\n+  login,\r\n+  logout, // Now 'logout' is defined\r\n };\r\n \r\n export default authService;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1754053406933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,8 @@\n \r\n const authService = {\r\n   register,\r\n   login,\r\n-  logout, // Now 'logout' is defined\r\n+  logout, \r\n };\r\n \r\n export default authService;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1754053241241,
+            "name": "Commit-0",
+            "content": "import axios from 'axios';\r\n\r\nconst API_URL = 'http://localhost:5000/api/auth/';\r\n\r\nconst register = (name, email, password) => {\r\n  return axios.post(API_URL + 'register', {\r\n    name,\r\n    email,\r\n    password,\r\n  });\r\n};\r\n\r\nconst login = async (email, password) => {\r\n  const response = await axios.post(API_URL + 'login', {\r\n    email,\r\n    password,\r\n  });\r\n  if (response.data.token) {\r\n    localStorage.setItem('user', JSON.stringify(response.data));\r\n  }\r\n  return response.data;\r\n};\r\n\r\nconst authService = {\r\n  register,\r\n  login, \r\n  // Add login to the exported object\r\n};\r\n\r\nexport default authService;"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+Oil Price Index Chart
+December 6th, 2008
+Our shows that oil prices in November of 2008 are roughly equal to the oil prices of November 2005. The graph also shows that there was a small spike in prices in 2006, followed by a large spike that began in January 2007 and peaked in July 2008. 15-year oil price index chart
+Embeddable population charts
+November 26th, 2008
+Any of the charts in the can now be embedded and/or copied. Check the example below. country comparison section
+I’m using Google’s chart API to generate the image file. To copy the image, right-click on it and choose copy.
+Oil Price Index
+November 10th, 2008
+puts recent changes in the price of crude oil in perspective. The chart below, showing the oil price index since November of 1983, displays the impressive run-up that started around July of 2007. A 25 year chart showing the changes in the IMF oil price index
+Historical Trade Statistics
+July 17th, 2008
+I just released . and are available for the period 2001-2005. The product groupings belong to the SITC Rev. 3 international standard. The primary data source is the commerce and trade database maintained by the United Nations. trade statistics by country and by product Exports imports
+Historical Commodity Prices
+July 10th, 2008
+I just updated the with the latest data. Historical data for 8 price indices and 49 commodities now includes June 2008 numbers. I’m including a chart showing that the aggregate commodity price index, i.e. the index that tracks energy, metals, food, and raw materials, continued its upward march in June. It increased 5.7% with respect to May 2008, 32.6% with respect to January 2008, and 62% with respect to June 2007. Inflation has clearly become a serious problem around the World. historical commodity prices section IMF
+Click on the image above to play with the data
+Thematic Maps
+June 30th, 2008
+I just finished a major upgrade to the thematic map engine. It can now generate color-coded maps (choropleths) for individual countries. Check out the following examples:

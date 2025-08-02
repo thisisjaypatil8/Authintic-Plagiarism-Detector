@@ -1,0 +1,13 @@
+Master Wizard Reged: 02/26/03 Posts: 4992 Loc: GooglePlex
+     
+Common Questions About Google Earth
+08/12/05 02:46 PM
+  Quick Reply
+1. Our images are photographs taken by satellites and aircraft sometime in the last few years. The images in Google Earth are updated on a rolling basis. for more details. 2. No, they aren't. Our images are photographs taken by satellites and aircraft sometime in the last few years. The whole world is covered with medium resolution imagery and terrain data. This resolution allows you to see major geographic features and man-made development such as towns, but not detail of individual buildings. Additional high-resolution imagery which reveals detail for individual buildings is available for most of the major cities in the US, Western Europe, Canada, and the UK. 3D buildings are represented in 38 US cities (the major urban areas). Detailed road maps are available for the US, Canada, the UK, and Western Europe. And Google Local search is available for the US, Canada, and the UK. Google Earth combines data of to offer a seamless viewing experience, so some locations look a bit blurry. We offer high resolution imagery (greater than 1-meter) for thousands of cities and more are on the way. Google Earth takes advantage of the 3D graphics capabilities standard on newer PCs and MACs. If you are using Google Earth on an older machine, or a notebook computer that does not have 3D graphics capabilities, you may not be able to run the application. Graphics card requirement for Google Earth The 3D graphics capabilities of your machine have a lot to do with how well Google Earth performs. * The following ATI cards are not supported: ATI Rage Mobility, ATI Xpert, ATI 3D Rage. ** Intel 3D graphics machines can use the default OpenGL version, but work better in DirectX (choose Start > Programs > Google Earth > Start Google Earth in DirectX). Matrox card users must use the OpenGL version. S3 cards must use the DirectX version. The Google Earth client requires certain system configurations in order to run smoothly. The Google Earth client requires certain system configurations in order to run smoothly on the Mac. Common questions about Google Earth
+When were these pictures taken? How often are they updated?
+Are Google Earth images captured in real time?
+3. Are there cities covered in detail worldwide? Or just in the US?
+4. Why do I see blurry pictures when I go to my house?
+5. Will my computer be able to run Google Earth?
+Google Earth will work on most graphics cards from the following manufacturers:
+NVIDIA

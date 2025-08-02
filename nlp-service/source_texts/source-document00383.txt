@@ -1,0 +1,12 @@
+Medication Module
+Module Description 
+This module is designed as a tutorial to assist nursing students with preparation for the National Council Licensure Examination for Registered Nurses (NCLEX-RN) Computer Adaptive Testing (CAT). Students will review pertinent information related to medications that require therapeutic drug monitoring. Learning Objectives
+After completing this module, the learner will be able to: 
+Identify the medications that require therapeutic drug monitoring to manage drug therapy for clients. 
+List the therapeutic levels for selected medications that require therapeutic drug monitoring.
+Identify the side effects of toxic levels for selected medications that require therapeutic drug monitoring. 
+Online Tutorial 
+According to Fischback (A Manual of Laboratory and Diagnostic Tests), is a reliable approach to managing drug therapy for clients. Monitoring drug therapy is especially important when the potential for drug toxicity is significant and can lead to serious complications or when inadequate levels of drugs can lead to ineffective therapy.  therapeutic drug monitoring
+Some drugs likeDigoxinrequire routine monitoring and others likeAntibioticsrequire monitoring in certain situations. The plasma level of drugs needed to control symptoms is called theSTEADY-STATE CONCENTRATION, and is usually maintained by a combination of drug dosage and dosage interval. When drugs are monitored at intervals, this lessens the chance of developing complications related to the side effects associated with toxicity. 
+Drugs that Require Frequent Monitoring
+Drug

@@ -1,0 +1,11 @@
+ (PDF, 0.25 MB) Continuous Wave (CW) Single Frequency IR Laser
+The JDSU NPRO 125/126 diode-pumped lasers produces CW, single-frequency output at either 1064 nm or 1319 nm. Key features include fiber-optic or free-space output, narrow linewidth, low noise, frequency tunability, and adjustable power.
+The NPRO 125/126 lasers are used for a variety of applications including fiberoptic sensing, coherent communications, remote antenna links, optical heterodyne, lidar oscillators, and passive sonar.
+At the heart of each NPRO 125/126 laser is JDSUs unique, monolithic, NPRO laser cavity delivering true single-frequency laser output. Since its initial development in 1985, NPRO technology has demonstrated a record of reliability and top-level performance.
+Amplitude noise for a typical NPRO 125/126 laser is <0.05% rms over the range from 10 Hz to 2 MHz, and less than -165 dB/Hz above 10 MHz (shot noise limited). This performance is achieved by combining an inherently quiet laser oscillator with a noise reduction circuit which effectively eliminates the laser's natural relaxation oscillation.
+NPRO lasers are built in a compact, OEM-friendly package. All necessary control electronics are onboard the laser head allowing for easy integration with existing systems or new product platforms.
+Key Features
+1319 or 1064 nm outputs available
+Fiber-coupled output
+Proven nonplanar ring oscillator (NPRO) design
+Superior power stability

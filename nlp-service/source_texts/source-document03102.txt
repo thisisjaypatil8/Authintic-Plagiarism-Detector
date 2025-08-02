@@ -1,0 +1,5 @@
+[] edit Projections
+A , argued by Goldberg & as the best overall whole-earth map projection known, and the standard projection for world maps made by the .
+Main article: Map projection
+Maps that depict the surface of the Earth use a , a way of translating the three-dimensional real surface of the to a two-dimensional picture. Perhaps the best-known world-map projection is the , originally designed as a form of . projection geoid Mercator Projection nautical chart
+Airplane pilots use aeronautical charts based on a , in which a cone is laid over the section of the earth to be mapped. The cone intersects the sphere (the earth) at one or two parallels which are chosen as standard lines. This allows the pilots to plot a (shortest distance) route approximation on a flat, two-dimensional chart. Lambert conformal conic projection great circle

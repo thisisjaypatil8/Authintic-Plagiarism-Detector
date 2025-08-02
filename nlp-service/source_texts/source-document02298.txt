@@ -1,0 +1,51 @@
+Conduit.
+Various industrial installations.
+It can be used under ground or above ground in buildings. It can also be used outdoors if the pipe contains stabilizers and UV inhibitors to shield against ultraviolet radiation and it is painted with a water-based latex paint.
+PVC materials are resistant to many ordinary chemicals such as acids, bases, salts and oxidants.
+Because PVC piping system components can be manufactured in a variety of colors, identification of application is easy. A common color scheme (although not universal) is:
+White for DWV and some low pressure applications.
+White, blue, and dark gray for cold water piping.
+Green for sewer service.
+Dark gray for industrial pressure applications.
+This color scheme has an exception in that much of the white PVC pipe is dual rated for DWV and pressure applications.
+PVC piping systems should not be used to store and/or convey compressed air or other gases. PVC piping systems should not be tested with compressed air or other gases either.
+PVC piping is recognized as acceptable material for DWV, sewers, and potable water services and distribution in all model plumbing codes. These Codes normally identify acceptable products for specific uses based on the ASTM Standard designation. CODE STATUS
+PVC is available from plumbing supply houses, hardware stores, and home centers throughout North America. Refer to our .AVAILABILITY
+Because printing on PVC piping is simple, markings are always easy to identify. ASTM standards mandate that PVC pipe be labeled as follows:MARKING
+The manufacturer's name or trademark.
+The standard to which it conforms.
+Pipe size.
+Material designation (e.g., PVC 12454, of PVC 1120, or PVC Type 1, Grade 1).
+DWV, if for drainage.
+Pressure rating if for pressure.
+SDR number or Schedule number.
+If the pipe is for potable water, a laboratory seal or mark attesting to suitability for potable water.
+piping systems is easy. Contractors love this lightweight piping material. Just follow some simple, common-sense steps: Installing PVC
+Follow local code requirements.
+Follow recommended safe work practices.
+Follow proper handling procedures.
+Read the manufacturer's installation instructions.
+Keep pipe and fittings in original packaging until needed.
+Cover pipe and fittings with an opaque tarp if stored outdoors.
+Inspect pipe for damage prior to use.
+Use tools specifically designed for use with plastic pipe.
+Use a drop cloth to protect finishes in the work area.
+When joining PVC pipe and fittings with solvent cement, always:
+Cut the pipe ends square.
+Bevel and deburr the pipe ends with a chamfering tool.
+Use the proper primer and solvent cement and follow manufacturer's application instructions.
+Use the proper size applicator for the pipe being joined.
+Rotate the pipe 1/4 turn when bottoming pipe in fitting socket.
+Avoid puddling of primer or cement in fittings and pipe.
+For threaded connections, always:
+Use Teflontape or approved paste thread sealant.
+Assemble threaded joints carefully (maximum two turns past finger tight).
+To properly support PVC piping systems:
+Allow for movement due to expansion and contraction.
+Use hangers designed for use with plastic.
+Follow proper hanger support spacing requirements.
+Protect from nails, screws, and abrasive surfaces.
+When testing an installed PVC piping system:
+Follow the manufacturer's recommended cure times prior to pressure testing.
+Test in accordance with local codes.
+Use only glycerin and water solutions for freeze protection when applicable.

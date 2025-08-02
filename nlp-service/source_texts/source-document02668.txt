@@ -1,0 +1,66 @@
+Dietary Correlates of Plasma Insulin-like Growth Factor I and Insulin-like Growth Factor Binding Protein 3 Concentrations 1, , and
+Michelle D. Holmes 2
+Walter C. Willett
+Susan E. Hankinson
+Channing Laboratory, Department of Medicine, Harvard Medical School and Brigham and Womens Hospital, Boston, Massachusetts 02115 [M. D. H., W. C. W., S. E. H.]; Cancer Prevention Research Unit, Department of Oncology, Jewish General Hospital and McGill University, Montreal, Quebec, H3T1E2 Canada [M. N. P.]; Department of Epidemiology, Harvard School of Public Health, Boston, Massachusetts 02115 [W. C. W. and S. E. H.]; and Department of Nutrition, Harvard School of Public Health, Boston, Massachusetts 02115 [W. C. W.]
+Plasma levels of insulin-like growth factor I (IGF-I) have beenassociated with risk of several cancers. Although protein-caloriemalnutrition is known to decrease IGF-I levels, few publishedstudies have related diet to IGF-I levels in well-nourishedhumans. We examined the cross-sectional association of plasmaIGF-I and IGF-binding protein 3 (IGFBP-3) levels with intakesof alcohol, energy, macronutrients, micronutrients, and specificfoods in 1037 healthy women. Adjusted mean hormone levels acrosscategories of dietary variables were calculated by linear regression.Results were adjusted for non-dietary factors found to be associatedwith IGF levels. Total energy intake was positively associatedwith IGF-I levels when adjusted for covariates. Adjusted meanlevels of IGF-I (ng/ml) across increasing quintiles of energyintake were 181, 185, 191, 199, and 195 ( for the linear trend= 0.006). In other multivariate analyses, energy-adjusted fatand carbohydrate intake had no association with IGF-I levels.The most consistent finding was a positive association betweenprotein intake with circulating IGF-I concentration (174, 188,201, 192, and 196 ng/ml across quintiles of protein intake; = 0.002), which was largely attributable to milk intake. Adjustedmean levels of IGF-I (ng/ml) across increasing quartiles ofmilk intake were 183, 189, 188, and 200 ( = 0.01). Higher fatintake, in particular saturated fat, was associated with lowerlevels of IGFBP-3. We conclude that higher energy, protein,and milk intakes were associated with higher levels of IGF-I.These associations raise the possibility that diet could affectcancer risk through influencing IGF-I level.PPP
+This article has been cited by other articles:
+F. L Crowe, T. J Key, P. N Appleby, R. C Travis, K. Overvad, M. U Jakobsen, N. F Johnsen, A. Tjonneland, J. Linseisen, S. Rohrmann, Am. J. Clinical Nutrition, May 1, 2008; 87(5): 1405 - 1413.et al.
+Dietary fat intake and risk of prostate cancer in the European Prospective Investigation into Cancer and Nutrition
+[Abstract] [Full Text] [PDF]
+N. Kurahashi, M. Inoue, M. Iwasaki, S. Sasazuki, a. S. Tsugane, and for the Japan Public Health Center-Based Prospecti Cancer Epidemiol. Biomarkers Prev., April 1, 2008; 17(4): 930 - 937.
+Dairy Product, Saturated Fatty Acid, and Calcium Intake and Prostate Cancer in a Prospective Cohort of Japanese Men
+[Abstract] [Full Text] [PDF]
+R. M. Martin, D. Gunnell, E. Whitley, A. Nicolaides, M. Griffin, N. Georgiou, G. Davey Smith, S. Ebrahim, and J. M. P. Holly J. Clin. Endocrinol. Metab., April 1, 2008; 93(4): 1331 - 1338.
+Associations of Insulin-Like Growth Factor (IGF)-I, IGF-II, IGF Binding Protein (IGFBP)-2 and IGFBP-3 with Ultrasound Measures of Atherosclerosis and Plaque Stability in an Older Adult Population
+F. Xue, W. C. Willett, B. A. Rosner, M. R. Forman, and K. B. Michels Hum. Reprod., January 1, 2008; 23(1): 168 - 177.
+Parental characteristics as predictors of birthweight
+C. Hoppe, G. S. Andersen, S. Jacobsen, C. Molgaard, H. Friis, P. T. Sangild, and K. F. Michaelsen J. Nutr., January 1, 2008; 138(1): 145S - 161S.
+The Use of Whey or Skimmed Milk Powder in Fortified Blended Foods for Vulnerable Groups
+J. C van der Pols, C. Bain, D. Gunnell, G. Davey Smith, C. Frobisher, and R. M Martin Am. J. Clinical Nutrition, December 1, 2007; 86(6): 1722 - 1729.
+Childhood dairy intake and adult cancer risk: 65-y follow-up of the Boyd Orr cohort
+[Abstract] [Full Text] [PDF]
+Y. L. Kim, D. R. Jacobs Jr., M. D. Gross, R. C. Bergan, P. H. Gann, K. Liu, and S. M. Gapstur Cancer Epidemiol. Biomarkers Prev., December 1, 2007; 16(12): 2781 - 2783.
+Associations of Serum Carotenoid Levels with Serum Insulin-like Growth Factor-I and Insulin-like Growth Factor Binding Protein-3 Levels in Black Men and White Men
+[Full Text] [PDF]
+A. Vrieling, D. W Voskuil, J. M Bonfrer, C. M Korse, J. van Doorn, A. Cats, A. C Depla, R. Timmer, B. J Witteman, F. E van Leeuwen, Am. J. Clinical Nutrition, November 1, 2007; 86(5): 1456 - 1462.et al.
+Lycopene supplementation elevates circulating insulin-like growth factor binding protein-1 and -2 concentrations in persons at greater risk of colorectal cancer
+[Abstract] [Full Text] [PDF]
+K. R. Rarick, M. A. Pikosky, A. Grediagin, T. J. Smith, E. L. Glickman, J. A. Alemany, J. S. Staab, A. J. Young, and B. C. Nindl J Appl Physiol, November 1, 2007; 103(5): 1613 - 1621.
+Energy flux, more so than energy balance, protein intake, or fitness level, influences insulin-like growth factor-I system responses during 7 days of increased physical activity
+S. F Olsen, T. I Halldorsson, W. C Willett, V. K Knudsen, M. W Gillman, T. B Mikkelsen, J. Olsen, and and The NUTRIX Consortium Am. J. Clinical Nutrition, October 1, 2007; 86(4): 1104 - 1110.
+Milk consumption during pregnancy is associated with increased infant size at birth: prospective cohort study
+E. Giovannucci J Natl Cancer Inst, July 18, 2007; 99(14): 1060 - 1062.
+Does Prostate-Specific Antigen Screening Influence the Results of Studies of Tomatoes, Lycopene, and Prostate Cancer Risk?
+[Full Text] [PDF]
+D. Berrigan, N. Potischman, K. W. Dodd, M. Nicar, G. McQuillan, J. A. Lavigne, J. C. Barrett, and R. Ballard-Barbash Cancer Epidemiol. Biomarkers Prev., May 1, 2007; 16(5): 1017 - 1022.
+Serum Levels of Insulin-like Growth Factor-I and Insulin-like Growth Factor-I Binding Protein-3: Quality Control for Studies of Stored Serum
+J.E. Chavarro, J.W. Rich-Edwards, B. Rosner, and W.C. Willett Hum. Reprod., May 1, 2007; 22(5): 1340 - 1347.
+A prospective study of dairy foods intake and anovulatory infertility
+A. Schaffer, A. Koushik, H. Trottier, E. Duarte-Franco, N. Mansour, J. Arseneau, D. Provencher, L. Gilbert, W. Gotlieb, A. Ferenczy, Cancer Epidemiol. Biomarkers Prev., April 1, 2007; 16(4): 716 - 722.et al.
+Insulin-like Growth Factor-I and Risk of High-Grade Cervical Intraepithelial Neoplasia
+R. L. Ahmed, W. Thomas, and K. H. Schmitz Cancer Epidemiol. Biomarkers Prev., March 1, 2007; 16(3): 593 - 597.
+Interactions between Insulin, Body Fat, and Insulin-Like Growth Factor Axis Proteins
+[Abstract] [Full Text] [PDF]
+C. D. Tran, C. Diorio, S. Berube, M. Pollak, and J. Brisson Am. J. Clinical Nutrition, December 1, 2006; 84(6): 1518 - 1526.
+Relation of insulin-like growth factor (IGF) I and IGF-binding protein 3 concentrations with intakes of fruit, vegetables, and antioxidants
+M. Tseng, C. Byrne, K. A. Evers, W. T. London, and M. B. Daly Cancer Epidemiol. Biomarkers Prev., July 1, 2006; 15(7): 1301 - 1305.
+Acculturation and breast density in foreign-born, u.s. Chinese women.
+[Abstract] [Full Text] [PDF]
+E. S Schernhammer, J. M Holly, D. J Hunter, M. N Pollak, and S. E Hankinson Endocr. Relat. Cancer, June 1, 2006; 13(2): 583 - 592.
+Insulin-like growth factor-I, its binding proteins (IGFBP-1 and IGFBP-3), and growth hormone and breast cancer risk in The Nurses Health Study II.
+[Abstract] [Full Text] [PDF]
+W. K. Al-Delaimy, L. Natarajan, C. L. Rock, S. Sun, S. W. Flatt, and J. P. Pierce Cancer Epidemiol. Biomarkers Prev., June 1, 2006; 15(6): 1238 - 1239.
+Insulin-like growth factor I, insulin-like growth factor I binding protein 1, insulin, glucose, and leptin serum levels are not influenced by a reduced-fat, high-fiber diet intervention.
+B. M Popkin, L. E Armstrong, G. M Bray, B. Caballero, B. Frei, and W. C Willett Am. J. Clinical Nutrition, March 1, 2006; 83(3): 529 - 542.
+A new proposed guidance system for beverage consumption in the United States
+J. M. Genkinger, D. J. Hunter, D. Spiegelman, K. E. Anderson, A. Arslan, W. L. Beeson, J. E. Buring, G. E. Fraser, J. L. Freudenheim, R. A. Goldbohm, Cancer Epidemiol. Biomarkers Prev., February 1, 2006; 15(2): 364 - 372.et al.
+Dairy products and ovarian cancer: a pooled analysis of 12 cohort studies.
+I. Cheng, D. O. Stram, K. L. Penney, M. Pike, L. Le Marchand, L. N. Kolonel, J. Hirschhorn, D. Altshuler, B. E. Henderson, and M. L. Freedman J Natl Cancer Inst, January 18, 2006; 98(2): 123 - 134.
+Common Genetic Variation in IGF1 and Prostate Cancer Risk in the Multiethnic Cohort
+[Abstract] [Full Text] [PDF]
+C. Diorio, S. Berube, C. Byrne, B. Masse, N. Hebert-Croteau, M. Yaffe, G. Cote, M. Pollak, and J. Brisson Cancer Res., January 1, 2006; 66(1): 588 - 597.
+Influence of Insulin-like Growth Factors on the Strength of the Relation of Vitamin D and Calcium Intakes to Mammographic Breast Density
+[Abstract] [Full Text] [PDF]
+M. L. McCullough, C. Rodriguez, W. R. Diver, H. S. Feigelson, V. L. Stevens, M. J. Thun, and E. E. Calle Cancer Epidemiol. Biomarkers Prev., December 1, 2005; 14(12): 2898 - 2904.
+Dairy, Calcium, and Vitamin D Intake and Postmenopausal Breast Cancer Risk in the Cancer Prevention Study II Nutrition Cohort

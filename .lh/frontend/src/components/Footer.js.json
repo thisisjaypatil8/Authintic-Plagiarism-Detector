@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/src/components/Footer.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1754055508481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1754121030850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     return (\r\n         <footer className=\"w-full bg-white border-t border-gray-200 mt-auto\">\r\n             <div className=\"container mx-auto py-4 text-center\">\r\n                 <p className=\"text-sm text-gray-500\">\r\n-                    © {new Date().getFullYear()} Plagiarism Detector. All Rights Reserved.\r\n+                    © {new Date().getFullYear()} Plagiarism Detecto. All Rights Reserved.\r\n                 </p>\r\n                 <p className=\"text-xs text-gray-400 mt-1\">\r\n                     Developed by Prathamesh, Harsh, Viraj, and Jay.\r\n                 </p>\r\n"
+                }
+            ],
+            "date": 1754055508481,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\n\r\nconst Footer = () => {\r\n    return (\r\n        <footer className=\"w-full bg-white border-t border-gray-200 mt-auto\">\r\n            <div className=\"container mx-auto py-4 text-center\">\r\n                <p className=\"text-sm text-gray-500\">\r\n                    © {new Date().getFullYear()} Plagiarism Detector. All Rights Reserved.\r\n                </p>\r\n                <p className=\"text-xs text-gray-400 mt-1\">\r\n                    Developed by Prathamesh, Harsh, Viraj, and Jay.\r\n                </p>\r\n            </div>\r\n        </footer>\r\n    );\r\n}\r\n\r\nexport default Footer;\r\n"
+        }
+    ]
+}

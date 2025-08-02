@@ -1,0 +1,29 @@
+Blowin' in the Wind, Issue #001 - This is it! Weather satellites discussed here. December 1, 2003
+December 01, 2003
+Howdy, Hey thanks for joining. I started collecting addresses in July on the website www.StuffintheAir.com and now, December 1, the first issue is finally out. Thanks for your patience. This data acquisition technology has been around a while, but it was crucial to the great advances in forecasting we have seen over the last 50 years or so. Geo-stationary: We have a trade-off here. High satellites can see larger areas, anytime, but with a relative low resolution. Low satellites can see much closer and clearer, but not very far and so they have to move across the earth to get a complete picture.
+Welcome to this first issue! Weather satellites
+In the future, we will likely be supplying a mixture of scientific articles and news items with editorial...all relating to weather and meteorology of course.
+Please reply if you have any suggestions on what to include.
+On with the show...
+Weather Satellites - Introductory notes
+We can derive temperature, moisture and wind data from the imagery. Both for identifying long term trends and providing the high-resolution detail needed for increased accuracy in predicting immediate weather changes. It has become a real boon to pilots flying into areas with sparse weather observations.
+The first weather satellite: Tiros-1 in 1960, USA.
+Since then we have become used to a world monitored by and four satellites (or satelites, as some people say).five geo-stationarypolar orbiting
+Geo What?
+A satellite can be launched to a perfect height and speed so that its position above a spot on the rotating earth never changes. That's what geostationary means. It has to be over the equator for this to work, but if it's high enough (how does 22,000 miles/36,000 km grab ya), it can see almost to the poles. It also has to go nearly 7000 miles/11,000 km per hour.
+These things send fresh images of varying types (wavelengths) for a large area every 15 minutes. Good for animating satellite photos. Five of these enable us to see the entire earth between around 60 and 60. They remain above the equator at 75, 135, 140, 70 and about 0 the prime meridian. What's even better, if one goes down, the others can shuffle around to cover for it until it's replaced.
+The vehicles, at nearly half a ton each, spin rapidly for stability while the cameras are held steady and get their power from the sun. Pretty tricky.
+They provide photos using infrared radiation and visible light, plus an assortment of other data. A telescope scans the earth to give us images with the required resolution and then sends the data to the ground where computers overlay the geographic maps. The completed image goes back to the satellite for worldwide distribution.
+Though it's not perfect, the whole system is quite reliable.
+Around the world 14 times every day...
+Only 500 miles/800 km up or so, we have , racing from North Pole to South Pole and back again in less than two hours. All this speed in a vehicle weighing about 3/4 of a ton.polar orbiting satellites
+This is fast enough so that each satellite's orbit remains fixed relative to the poles and it always makes its northbound journey during daylight and each spot on the earth gets its photo taken at the same time every day. We call this feature .sun-synchronous
+Imagine the photos resembling ribbons stretching up and down around the earth. Naturally, there will be increasing overlap closer to the poles. This increased temporal resolution (frequency) makes up for the dimished photo quality from the geo-stationary satellites in polar regions.
+This so-called (TIROS) comes loaded with cameras and other high-tech instruments such as radiometers, sounders, data collection systems and monitors.Television Infra-Red Obervational Satellite
+Receivers that can "see" the satellite can get data from it and the (HRPT) images can be quite amazing.High Resolution Picture Transmission
+The scoresheet
+Geostationary - Steady, high-frequency pictures of large area good for animated satellite displays.
+Polar Orbiting - Superior resolution for studying and analyzing photos, less expensive.
+You can read up more on weather and other types of satellites by looking at Amazon.com:
+<P align="Left"> <P align="Left"> <MAP NAME="boxmap-p16"><AREA SHAPE="RECT" COORDS="10, 322, 100, 329" HREF="http://rcm.amazon.com/e/cm/privacy-policy.html?o=1" ><AREA COORDS="0,0,10000,10000" HREF="http://www.amazon.com/exec/obidos/redirect-home/stuffintheair-20" ></MAP><img src="http://rcm-images.amazon.com/images/G/01/rcm/468x336.gif" width="468" height="336" border="0" usemap="#boxmap-p16" alt="Shop at Amazon.com"> <P align="Left"> <P align="Left">
+Anyway, adios for now.

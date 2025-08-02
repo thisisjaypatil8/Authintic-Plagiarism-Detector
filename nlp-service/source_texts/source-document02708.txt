@@ -1,0 +1,17 @@
+About
+More people than ever are making maps with a growing diversity of tools. is being used by a broad array of Hundreds of web mapping sites exist, and tools for the relatively easy creation of map mashups (such as the ) allow people to map their own data collected with GPS and by other means. Geographic Information Systems (GIS) software industries and users. Google Maps API
+Map making tools are proliferating and easily accessible:but how do you learn to make decent maps if you are not a professionally trained cartographer?
+The book by and Denis Wood (published by ) was written for the (DIY) cartographer - the student, the new GIS user, the internet user - anyone who wants to make maps that work and look great. Making Maps John Krygier Guilford Press Do It Yorself
+This blog highlights resources that supplement the book and help you to make better maps. Like the book, this blog also provides examples of creative and provocative maps and material on map making and understanding, culled from contemporary and historical sources.Making MapsMaking Maps
+is Associate Professor of Geography at He is past president of the and author of numerous articles and book chapters. He has won national map design award contests, and has extensive experience designing and making maps with a diversity of technologies. He has taught cartography and GIS courses for over 15 years. John Krygier Ohio Wesleyan University. North American Cartographic Information Society (NACIS)
+2 Responses to “About”
+Patrice
+hi.
+I am on the Fall River United Arts Board. I am heading a project the will create a Cultural Map of Fall River Ma.
+Do you know of any that exist that i may look at?
+Patrice
+John Krygier
+“Cultural Map” can mean diverse things - but I think you are talking about a map showing an area’s cultural assets, history, etc. Among the best examples is the An online version is While this is for an entire state, it should provide a good guide to the kind of content such a map can have. Cultural Map of Wisconsin. here.
+Many “cultural maps” are used to promote tourism. One example is the A nice looking map, marred, a bit, by the locations of “Save A Dollar” deals. But someone has to pay for these maps. Staten Island Cultural Map (PDF).
+You might want to check out the CartoTalk site, listed in the Blogroll of this blog. Many practicing cartographers there who may have worked on such maps.
+John K.

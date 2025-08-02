@@ -1,0 +1,28 @@
+US Statistical Map in Flash
+Flash Map overview
+applies vector graphics to represent your statistical, marketing, or sales data in a convenient and easy for visual perception way.US Statistical Map
+Interactive data mapping is a common task many companies face in their work. Our combines original functionality and excellent data compatibility with user friendly interface.US Statistical Map
+Present your sales statistics or marketing research results, show strong or nonexistent coverage. Easily insert this data in a CD presentation of your company achievements. This is only a small review of the possible US Statistical flash map usage ways.
+$199
+Order USA Statistics by counties flash map now!
+Install and configure in 5 minutes.
+5 Background Images for free
+Order Map Now!
+With our you could present simultaneously as much data sets as you need. Moreover you could upload all data in one CSV file.US Statistics Map
+Each of them represents a value on 100% scale of visualized parameter. Each crawler is "attached" to some value of brightness. Each state has its value defined by user. This value is a part of user statistics or marketing data.Our Interactive Statistical Map has a series of crawlers to simplify visualization.
+You can change color scheme by using a dropdown in a legend. State color depends on the proximity of its value to some crawler value.
+Data for visualization loads from an external file. You may edit it yourself in your favorite text editor or use free php script converting CSV files saved from Excel to data files in map format. You may install this script on your website.
+.To export the data, you need just to create a file in Excel in such a simple format.
+Save your file in CSV format after editing. Upload a file using the form with free transformation script. You will be asked to save a transformed data file to your computer. Just replace the old file in the map folder with the new one, and you are ready with the new data!
+is an independent application. In other words you could use it not only on a web site but also on any local computer not connected to the Internet as a simple application.Our US Statistical Map
+Technical requirements
+is a standalone application, which works on any computer with a flash plug-in. You can run it locally, or upload to your website. No scripting language or database support is required.US Statistical Map
+Configuration notes
+. Interactive Flash Map does not require any special software installed on your web server. It will take you only several minutes to do the following:Installing and configuring is really easy and funUS Statistical Map
+Copy the map folder contents to your website folder
+Insert object to one or several HTML pages, where you want it to be shown (use any HTML editor or edit the code manually).US Statistical Map
+Specify the name of your page, to submit name of the state and county clicked.
+Change background image and color settings to meet your design style - state and county shape colors, opacity, mouse over settings and much more. .
+Specify external data source, if you have the data for each county (Database, streaming channel, text files)
+And that's it! Your map is working on your site!
+ 

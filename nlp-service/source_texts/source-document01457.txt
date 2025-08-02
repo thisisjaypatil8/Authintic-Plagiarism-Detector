@@ -1,0 +1,13 @@
+Dysrhythmias; Abnormal heart rhythms; Bradycardia; Tachycardia
+Definition of Arrhythmias:
+An arrhythmia is a disorder of the (pulse) or heart rhythm, such as beating too fast (tachycardia), too slow (bradycardia), or irregularly. heart rate
+Causes, incidence, and risk factors:
+Normally, the four chambers of the heart (two atria and two ventricles) contract in a very specific, coordinated way.
+The electrical impulse that signals your heart to contract in a synchronized manner begins in the sinoatrial node (SA node). This is your heart's natural pacemaker.
+The signal leaves the SA node and travels through the two upper chambers (atria). Then the signal passes through another node (the AV node). Finally, it passes through the lower chambers (ventricles). This path enables the chambers to contract in a coordinated fashion.
+Problems can occur anywhere along this conduction system, causing various arrhythmias. Examples include:
+Bradycardia - a slow heart rate due to problems with the SA node's pacemaker ability, or an interruption in energy movement (conduction) through the natural electrical pathways of the heart.
+Supraventricular tachycardia - a fast heart rate that originates in the upper chambers (atria). The most common are and atrioventricular nodal reentry tachycardia (AVNRT). atrial fibrillation or flutter
+Ventricular tachycardia - a fast heart rate that originates in the lower chambers (ventricles).
+The risk of getting a tachycardia or bradycardia varies greatly, depending on:
+Condition of your heart

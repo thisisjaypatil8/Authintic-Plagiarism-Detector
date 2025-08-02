@@ -1,0 +1,10 @@
+Subscribe to our RSS feed and stay current on the latest GeoLytics news, products, and services.
+CensusCD 1970,1980,1990
+Export data files and map in seconds with GeoLytics Census CD's for 1970, 1980, and 1990. Access to historic census data had never been easier with this suite of historic census data products. These products offer all of their historic census data in their original geographic boundaries. population statistics
+If you are comparing these data to 2000 Census data, then you may wish to purchase from our . All of our normalized data products have data expressed in the 2000 Census Boundaries. We have already done the task of cross-walking the historic data to the 2000 boundaries for you, so you can quickly and easily compare data from different census years. normalized data products
+Light Red Areas have >2% to 14 % and Dark Red Areas have >14%Blacks in NYC Metro Area: Census 1970
+- Complete Long Form (STF3) census data, plus a built-in mapping function. Includes about 3500 variables and 11 boundaries such as tracts, block groups, zip codes, MSA and more. CensusCD 1990 Long Form 1990 Census
+- The entire Short Form (STF1) data set and boundaries for 7 million census blocks available on a single disk. Micro-level 1990 census data available in an instant right on your own personal computer. CensusCD 1990 Blocks 1990 Census
+- The complete Long and Short Form date sets. This CD includes 1500 variables: 1200 from the Long Form and 300 from the Short Form. Data and mapping capabilities for county, MCD, place, tract and block group. The country was not fully tracted in 1980; there is no tract or block group data available in untracted areas. CensusCD 1980 1980 Census
+- Long Form data with over 5,000 variables. It has data and mapping capabilities for counties and tracts, and data only for MCDs and places. The country was not fully tracted in 1970; there is no tract data available in untracted areas. CensusCD 1970 1970 Census
+        

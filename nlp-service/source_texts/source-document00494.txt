@@ -1,0 +1,31 @@
+    Print Email Bookmark
+Voyager 2 Spacecraft Set to Reach Space Milestone
+ Using a computer model simulation, Haruichi Washimi, a physicist at UC Riverside, has predicted when the interplanetary spacecraft Voyager 2 will cross the "termination shock," the spherical shell around the solar system that marks where the solar wind slows down to subsonic speed.ScienceDaily (Nov. 28, 2007)
+See also:
+Solar radiation
+According to Washimi's simulations, the spacecraft is set to cross the termination shock in late 2007-early 2008. To make this forecast, Washimi and his colleagues used data from Voyager 2 and performed a global "magneto-hydrodynamic simulation" -- a method that allows for precise and quantitative predictions of geomagnetic disturbances caused by solar activities.
+Because Voyager 2's crossing of the shock is expected to be an abrupt and relatively brief event, scientists are working to ensure that the most is made of the opportunity. With an idea of when the spacecraft will cross the shock, they are better able to maximize coverage of the crossing.
+"Washimi's model has predicted the location of a boundary that is approximately 90 times farther from the sun than is the Earth, to within a few percent," said Gary Zank, the director of the Institute of Geophysics and Planetary Physics and one of the coauthors of the research paper. "This is truly remarkable given the enormous complexity of the physics involved, the temporal and spatial scales involved, and the variability of the solar wind conditions."
+The solar wind -- a stream of charged particles ejected by the sun in all directions -- travels at supersonic speeds when it leaves the sun, until it eventually encounters the interstellar medium made up of plasma, neutral gas and dust.
+At the termination shock, located at 7-8.5 billion miles from the sun, the solar wind is decelerated to less than the speed of sound. The boundary of the termination shock is not fixed, however, but wobbly, fluctuating in both time and distance from the sun, depending on solar activity.
+"This is the first time the termination-shock position has been forecast in this way," said Washimi, the lead author of the research paper and a scientist at the Institute of Geophysics and Planetary Physics. "After it crosses this boundary, Voyager 2 will be in the outer heliosphere beyond which lies the interstellar medium and galactic space. Our simulations also show that the spacecraft will cross the termination shock again in the middle of 2008. This will happen because of the back and forth movement of the termination-shock boundary. This means Voyager 2 will experience multiple crossings of the termination shock. These crossings will come to an end after the spacecraft escapes into galactic space."
+Voyager 2 was launched Aug. 20, 1977. It visited four planets and their moons in the course of its journey into space. Its sister spacecraft Voyager 1, which was launched Sept. 5, 1977, crossed the termination shock in December 2004 -- earlier than Voyager 2 because of a shorter trajectory. Both spacecraft are currently operational, but power sources have degraded and some of the instrumentation no longer works optimally. In the future, the spacecraft will encounter their next milestone in space: the heliopause, which is the boundary where the interstellar medium brings the solar wind to a halt.
+Study results appear in the Dec. 1 issue of The Astrophysical Journal.
+Washimi and Zank were joined in the research by UCR's Qiang Hu; Takashi Tanaka of Kyushu University, Japan; and Kazuoki Munakata of Shinshu University, Japan. The research was funded by grants from the National Science Foundation and the National Aeronautics and Space Administration.
+.Adapted from materials provided by , via , a service of AAAS University of California - Riverside EurekAlert!
+Email or share this story:  
+Need to cite this story in your essay, paper, or report? Use one of the following formats:
+APA MLA
+A computer simulation by a physicist predicts the Voyager 2 spacecraft will reach a major milestone in space in late 2007 or early 2008. (Credit: NASA/Walt Feimer)
+ 
+Related Stories
+ Scientists using data from NASA's Voyager 2 spacecraft have observed the bubble of solar wind surrounding the solar system is not round, but has a squashed shape, according to recent data published ...  >  Voyager Squashes View Of Solar System (July 3, 2008) read more
+ NASA's Voyager 2 spacecraft has followed its twin Voyager 1 into the solar system's final frontier, a vast region at the edge of our solar system where the solar wind runs up against the thin gas ...  >  Voyager 2 Proves Solar System Is Squashed (Dec. 13, 2007) read more
+ NASA's Voyager 1 spacecraft has entered the solar system's final frontier. It is entering a vast, turbulent expanse, where the sun's influence ends and the solar wind crashes into the thin gas ...  >  Voyager Spacecraft Enters Solar System's Final Frontier (May 25, 2005) read more
+ Space physicists report that the Voyager 2 spacecraft, which has been traveling outward from the sun for 31 years, has made the first direct observations of the solar wind termination shock, ...  >  First Measurements Of The Solar Wind Termination Shock By Voyager 2 Spacecraft (July 3, 2008) read more
+ In a dark, cold, vacant neighborhood near the very edge of our Solar System, the Voyager 1 spacecraft is set to break another record and become the explorer that has traveled farthest from ...  >  Voyager 1 Now Most Distant Human-Made Object In Space (Feb. 16, 1998) read more
+Number of stories in archives: 44,032
+Find with keyword(s):
+ 
+Enter a keyword or phrase to search ScienceDaily's archives for related news topics, the latest news stories, reference articles, science videos, images, and books.
+ 

@@ -1,0 +1,13 @@
+7
+The questions that follow will give you an idea of the type of mathematical thinking required to solve problems on the SAT. First, try to answer each question yourself, and then read the solutions that follow. These solutions may give you new insights into solving the problems or point out techniques you'll be able to use again. Most problems can be solved in a variety of ways, so don't be concerned if your method is different from the one given. Note that the directions indicate that you are to select the best of the choices given.
+On the following pages are seven examples of standard multiple-choice questions.
+Directions
+For this section, solve each problem and decide which is the best of the choices given. Fill in the corresponding circle on the answer sheet. You may use any available space for scratchwork.
+Notes
+The use of a calculator is permitted.
+All numbers used are real numbers.
+Figures that accompany problems in this test are intended to provide information useful in solving problems.
+They are drawn as accurately as possible EXCEPT when it is stated in a specific problem that the figure is not drawn to scale. All figures lie in a plane unless otherwise indicated.
+Unless otherwise specified, the domain of any function ƒ is assumed to be the set of all real numbers for which ƒ is a real number.x(x)
+Reference Information
+The number of degrees of arc in a circle is 360. The sum of the measures in degrees of the angles of a triangle is 180.

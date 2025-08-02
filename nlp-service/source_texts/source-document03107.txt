@@ -1,0 +1,25 @@
+Login
+Home:FAQs
+Yahoo! Web Analytics is a key component in Yahoo!'s overall insights strategy. By enabling Advertisers, Publishers and Developers to visualize key performance indicators in an easy to use fashion, Yahoo! can help these groups measure and improve their online businesses.
+FAQs
+1. What is Yahoo! Web Analytics?
+Yahoo! Web Analytics is designed to enable you to view, in near real-time, the experiences of visitors to your website. With Yahoo! Web Analytics you can understand how visitors come to your site, what they do while there, how many convert from visitors to customers, and why some of them don't. Yahoo! Web Analytics helps you identify the ads, campaigns, keywords and referrals that contribute the most to your bottom line. It helps you understand what pages, content and products perform better than others, thereby helping you better design your site. And by providing extremely valuable insights into how your visitors and customers experience your website, Yahoo! Web Analytics can help you to market your site better, increase visitor engagement, convert more visitors into customers, and transform existing customers into die-hard fans.
+2. Who can benefit from Yahoo! Web Analytics?
+Yahoo! Web Analytics offers a whole array of compelling features and benefits for everyone from senior executives and marketing professionals, to advertising teams, content developers and individual site owners.
+3. How is Yahoo! Web Analytics different than other analytics products?
+Yahoo! Web Analytics is different from others in three key areas:
+While some analytics products provide data 24-48 hours after collection, Yahoo! Web Analytics reflects data within minutes of collection. In other words, with Yahoo! Web Analytics, you can practically see in real-time what your website users are experiencing. This is extremely powerful compared to seeing what users did 2 days ago. With Yahoo! Web Analytics near real-time data you can:The Value of Real-time Data:
+See how new ad campaigns are performing in order to quickly make changes and optimize your budget
+Identify usability issues if top performing pages suddenly see a dip in key performance metrics, or new pages under-perform
+Quickly assess performance of new website content or products to maximize your yield
+While some products store aggregated data, which restricts the usefulness of the data to pre-created or canned reports, Yahoo! Web Analytics stores data in non-aggregated raw form. This means that you can ask a variety of new questions and create new kinds of reports to answer questions using both current and historical data. In other words, Yahoo! Web Analytics is , it .The Power of Raw Data:not a simple aggregated data reporting toolis a powerful data analysis tool
+Yahoo! Web Analytics enables easier analysis of website data by allowing you to filter and segment data using intuitive drag-and-drop features, to quickly build reports with simple custom report wizards, and to create ad hoc scenarios to answer your specific business questions as they arise.Ease-of-Use and Flexibility:
+Yahoo! Web Analytics is easy to implement. For instance, once you have added our JavaScript code to your web pages, you can create new funnels or change how products or actions are referenced in your reporting through the user interface rather than with cumbersome changes to the tracking code.
+4. When can I gain access?
+Yahoo! Web Analytics will be made available to a wide range of Yahoo!'s customers, partners, developers and advertisers in stages throughout the rest of 2008 and into 2009.
+Yahoo! Web Analytics is currently being offered to Yahoo! Small Business customers who host e-commerce sites with Yahoo!, as well as to advertisers who work with Yahoo! Custom Solutions and Yahoo! Buzz Marketing.
+If you are an existing customer of Merchant Solutions Standard or Professional, or a Y! Store merchant, you will automatically have access. Merchant Solutions Starter customers and other members of Yahoo's Small Business solution suite should stay tuned for future opportunities to gain access. Yahoo! also plans to release analytics-enhanced reporting for the Yahoo! developer community very soon.
+If you would like to stay informed as we continue to expand our services to new groups of customers and partners, please register for updates on the Yahoo! Web Analytics home page.
+5. How do these changes impact existing customers of IndexTools?
+We expect to provide the same quality of service to customers who previously implemented IndexTools prior to its acquisition by Yahoo!.
+Copyright © 2006-2009 Yahoo! Inc. All rights reserved.

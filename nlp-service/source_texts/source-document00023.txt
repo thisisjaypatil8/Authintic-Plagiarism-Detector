@@ -1,0 +1,12 @@
+Managed Services & Installation
+For organizations with many remote locations (typically over 50), satellite technology offers the most cost-effective means of delivering full-screen, full-motion, digital quality video content.
+Because satellite costs are fixed, the more sites you have, the lower your cost per site. In fact, you can broadcast to an unlimited number of locations.
+When you lease a full-time channel on a satellite, costs are also based on a flat fee - enabling you to broadcast content up to 24/day with no additional usage fees. Live satellite events can incorporate viewer call-ins and other kinds of audience interactivity.
+We also offer services to occasional use clients on an as needed basis.
+In addition to traditional KU-band digital satellite systems, other technologies, like IP satellite and DBS (Direct Broadcast Satellite i.e., Echostar's DISH Network), are becoming network platforms of choice.
+IP Satellite
+IP Satellite provides quick, cost-effective distribution of video and data, especially to multiple remote sites simultaneously, in a way that combines satellite and Internet technologies. It is most effectively used between remote sites continually and permanently More...
+Direct Broadcast Satellite
+While the direct broadcast satellite services, such as DISH Network, are primarily consumer-oriented, a number of businesses have utilized the platform for training and communications, as well. In fact, Broadcast International was the first service provider to launch More...
+VSAT
+When you need a wireless link that is completely independent from the local infrastructure, or when you need to connect a large number of geographically dispersed sites to a central location, we can assist you with a broad range of VSAT (Very Small Aperture Terminal) services. VSAT networks can be configured in many different ways, and are used to transmit voice, data, fax or video programming. We offer both one-way and interactive VSAT systems, which use onboard acceleration of protocols, ensuring a high quality connection regardless of latency. VSAT gives you total control over your communication systems and higher speed reception than ordinary telephone or ISDN services.

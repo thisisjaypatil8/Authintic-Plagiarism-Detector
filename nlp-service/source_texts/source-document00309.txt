@@ -1,0 +1,4 @@
+Lepidoptera
+PerhosetButterflies and Moths
+The source of this data is from miscellanoues literature (old and new) of varying quality, and often using conflicting organizations. The result is sometimes confusing and . At this point I'm only trying to get the taxa included.the organization here must not be taken as any taxonomic statement or study
+The addition of my records from over 20 years of light trapping is still at idea stage. I may end up using Java applets in this. However, some static graphs are shown from about 10 species. For example, see . (). Amphipoea fucosa Not much progress on this project for ages

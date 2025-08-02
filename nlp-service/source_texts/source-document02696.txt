@@ -1,0 +1,33 @@
+some general data of the state
+General useful information
+Note: some data are of constant value, while other are due to changes, fluctuations etc.
+State and population
+capital: Montgomery // state code ISO: AL ; FIPS: US01
+surface land area: 131434 sq.km = 50758 sq.mi // rank in USA: 28 // location: East South Central
+climate: long hot summers; mild winters; generally abundant rainfall
+entered USA as 22nd state on: 1819-12-14
+administrative division: 67 counties
+total population according to the census of 2000: 4,447,100
+population density 2000: 227 per sq.km = 87,6 per sq.mi // -growth 1999-2000: 10%
+main ethnic groups: white 71%; black 26%
+Economy and infrastructure
+chief crops: cotton, greenhouse & nursery, peanuts, sweet potatoes, potatoes and other vegetables
+livestock (million): cattle: 1,4 / pigs: 0,2 / poultry: 987 / sheep:
+timber/lumber: pine, hardwoods
+chief industries: pulp & paper, chemicals, electronics, apparel, textiles, primary metals
+chief industrial products: electronics, cast iron & plastic pipe, steel products, ships, paper products
+chief mining products: portland cement, crushed stone, lime, sand & gravel, masonry
+Some physical landmarks
+highest point in the state: Cheaha Mtn. 2407 ft = 734 m; other mountains: of no importance
+lowest point in the state: sea level
+lakes:
+artificial lakes: Wheeler L., Guntersville L., Dannelly Res., L. Martin, Weiss L., Lewis Smith L.
+rivers: Tennessee River, Alabama R., Coosa R., Tombigbee R., Mobile R., Black Warrior R.
+others: islands: some small ones // deserts: none
+Additional remarks, especially on the statistical information
+other important features:
+nick name(s): Heart of Dixie, Camellia State, Cotton State
+motto: We dare defend our rights
+song: Alabama
+flower: Camellia // bird: Yellowhammer // tree: Southern Longleaf pine
+primary sources:

@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.highlight {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.highlight-direct {
+    background-color: rgba(255, 179, 179, 0.6);
+}
+.highlight-paraphrased {
+    background-color: rgba(255, 229, 153, 0.7);
+}
+.highlight:hover {
+    background-color: rgba(79, 70, 229, 0.3);
+}
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    transform: translate(-50%, -110%);
+    font-size: 0.875rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}

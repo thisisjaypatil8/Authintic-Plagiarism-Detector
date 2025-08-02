@@ -1,0 +1,34 @@
+{
+    "sourceFile": "frontend/src/routes/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1754052162422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1754116352561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import Login from \"../pages/Login\";\r\n import Register from \"../pages/Register\";\r\n import Dashboard from \"../pages/Dashboard\";\r\n import PrivateRoute from \"../components/PrivateRoute\";\r\n+im\r\n \r\n-\r\n const router = createBrowserRouter([\r\n     {\r\n         path : \"/\",\r\n         element : <App/>,\r\n"
+                },
+                {
+                    "date": 1754116369828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Login from \"../pages/Login\";\r\n import Register from \"../pages/Register\";\r\n import Dashboard from \"../pages/Dashboard\";\r\n import PrivateRoute from \"../components/PrivateRoute\";\r\n-im\r\n+import About from \"../pages/About\";\r\n \r\n const router = createBrowserRouter([\r\n     {\r\n         path : \"/\",\r\n@@ -30,9 +30,9 @@\n                     <PrivateRoute>\r\n                         <Dashboard />\r\n                     </PrivateRoute>\r\n                 )\r\n-            }\r\n+            },\r\n         ]\r\n     }\r\n ])\r\n \r\n"
+                },
+                {
+                    "date": 1754116384960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,10 @@\n                         <Dashboard />\r\n                     </PrivateRoute>\r\n                 )\r\n             },\r\n+            \r\n+\r\n         ]\r\n     }\r\n ])\r\n \r\n"
+                },
+                {
+                    "date": 1754116391561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,12 @@\n                         <Dashboard />\r\n                     </PrivateRoute>\r\n                 )\r\n             },\r\n-            \r\n+            {\r\n+                path: \"about\",\r\n+                element: <About />\r\n+            }\r\n \r\n         ]\r\n     }\r\n ])\r\n"
+                }
+            ],
+            "date": 1754052162422,
+            "name": "Commit-0",
+            "content": "import { createBrowserRouter } from \"react-router-dom\";\r\nimport App from \"../App\";\r\nimport Home from \"../pages/Home\";\r\nimport Login from \"../pages/Login\";\r\nimport Register from \"../pages/Register\";\r\nimport Dashboard from \"../pages/Dashboard\";\r\nimport PrivateRoute from \"../components/PrivateRoute\";\r\n\r\n\r\nconst router = createBrowserRouter([\r\n    {\r\n        path : \"/\",\r\n        element : <App/>,\r\n        children : [\r\n            {\r\n                path:\"\",\r\n                element : <Home/>\r\n            },\r\n            {\r\n                path: \"login\",\r\n                element: <Login />\r\n            },\r\n            {\r\n                path: \"register\",\r\n                element: <Register />\r\n            },\r\n            {\r\n                path: \"dashboard\",\r\n                element: (\r\n                    <PrivateRoute>\r\n                        <Dashboard />\r\n                    </PrivateRoute>\r\n                )\r\n            }\r\n        ]\r\n    }\r\n])\r\n\r\nexport default router;"
+        }
+    ]
+}

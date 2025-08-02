@@ -1,0 +1,25 @@
+[] edit Development
+An important cartographic element preceding thematic mapping was the development of accurate base maps. Improvements in accuracy proceeded at a gradual pace, and even until the mid-17th century, general maps were usually of poor quality. Still, base maps around this time were good enough to display appropriate information, allowing for the first thematic maps to come into being.
+[] edit Examples of early thematic cartographers
+Edmond Haley's map of ocean currents.
+[] edit John Snow
+The most widely touted example of early thematic mapping comes from London physician . Though disease had been mapped thematically, Snow s cholera map in 1855 is the best known example of using thematic maps for analysis. Essentially, his technique and methodology anticipate principles of a geographic information system (). John Snow GIS
+John Snow's Cholera map (dot style).
+Starting with an accurate base map of a neighborhood which included streets and pump locations, Snow mapped out the incidents of death. The emerging pattern centered around one particular . At Snow s request, the handle of the pump was removed, and new cholera cases ceased almost at once. Further investigation of the area revealed the Broad Street pump was near a sewer line. London cholera pump on Broad Street
+[] edit Uses of thematic maps
+Thematic maps serve three primary purposes. First, they provide specific information about particular locations. Second, they provide general information about spatial patterns. Third, they can be used to compare patterns on two or more maps. Common examples are maps of demographic data such as population density. When designing a thematic map, cartographers must balance a number of factors in order to effectively represent the data. Besides spatial accuracy, and aesthetics, quirks of human and the presentation format must be taken into account. visual perception
+Of equal importance is audience. Who will read the thematic map and for what purpose helps define how it should be designed. A political scientist might prefer having information mapped within clearly delineated county boundaries (choropleth maps). A state biologist could certainly benefit from county boundaries being on a map, but nature seldom falls into such smooth, man-made delineations. In which case, a dasymetric map charts the desired information underneath a transparent county boundary map for easy location referencing.
+[] edit Displaying data
+In constructing any type of thematic map (or any map for that matter) it is understood that location is a key feature. After selecting the physical area to examine, the next step is collecting data sets.
+Data dealing with one subject is called , which examines occurrences of a single type of event. The distribution of population, cancer rates, and rainfall are all examples of univariate data.univariate
+shows the distribution of two sets of data to explore possibilities of correlations. For example, we can examine population density in relation to textile manufacturing. Other examples could be cancer rates and population density, or rainfall and elevation. Bivariate mapping
+More than two sets of data leads to mapping. Taking three or more data sets and displaying the result on a map helps determine possible correlations between different phenomena. For instance, our bivariate example maps two data sets, rainfall and elevation. If we add another variable such as population density, our map becomes multivariate rather than bivariate.multivariate
+Map makers must be careful in designing thematic maps that display too much information or suggest phenomenon have a correlation when in fact they do not.
+[] edit Methods of thematic mapping
+Geographers use many methods to create thematic maps, but five techniques are especially noted.
+[] edit Choropleth
+Choropleth map of water use.
+The most commonly used method of thematic mapping. are particularly suited for charting phenomena that are evenly distributed within each enumeration unit (set area). Choropleth maps
+Raw data, e.g. population distribution, should not be mapped with this technique. If derived values can be obtained from raw data (such as population densities), then the choropleth technique can be applied.
+[] edit Proportional symbol
+Also known as graduated symbols, these maps represent data associated with point locations (i.e., cities or counties). The data is displayed with proportionally sized symbols to graphically represent a realistic difference in occurrence. If the raw data cannot be dealt with as a ratio or proportion, then they should be portrayed with the proportional symbol technique.

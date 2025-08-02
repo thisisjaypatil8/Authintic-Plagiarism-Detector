@@ -1,0 +1,37 @@
+When can 403(b) money be accessed without penalty?
+Reaches age 59 1/2
+Separates from service in the year turning 55 (and must be retired)
+Retire before age 55  eligible for Substantially Equal Periodic Payments (SEPP). Participants who have retired early (before age 55), but want access to their 403(b) without penalty can do so using SEPP. This provision requires that you take a series of substantially equal periodic payments. The key is that once you start these payments they must continue for five years or until you reach 59 1/2, whichever takes longer. If you start at age 58 you must continue until you are 63 (minimum 5 years).
+Becomes disabled (as defined in section 72(m)(7) of the Internal Revenue Code)
+Through a loan (some investment companies allow this, some do not)
+Dies  
+ 
+Consulting a tax professional before accessing 403(b) money is highly recommended.   Another way to access 403(b) money early is to take out a loan. Though not all vendors oblige, loans are permitted from a 403(b). Many mutual funds do not allow loans. This can be both an advantage and a disadvantage. The advantage is that access to your funds is limited and you are less likely to take out a loan, thus allowing your money to continue to grow. The disadvantage is that you may really need the money and the only way to get it is through a hardship withdrawal which has tax consequences (explained below). Other rules governing loans exist but vary by vendor, so consult your vendor for details. You may also want to read this story on loans: .   Consulting a tax professional before taking out a 403(b) loan is highly recommended.   This provision allows withdrawal of funds from a 403(b) if under severe financial distress. The participant must have no other resources available. A hardship withdrawal may be made for:
+Loans
+Under what circumstances may a hardship withdrawal be made?
+Un-reimbursed medical expenses of the participant or his/her spouse and dependents.
+Down payment on primary residence.
+Tuition and fees for higher education needs, and only for the next 12 months.
+Eviction or foreclosure on your primary residence  
+ 
+Hardship withdrawals are not exempt from an IRS 10% penalty. Furthermore, withdrawals are subject to ordinary income taxation in the year withdrawn. To qualify you must certify that you have no other recourse, including the possibility of taking a loan. You also are prohibited from contributing to a 403(b) for the next six months. The IRS makes it tough to access money this way for a reason: they don't want you to use the 403(b) as a form of short term savings. For exact details on your situation it is recommended that you contact both your vendor and a tax professional before proceeding.   Also, while the IRS permits withdrawals, it is allowable for a plan sponsors (the employer) to not permit them. The employer has some responsibility in making hardship withdrawals. The employer has to "OK" the hardship, based on written information provided by the employee as to the nature of the hardship. The employer has to determine, based on the facts, whether the employee has an "immediate and heavy financial need."   Consulting a tax professional before making a hardship withdrawal is highly recommended.  
+What are the options for a 403(b) when switching jobs?
+1.
+Move the money into your new employer's 403(b) plan. Note, as of 2002 a 403(b) can be rolled into a 401(k) and vice versa. Not all plans allow such transfers, so check with your employer (former and present) and plan provider (former and present).
+2.
+Roll it into an IRA. See: Rolling a 403(b) into an IRA
+3.
+Leave it where it is, especially if you like your investment choices. If the balance is below $5,000 some employers require you to move the money. Check with your employer.
+4.
+Take a lump sum payment. Beware! This is not Wise at all. This will trigger all kinds of fees and penalties, and worse, ridicule and scorn from your Wise friends.  
+ 
+For more detailed information refer to IRS Publication 571. You can obtain this document by calling 1-800-829-3676 or it may be downloaded by clicking on .   Generally, distributions of funds in a salary reduction 403(b) are restricted by section 403(b)(11) of the Internal Revenue Code. In order for a distribution to take place, a qualifying event must occur. These events include death, disability, severance of employment or attainment of age 59 1/2. However, a distribution to an "alternate payee" will be permitted if pursuant to a qualified domestic relations order (QDRO).   A QDRO is a decree, judgment or order that meets the qualification requirements of the Internal Revenue Code. Those requirements include: IRS Publication 571
+What happens to 403(b) money in the event of a divorce?
+The order must have been issued under a state's community property or other domestic relations law,
+It must relate to the provision of alimony, child support or the property rights of a spouse, former spouse, child or other dependent (alternate payee),
+It must assign to the alternate payee the right to receive all or a portion of the participant's plan benefits, and
+It must clearly specify (1) the names and addresses of each alternate payee, (2) the amount or percentage of the participant's benefit to be paid to each alternate payee, (3) the period of time over which the order applies and (4) each plan to which the order applies.  
+ 
+If a distribution is made to a spouse or former spouse under a QDRO, the distribution may be rolled into a qualified plan or IRA that the spouse or former spouse has. Distribution to any other alternate payee is not eligible for rollover.   Death benefits to be paid under a 403(b) plan depend on when death occurs and who is the designated beneficiary on the plan.   The Internal Revenue Code states that distributions generally must be made from a 403(b) plan by the participants required beginning date, which is April 1 of the year following the year in which the participant attains age 70 1/2. Different rules apply to death benefits depending on whether or not death occurs before the required beginning date. The following table briefly summarizes the death benefit requirements of a 403(b):  
+What happens to 403(b) money in the event of death?
+ 

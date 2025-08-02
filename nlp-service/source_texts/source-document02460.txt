@@ -1,0 +1,179 @@
+1. A is that which has no partpoint
+2. A is breadthless length.line
+3. The extremities of a line are points.
+4. A is a line which lies evenly with the points on itself.straight line
+17. A of the circle is any straight line drawn through the center and terminated in both directions by the circumference of the circle, and such a straight line also bisects the circle.diameter
+-- Book IThe Elements
+To draw a straight line from any point to any point.
+To produce a finite straight line continuously in a straight line.
+To describe a circle with any center and distance.
+That all right angles are equal to one another.
+That, if a straight line falling on two straight lines make the interior angles on the same side less than to right angles, the two straight lines, if produced indefinitely, meet on that side on which are the angles less than the to right angles.
+The Elements -- Book I
+Things which are equal to the same thing are also equal to one another.
+If equals be added to equals, the wholes are equal.
+If equals be subtracted from equals, the remainders are equal.
+Things which coincide with one another are equal to one another.
+The whole is greater that the part.
+The Elements -- Book I
+Some Logic
+: ``a syllogism in discourse in which, certain things being stated, something other than what is stated follows of necessity from their being so." Example: If all monkeys are primates and all primates are mammals, then it follows that all monkeys are mammals.A syllogism
+: If , then . . Therefore .modus ponenspq
+q
+: If , then . Not . Therefore, not .modus tolenspqqp
+The Elements -- Book I
+Theorems -- 48
+To prove this construct circles at and of radius . Argue that the intersection point is equidistant from and , and since it lies on the circles, the distance is .\ABABCABAB
+Note that in Proposition I-1, Euclid can appeal only to the definintions and postulates. But he doesn't use the Aristotelian syllogisms, rather he uses . Note also that there is a subtle assumption of the continuous nature of the plane made in the assumption that the circles intersect. Flaws of this type went essentially unresolve up until modern times.modus ponensvisual
+The Elements -- Book I
+Proposition I-4. (SAS) If two triangles have two sides equal to two sides respectively, and have the angles contained by the equal sides also equal, then the two triangles are congruent.
+In modern treatments of plain geometry this proposition is given as a postulate.Note:
+: The modern term is used here, replacing Euclid's assertion that ``each part of one triangle is equal to the corresponding part of the other."Notecongruent
+The Elements -- Book I
+Proposition I-5. In isosceles triangles the angles at the base are equal to one another, and, if the equal straight lines are produced further, the angles under the base will be equal to one another.
+Extend to and to . Mark of equal distances and on their respective segments. Now argue that since and are equal and and are equal and the triangles and share the included angle at , they must be congruent. This means than the sides and are equal. Hence, triangles and are (SAS) congruent. Therefore, the angles and are equal, from which the conclusion follows.Proof.ACDACEBFCGAFAGACABACFABGAFCGBFCBGCB
+This is the proof given by Euclid. Many of the theorems in have simpler proofs, found later. This one is no exception. The following proof was given by Pappus: Observe that the two triangles and are SAS (side-angle-side) congruent. Therefore, the angles at and are equal.The ElementsBACCABBC
+Proposition I-6. If in a triangle two angles are equal to one another, then the opposite sides are also equal.
+equals . Assume .BC
+Assume >. Make so that =.ABACDDCAB
+Now argue that triangles and are congruent.ABCDBC
+Thus , the part is equal to , the whole.
+The Elements -- Book I
+Proposition I-29. A straight line intersecting two parallel straight line makes the alternate angles equal to one another, the exterior angle equal to the interior and opposite angle, and the interior angles on the same side equal to two right angles.
+Assume .
+Then the sum of and is greater than the sum of and .
+But the first sum is two right angles. (Prob I-13.)
+Thus the second sum is less than two right angles and thus the line are not parallel.
+-- Book II -- 14 TheoremsThe Elements
+Book II is different than Book I in that it deals with rectangles and squares. It can be termed . There is some debate among Euclid scholars as to whether it was extracted directly from Babylonian mathematics. In any event, it is definitely more difficult to read that Book I material.geometric algebra
+Any rectangle is said to be contained by the two straight lines forming the right angle.Definition.
+Euclid never multiplies the length and width to obtain area. There is no such process. He does multiply numbers (integers) times length.
+-- Book IIThe Elements
+II-1. If there are two straight lines, and one of them is cut into any number of segments whatever, the rectangle contained by the two straight lines is equal to the sum of the rectangles contained by the uncut straight line and each of the segments.
+It should be apparent that this is the distributive law for multiplication through addition. Yet, it is expressed purely in terms of geometry.
+-- Book IIThe Elements
+Proof.
+Let and be the two lines. Make the random cuts at and .1.ABCDE
+Let be drawn perpendicular to and cut at so that is the same as . Complete the diagram as shown.2.BFBCGBGA
+Then is equal to , ,3.BHBKDLEH
+Now argue that the whole is the sum of the parts.4.
+-- Book IIThe Elements
+II-2. If a straight line be cut at random, the rectangle contained by the whole and both of the segments is equal to the square on the whole.
+II-4. If a straight line is cut at random, the square on the whole is equal to the squares on the segments and twice the rectangle contained by the segments.
+Note the simplicity of visualization and understanding for the binomial theorem for =2.n
+-- Book IIThe Elements
+Many propositions give geometric solutions to quadratic equations.
+II-5. If a straight line is cut into equal and unequal segments, the rectangle contained by the unequal segments of the whole together with the square on the straight line between the points of section is equal to the square on the half.
+This proposition translates into the quadratic equation
+-- Book IIThe Elements
+II-14. To construct a square equal to a given rectilinear figure.
+Proof.
+Construct at the midpoint of AB, and produce the line of length (+)/2.2.EGac
+Therefore length of the segment is (-)/2.3.FGac
+Extend the line to and construct the line of length (+)/2 ( is on this line.).4.CDPGHacH
+By the Pythagorean theorem the length of the line has square given by5.FH
+-- Book III -- 37 theoremsThe Elements
+Book III concerns circles, begins with 11 definitions about circles. For example, the definition of the equality of circles is given (= if they have the same diameter). Tangency is interesting in that it relies considerably on visual intuition:
+A straight line is said to which, meeting the circle and being produced, does not cut the circle.Definition 2.touch a circle
+A is the figure contained by a straight line and a circumference of a circle.Deninition 3.segment of a circle
+Other concepts are segments, angles of segments, and similarity of segments of circles are given.
+-- Book IIIThe Elements
+Euclid begins with the basics:
+III-1. To find the center of a given circle.
+III-2. If on the circumference of a circle two points be take at random, the straight line joining the points will fall within the circle.
+-- Book IIIThe Elements
+III-5. If two circles cut (touch) one another, they will not have the same center.
+The inverse problem: III-9. If a point be taken within a circle, and more than two equal straight lines fall from the point on the circle, the point taken is the center of the circle.
+-- Book IIIThe Elements
+III-11. If two circles touch one another internally, and their centers be taken, the straight line joining their centers, if it be also produced, will fall on the point of contact.
+-- Book IIIThe Elements
+III-16. The straight line drawn at right angles to the diameter of a circle from its extremity will fall outside the circle, and into the space between the straight line and the circumference another straight line cannot be interposed; ... .
+III-31. (Thales Theorem) In a circle the angle in the semicircle is right, and further, ... .
+-- Book IV -- 16 theoremsThe Elements
+Construction of regular polygons was a preoccupation of the Greeks. Clearly equilateral triangles and squares can be constructed, that is, inscribed in a circle. Bisection allows any number of doublings, e.g. hexagons and octogons. The inscribed pentagon is a more challenging construction. This book is devoted to the circumscribing and inscribing regular and irregular polygons into circles.
+For example,
+IV-5. About a given triangle to circumscribe a circle.
+IV-10. To construct an isosceles triangle having each of the angles at the base double of the remaining one.
+IV-10 is the key to proving the celebrated
+IV-11. In a given circle to inscribe an equilateral and equiangular pentagon.
+-- Book IVThe Elements
+-- Book IV -- updateThe Elements
+The next regular figure to be inscribed in a circle was the 17-gon. And this was accomplished by no less a mathematician than in 1796, when he was just 18.
+Carl Frederich Gauss
+In fact, when he was a student at Göttingen, he began work on his major publication , one of the great classics of the mathematical literature. Toward the end of this work, he included this result about the 17-gon but more!!!
+Disquisitiones Arithmeticae
+He proved that the ONLY regular polygons that can be inscribed in a circle have
+sides, where is a integer and the ' are Fermat primes.mps
+Recall that are primes of the form
+Fermat primes
+We have the following table of polygons that can be inscribed in a circle:
+Are all such numbers, , primes? No, Euler prove that the next one is composite. No others are known. A contemporary of Gauss, Fernidand Eisenstein (1823-1852) conjectured the following subset of the Fermat numbers consists only of primes:
+but this has not been verified. The first three are the Fermat primes, 5, 17, 65,537. The next number has more than 45,000 digits.
+-- Book V -- 25 theoremsThe Elements
+Book V treats ratio and proportion. Euclid begins with 18 definitions about magnitudes begining with a part, multiple, ratio, be in the same ratio, and many others. Consider definition 5 on same ratios.
+A magnitude is a of a magnitude, the less of the greater, when it measures the greater.Definition 1.part
+This means that it divides the greater with no remainder.
+Magnitudes are said to to one another which are capable, when multiplied, exceeding on another.Definition 4.have a ratio
+This is essentially the Archimedian Axiom:If <, then there is an integer such that >.abnnab
+In the modern theory of partially ordered spaces, a special role is played by those spaces which have the so-called .Archimedian Property
+Magnitudes are said to , the first to the second and the third to the fourth, when, if any equimultiples whatever be taken of the first and third, and any equimultiples whatever of the second and fourth, the former equimultiples alike exceed, are alike equal to, or alike fall short of, the latter equimultiples respectively taken in corresponding order.Definition 5.be in the same ratio
+In modern notation, we say the magnitudes, ,,, are :=: ifabcdin the same ratioabcd
+and similarly for < and =.
+-- Book VThe Elements
+V-1. If there be any number of magnitudes whatever which are, respectively, equimultiples of any magnitudes equal in multitude, then, whatever multiple one of the magnitudes is of one, that multiple also will all be of all.
+In modern notation, let the magnitudes be and let be the multiple. Then,
+m
+V-8. Of unequal magnitudes, the greater has to the same a greater ratio than the less has; and the same has to the less a greater ratio than it has to the greater.
+In modern term, let >, and is given. Thenabc
+and
+-- Book VI -- 33 theoremsThe Elements
+Book VI is on of figures. It begins with three definitions.similarity
+Similar rectilineal figures are such as have their angles severally equal and the sides about the equal angles proportional.Definition 1.
+The height of any figure is the perpendicular drawn from the vertex to the base.Definition 3.
+-- Book VIThe Elements
+VI-1. Triangles and parallelograms which are under the same height are to one another as their bases.
+VI-5. If two triangles have their sides proportional, the triangles will be equiangular and will have those angles equal which the corresponding sides subtend.
+VI-30. To cut a given finite straight line in extreme and mean ratio.
+-- Book VIThe Elements
+Of course, you must prove all the similarity rigorously.
+-- Book VII -- 39 theoremsThe Elements
+Book VII is the first book of three on number theory. Euclid begins with definitions of unit, number, parts of, multiple of, odd number, even number, prime and composite numbers, etc.
+A number is that which is measured by the unit alone.Definition 11.prime
+Numbers are those which are measured by the unit alone as a common measure.Definition 12.prime to one another
+VII-21. Numbers prime to one another are the least of those which have the same ratio with them.
+VII-23. If two numbers be prime to one another, the number which measures the one of them will be prime to the remaining number.
+-- Book VIIThe Elements
+VII-26. If two numbers be prime to two numbers, both to each, their products also will be prime to one another.
+VII-31. Any composite number is measured by some prime number.
+VII-32. Any number either is prime or is measured by some prime number.
+-- Book VIII -- 27 theoremsThe Elements
+Book VIII focuses on what we now call geometric progressions, but were called by the ancients. Much of this is no doubt due to Archytas of Tarentum, a Pythagorean. Numbers are in continued proportion ifcontinued proportions
+We would write this as
+which is of course the same thing.
+VII-1. If there be as many numbers as we please in continued proportion, and the extremes of them be prime to one another, the numbers are the least of those which have the same ratio with them.
+Consider 5:3 and 8:6 and 10:6 and 16:12.
+-- Book VIII -- 27 theoremsThe Elements
+VIII-8. If between two numbers there are numbers in continued proportion with them, then, however any numbers are between them in continued proportion, so many will also be in continued proportion between numbers which are in the same ratio as the original numbers.
+Euclid concerns himself in several other propositions of Book VIII with determining the conditions for inserting mean proportional numbers between given numbers of various types. For example,
+VIII-20. If one mean proportional number falls between two numbers, the numbers will be similar plane numbers.
+In modern parlance, suppose :=:, thenaxxb
+-- Book IX -- 36 theoremsThe Elements
+The final book on number theory, Book IX, contains more familiar type number theory results.
+IX-20. Prime numbers are more than any assigned multitude of prime numbers.
+Let be all the primes. Define +1. Then, since must be composite, one of the primes, say . But this is absurd!Proof.
+N
+-- Book IX -- 36 theoremsThe Elements
+IX-35. If as many numbers as we please are in continued proportion, and there is subtracted from the second and the last numbers equal to the first, then, as the excess of the second is to the first, so will the excess of the last be to all those before it.
+We are saying let the numbers be , The the differences are (-1) and . Then, the theorem asserts that
+ar
+-- Book X -- 115 theoremsThe Elements
+Many historians consider this the most important of the books. It is the longest and probably the best organized. The purpose is the classification of the incommensurables. The first propostion is fundamental. It is Eudoxus' .method of exhaustion
+X-I. Two unequal magnitudes being given, if from the greater there is subtracted a magnitude greater than its half, and from that which is left a magnitude greater than its half, and if this process is repeated continually, there will be left some magnitude less that the lesser of the given magnitudes.
+This proposition allows an approximating process of arbitrary length.
+X-36. If two rational straight lines commensurable in square only be added together, the whole is irrational.
+-- Book X1-XIIIThe Elements
+The final three chapters of The are on solid geometry and the use of a limiting process in the resolution of area and volume problems. For example,Elements
+XII-2. Circles are to one another as the squares on the diameters.
+You will note there is no ``formula" expressed.
+XII-7. An pyramid is a third part of the prism which has the same base with it an equal height.
+XII-18. Spheres are to one another in the triplicate ratio of their respective diameters.

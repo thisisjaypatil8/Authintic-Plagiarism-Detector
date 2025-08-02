@@ -1,0 +1,9 @@
+A new StreetView-like service for Central Europe
+As reported by , has just launched a StreetView-like service for a handful of countries in Europe. They use the Google Maps API to power their product, then drop in a bunch of interactive panoramic images. You can’t move up up down streets quite as easily, but they provide small arrows in the corner to direct you to nearby paroramas, which are often just a few feet away (like StreetView). Google Maps Mania Norc
+I downloaded Windows 7 on my laptop tonight (dual boot with XP) and started testing the various digital earth products. So far, so good!
+went without a hitch. It runs very well, too!Google Earth
+worked perfectly as well.The Google Earth plug-in
+, as did .Google Maps workedStreetView
+installed flawlessly and worked briefly, then locked up the PC .Virtual Earthhard
+All in all, I’m quite pleased with how these programs are working with Windows 7. I had intended to say “this works, that doesn’t, etc”, but everything works (for the most part). I am very impressed with Windows 7 speed-wise, too. It’s had a few hiccups (video card didn’t want to play nice), but these apps are FLYING on this old machine.
+By the time it goes gold, I expect big things out of it.

@@ -1,0 +1,7 @@
+T wave inversion in leads V1-V3, III, aVF
+: Third Degree / Complete Atrioventricular Block with Junctional Escape Rhythm.ECG interpretation
+All P waves are blocked from leaving the AV Node. There is regular and normofrequent atrial activity, probably sinus, but none of the atrial impulses gets propagated further down the conduction system. The atrias and ventricles are acting independently. This is AV dissociation and produces a complete heart block. As the atria and the ventricles are now oblivious of each other, they run at different speeds. This is because they are independently paced. The ventricles are being paced from an ectopic focus, resulting in a rate of 39 bpm. Considering this rate and the narrow configuration (80ms) of the QRS complexes, the ectopic focus is most likely junctional. Usually, ectopic rhythms originating around the AV Node will pace from ca. 40-60 bpm.ECG comments:
+: Isoprenaline and permanent pacemakerTreatment
+CLICK TO SEE LARGER: Ladder diagram for lead V2, showing atrial impulses being blocked in the AV Node, and a nodal ectopic impulse generating an escape rhythm.
+Click to see full scale version (will open in a new window)
+Possibly related posts: (automatically generated)

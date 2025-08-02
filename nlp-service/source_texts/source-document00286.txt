@@ -1,0 +1,57 @@
+and extract it to your folder.
+Nuts and Bolts of Cartography in ArcGIS
+The goal of this tutorial is to provide hands-on experience with the techniques of producing context maps n ArcGIS, and turning them into graphics that can be inserted into presentation documents. We assume an understanding of our firts tutorial, and the second, . Beginning your GIS Database Working with Map Projections in ArcMap
+Required Reading
+Understanding how to use software is important, but it is even more important to have a clear idea of what you are trying to communicate and an idea of how to communicate ideas clearly. For work handed in for GIS and Site Representation courses at the GSD you must follow the guidelines described in these documents:
+(This tutorial covers the elements that every map should have. Thematic mapping will be discussed in future tutorials) Elements of Cartographic Style
+Begin your map recalling basic data handling and transformation concepts
+Develop simple statements about a few critical aspects of Local and Regional Context
+Choose aporopriate data and adjust portrayals
+Create a new Geodatabase and add a polygon that indicates your area of interest.
+Create a map layout & scalebar and captions
+Add labels and graphics to map. Experiment with ArcGIS annoation
+Export a layout as PDF, JPG
+Use your contextual framework as a template for a another thematic map exploring some data.
+Compile multiple pdfs as a single document
+Deeper Reading
+Right-Click here to Open this Tutorial Dataset C:\temp\your_username
+Remember Critical Prerequisites for Mapping
+We will open some layers from the data collection that we started with This same tutorial provides the techniques you need in order to simply portray some of the data in your map. We should always check the projection of our dataframe and choose an appropriate projection as discussed in the tutorial . Beginning a Place-Based Data Collection Dealing with Map Transformations in ArcGIS
+Think About Critcal Aspects of Site Context
+Your job is to frame the terms of discussion of your site. Try not to leave out anything that is obviously important. Frame the context map to show these details. For example:
+Our site, Fields Point, lies on the western bank of the Providence River, about 3 miles South of Downtown Providence, Rhode Island. It is best accessed from Route 1A, which is known locally as Naragansett Boulevard. The site is bounded on the west by the neigborhood of (what is the name of this neighborhood?) which sits on top of a bluff of approximately 40 feet. Accross the river, the neighborhood of (East Providence?) has good views of our area of interest. To the north, the site is dominated by the facilities of the Providence Water Treatment Plant and the Oil and Natural gas (check this) terminals of the Port of Providence. The large park a mile to the west is Roger Williams National Park.
+References:
+Working with Spatial Bookmarks
+Create a new Geodatabase and Some Feature Classes
+We will need to make a site boundary layer and a rectangular context clip polygon. This will give us an opportunity to create a new personal geodatabase, add some feature classes and to get the hang of creating our own GIS data.
+References:
+Create a new personal Geodatabase in your own gis/username/data folder.
+Add two polygon a feature classes for your area of interest (aoi) and your context clip.
+Load the editor toolbar and create a polygon for your area of interest.
+Add the Advanced Editing Toolbar and use the rectangle tool to define your context clip. It is a good idea to makek this clip polygon larger than the area you intend to use for your context map to give you some wiggle room.
+Create a Layout
+To make a nice map for presentation, we will need to be able to model a sheet of paper that will give us room to include our paragraphs of text, scalebars, projection information and source notes in the margin of the map and all of the other things discussed on the page, . This layout can also contain text and graphics that are fixed to the map. There are several ways of storing annotation with a map or in a geodatabase. For this tutorial we are going to stick with the simple method, in which the annotation is saved with the map document. If you feel like studying the deeper more sophisticated ways of treating annotation as data, you are welcome to do this. Elements of Cartographic Style
+References:
+Save your map document to your gis/username/docs folder. GIve it a name that ends with _1 so that you can save incremental versions.
+Use FIle->Document Properties to make your layout Letter Sized, and Landscape Format.
+Adjust the dateframe so that it is frames your context area but leaves room for your text and scalebars and stuff.
+Add a block of text for your paragraph.
+Add labels and markers and other graphics to label the things mentioned in your paragraph.
+Add a scalebar
+Cite your Sources and rout projection zone.
+Add a graticule of latitude and longitude tics around the edge if you want (this is optional)
+Add a north arrow (or create one) and a title.
+Save your map to your own docs folder and increment its name.
+In these general context maps it is best to stick with portrayls that follow basic conventions of symbology. Water should be blue, protected openspace should be green, roads should be displayed in a graphical hierarchy. IN this case there is no need for a legend. But since you will use this same framework for thematic maps later, you should leave room for a legend in your layout.A legend?
+Exporting your Map to JPEG or PDF
+ArcMap documents are good for exploring data and authoring graphics but not great for sharing graphics. TO do this we will want to be able to save our maps to jpeg files or pdf or oter formats that can be opened in Acrobat Reader or desktop publishing applications like illustrator. In this, you should be able to adjust the various options so that you can control your resolutions and avoid common problems with fonts.
+References
+Exporting a Map
+Look at the options for exporting your map as a jpeg. Notice that you can adjust the DPI.File>Export Map
+Export your map as a PDF. Check the export options to see that you can embed your fonts. This is a very inmportant thing to do, otherwise your special map fonts may be converted to jibberish your maps are viewed on a computer without ArcMap installed.
+Open your new map in Acrobat Pro (installable from Winapps. Note that you can use to build a pdf document with multiple pages. You can use Microsoft word to add title pages, and bibliographies, etc.Document>Insert Pages
+Making a Thematic Map to Explore some Data
+Misinterpreting data is about the easiest thing in the world. We need to be wary of this at all times, we particularly want to avoid making statements in our maps that are nopt supported by the data. IN order to avoid this, you should get into the habit of speaking in terms of what the data actually say, before you discuss what the map means in terms of your analysis. This habit will help you to show your users that you understand what you are doing. To practice this, we wiull make two thematic maps that explore two sets of data that purpotedly show the same thing. This will also get us some practice creating Categorical Symbology based on feature attributes.
+A couple of the important things to remember when you have a legend on your map is to make sure not to confuse your audinece by showing too many categories (learn to combine categories in your legend) and to always rename the legend headings and labels to words that make sense to a normal person.
+We will practice speaking clearly about data by making two layers to illustrate the difference between two datasets that each represent the Protected Open Space around our site. We will use the representation from ESRI and from the Rhode Island GIS.
+References:
