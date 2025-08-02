@@ -1,0 +1,18 @@
+{
+    "sourceFile": "nlp-service/DockerFile",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1754141863415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1754141863415,
+            "name": "Commit-0",
+            "content": "# Use an official Python runtime as a parent image\r\nFROM python:3.9-slim\r\n\r\n# Set the working directory in the container\r\nWORKDIR /code\r\n\r\n# Copy the requirements file into the container\r\nCOPY ./requirements.txt /code/requirements.txt\r\n\r\n# Install any needed packages specified in requirements.txt\r\nRUN pip install --no-cache-dir --upgrade -r /code/requirements.txt\r\n\r\n# Copy the rest of your app's source code from your host to your container\r\nCOPY . /code/\r\n\r\n# Expose the port the app runs on\r\nEXPOSE 5001\r\n\r\n# Run app.py when the container launches\r\nCMD [\"gunicorn\", \"--bind\", \"0.0.0.0:5001\", \"app:app\"]"
+        }
+    ]
+}
