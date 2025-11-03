@@ -14,7 +14,7 @@ router.post('/upload', upload.single('document'), async (req, res) => {
     }
     try {
         const fileContent = fs.readFileSync(req.file.path, 'utf8');
-        const nlpResponse = await axios.post('http://localhost:5001/analyze', {
+        const nlpResponse = await axios.post('http://localhost:5001/api/check', {
             text: fileContent
         });
         fs.unlinkSync(req.file.path);
@@ -37,7 +37,7 @@ router.post('/rewrite', async (req, res) => {
     try {
         // Call the Python service, passing the sentence and the API key from our secure .env file
         const nlpResponse = await axios.post(
-            `http://localhost:5001/rewrite`,
+            `http://localhost:5001/api/rewrite`,
             {
                 sentence: sentence,
                 api_key: process.env.GEMINI_API_KEY 
