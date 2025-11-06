@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    
+    // We can add more fields here later, like submission history
 });
 
 module.exports = mongoose.model('User', UserSchema);
