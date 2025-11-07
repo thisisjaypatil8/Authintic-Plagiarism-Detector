@@ -3,11 +3,23 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1762531815352,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762534005593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n /nlp-service/__pycache__\r\n /nlp-service/report_cache.pkl\r\n *.pyc\r\n \r\n+\r\n # OS & Editor\r\n .DS_Store\r\n .env\r\n \r\n"
+                },
+                {
+                    "date": 1762534016888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,14 @@\n /nlp-service/__pycache__\r\n /nlp-service/report_cache.pkl\r\n *.pyc\r\n \r\n+# NLP Generated Data\r\n+/nlp-service/source_data.pkl\r\n+/nlp-service/source_index.faiss\r\n \r\n+/nlp-service/source_embeddings.pt\r\n+\r\n # OS & Editor\r\n .DS_Store\r\n .env\r\n \r\n"
+                },
+                {
+                    "date": 1762534023405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,8 @@\n # NLP Generated Data\r\n /nlp-service/source_data.pkl\r\n /nlp-service/source_index.faiss\r\n \r\n-/nlp-service/source_embeddings.pt\r\n-\r\n # OS & Editor\r\n .DS_Store\r\n .env\r\n \r\n"
                 }
             ],
             "date": 1762531815352,
