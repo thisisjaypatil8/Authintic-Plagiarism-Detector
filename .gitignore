@@ -15,8 +15,8 @@ npm-debug.log
 /nlp-service/source_index.faiss
 
 # OS & Editor
-.DS_Store
-.env
+/backend/.DS_Store
+/backend/.env
 
 # Uploads
 /backend/uploads

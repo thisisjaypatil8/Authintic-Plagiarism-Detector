@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1762531815352,
@@ -20,6 +20,18 @@
                 {
                     "date": 1762534023405,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,8 @@\n # NLP Generated Data\r\n /nlp-service/source_data.pkl\r\n /nlp-service/source_index.faiss\r\n \r\n-/nlp-service/source_embeddings.pt\r\n-\r\n # OS & Editor\r\n .DS_Store\r\n .env\r\n \r\n"
+                },
+                {
+                    "date": 1762540675902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n /nlp-service/source_index.faiss\r\n \r\n # OS & Editor\r\n .DS_Store\r\n-.env\r\n+backend/.env\r\n \r\n+\r\n # Uploads\r\n /backend/uploads\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762540693054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,9 @@\n /nlp-service/source_data.pkl\r\n /nlp-service/source_index.faiss\r\n \r\n # OS & Editor\r\n-.DS_Store\r\n+b.DS_Store\r\n backend/.env\r\n \r\n-\r\n # Uploads\r\n /backend/uploads\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762540698296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n /nlp-service/source_data.pkl\r\n /nlp-service/source_index.faiss\r\n \r\n # OS & Editor\r\n-b.DS_Store\r\n+/backend/.DS_Store\r\n backend/.env\r\n \r\n # Uploads\r\n /backend/uploads\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1762531815352,
