@@ -13,29 +13,27 @@ from sentence_transformers import SentenceTransformer
 app = Flask(__name__)
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# --- 1. LOAD PRE-PROCESSED DOCUMENT DATA ---
+# --- 1. LOAD PRE-PROCESSED SENTENCE DATA ---
 try:
-    print("Loading pre-processed document embeddings and FAISS index...")
+    print("Loading pre-processed sentence embeddings and FAISS index...")
     index = faiss.read_index('source_index.faiss')
-    
-    # Load the source FILENAMES
+
     with open('source_data.pkl', 'rb') as f:
-        # This now correctly loads the list of names from your preprocess script
-        source_names = pickle.load(f) 
+        source_sentences, source_metadata = pickle.load(f)
     print("Data loaded successfully.")
-    
+
 except Exception as e:
     print(f"Error loading preprocessed data: {e}")
     print("Please STOP the server, run preprocess_sources.py, then restart.")
-    index, source_names = None, []
+    index, source_sentences, source_metadata = None, [], []
 
-# NLTK Tokenizer (still needed for rewrite)
+# NLTK Tokenizer
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
 
-# --- 2. CORE ANALYSIS ROUTE (Compares Full Document) ---
+# --- 2. CORE ANALYSIS ROUTE (NOW USES FAISS) ---
 @app.route('/api/check', methods=['POST'])
 def analyze_document():
     data = request.get_json()
@@ -43,63 +41,50 @@ def analyze_document():
         return jsonify({'error': 'No text provided'}), 400
 
     user_text = data['text']
-    
-    if not user_text or not index:
-        return jsonify({'overall_score': 0, 'flagged_sections': []})
+    user_sentences = nltk.sent_tokenize(user_text)
 
-    # --- 1. ENCODE THE ENTIRE USER DOCUMENT ---
-    # We compare the user's full text to the full source texts
-    try:
-        user_embedding = model.encode(user_text, convert_to_numpy=True).astype('float32')
-    except Exception as e:
-        print(f"Error encoding user text: {e}")
-        return jsonify({'error': 'Failed to process text.'}), 500
-        
-    user_embedding = user_embedding.reshape(1, -1) # Make it a (1, D) array
+    if not user_sentences or not index:
+        return jsonify({'overall_score': 0, 'flagged_sections': [], 'full_text': user_text})
 
-    # --- 2. SEARCH THE FAISS (L2) INDEX ---
-    # Your script uses IndexFlatL2, which finds the *closest* vector (lowest distance)
-    # k=1 means find the single best match
-    k = 1
-    D, I = index.search(user_embedding, k)
-    
-    l2_distance = D[0][0]
-    best_match_index = I[0][0]
-    
-    # --- 3. PREPARE THE REPORT ---
     report = {'overall_score': 0, 'flagged_sections': []}
-    
-    # With L2 distance, 0.0 is a perfect match.
-    # A low distance (e.g., < 0.7) means it's very similar.
-    L2_DISTANCE_THRESHOLD = 0.7 
+    plagiarized_indices = set()
 
-    if l2_distance < L2_DISTANCE_THRESHOLD:
-        # We found a significant match!
-        
-        # --- THIS IS THE FIX ---
-        # Convert L2 distance to a 0-100% similarity score
-        # We wrap in float() to fix the JSON serializable error
-        similarity_percent = float(round((1.0 - (l2_distance / 2.0)) * 100, 2))
-        # --- END OF FIX ---
-        
-        # Get the filename of the match
-        source_name = source_names[best_match_index] 
-        
-        report['overall_score'] = similarity_percent
-        
-        # Since this is a full-document check, we create one report entry
-        report['flagged_sections'].append({
-            'text': f"The entire document is {similarity_percent}% similar to a source file.",
-            'source': source_name,
-            'similarity': similarity_percent,
-            'type': 'Full Document Match'
-        })
-    
+    # --- FAISS-POWERED SEMANTIC SEARCH ---
+    user_embeddings = model.encode(user_sentences, convert_to_numpy=True).astype('float32')
+    faiss.normalize_L2(user_embeddings)
+
+    k = 1 # Find the single best match for each sentence
+    D, I = index.search(user_embeddings, k)
+
+    SIMILARITY_THRESHOLD = 0.75 # Tune this threshold (0.75 is a good start)
+
+    for i in range(len(user_sentences)):
+        similarity_score = D[i][0]
+        source_index = I[i][0]
+
+        if similarity_score > SIMILARITY_THRESHOLD:
+            plagiarized_indices.add(i)
+
+            matched_sentence = source_sentences[source_index]
+            source_file, _ = source_metadata[source_index]
+
+            report['flagged_sections'].append({
+                'text': user_sentences[i],
+                'source': f"{source_file} (similar to: \"{matched_sentence[0:100]}...\")",
+                'similarity': float(round(similarity_score * 100, 2)),
+                'type': 'Paraphrased' 
+            })
+
+    if len(user_sentences) > 0:
+        report['overall_score'] = round((len(plagiarized_indices) / len(user_sentences)) * 100, 2)
+
+    # IMPORTANT: Send the original text back, we need it for the PDF report
+    report['full_text'] = user_text 
+
     return jsonify(report)
 
 
 # --- 3. GEMINI-POWERED REWRITE ENDPOINT ---
-# (This route was correct, leaving as-is)
 @app.route('/api/rewrite', methods=['POST'])
 def rewrite_sentence():
     data = request.get_json()
@@ -112,12 +97,9 @@ def rewrite_sentence():
     api_key = data['api_key'] 
 
     prompt = f"Rewrite the following sentence in a completely original way, maintaining the core meaning but using different vocabulary and structure: \"{sentence_to_rewrite}\""
-    
-    gemini_api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key={api_key}"
 
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}]
-    }
+    gemini_api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key={api_key}"
+    payload = {"contents": [{"parts": [{"text": prompt}]}]}
 
     try:
         response = requests.post(gemini_api_url, json=payload)

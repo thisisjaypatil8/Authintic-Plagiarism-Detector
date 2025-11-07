@@ -1,0 +1,18 @@
+{
+    "sourceFile": "frontend/src/components/Actions/RewriteModal.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762449673209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762449673209,
+            "name": "Commit-0",
+            "content": "import React, { useState, useEffect } from 'react';\r\nimport axios from 'axios';\r\nimport './RewriteModal.css'; // We'll create this CSS file next\r\n\r\n// This component is controlled by Dashboard.js\r\n// It receives 'isOpen', 'onClose', and 'sentence' as props\r\nfunction RewriteModal({ isOpen, onClose, sentence }) {\r\n  const [isLoading, setIsLoading] = useState(false);\r\n  const [rewrittenText, setRewrittenText] = useState('');\r\n  const [error, setError] = useState('');\r\n\r\n  // This effect runs whenever the modal is opened\r\n  useEffect(() => {\r\n    if (isOpen) {\r\n      // Reset state\r\n      setIsLoading(true);\r\n      setRewrittenText('');\r\n      setError('');\r\n\r\n      // Prompt for API key - INSECURE for production, OK for project\r\n      const apiKey = prompt(\"Please enter your Gemini API Key:\");\r\n      if (!apiKey) {\r\n        setError('An API key is required to rewrite text.');\r\n        setIsLoading(false);\r\n        return;\r\n      }\r\n\r\n      // Call the rewrite API\r\n      axios.post('http://localhost:5001/api/rewrite', { \r\n        sentence: sentence,\r\n        api_key: apiKey \r\n      })\r\n      .then(response => {\r\n        setRewrittenText(response.data.rewritten_text);\r\n        setIsLoading(false);\r\n      })\r\n      .catch(err => {\r\n        console.error('Error rewriting text:', err);\r\n        setError('Failed to get a suggestion. Check the console.');\r\n        setIsLoading(false);\r\n      });\r\n    }\r\n  }, [isOpen, sentence]); // Re-run if the modal is opened or the sentence changes\r\n\r\n  if (!isOpen) {\r\n    return null; // Don't render anything if the modal is closed\r\n  }\r\n\r\n  return (\r\n    // The Modal Backdrop\r\n    <div className=\"modal-backdrop\" onClick={onClose}>\r\n      {/* The Modal Content - stopPropagation prevents clicks inside from closing it */}\r\n      <div className=\"modal-content\" onClick={e => e.stopPropagation()}>\r\n        <button className=\"modal-close-btn\" onClick={onClose}>&times;</button>\r\n        \r\n        <h3>Rewrite Suggestion</h3>\r\n        \r\n        <div className=\"modal-section\">\r\n          <strong>Original:</strong>\r\n          <p>{sentence}</p>\r\n        </div>\r\n        \r\n        <div className=\"modal-section\">\r\n          <strong>Suggestion:</strong>\r\n          {isLoading && <p>Generating suggestion...</p>}\r\n          {error && <p className=\"modal-error\">{error}</p>}\r\n          {!isLoading && !error && (\r\n            <p className=\"modal-suggestion\">{rewrittenText}</p>\r\n          )}\r\n        </div>\r\n      </div>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default RewriteModal;"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "frontend/src/pages/Home.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762450303099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762450303099,
+            "name": "Commit-0",
+            "content": "import React, { useState } from 'react';\r\nimport { useNavigate } from 'react-router-dom';\r\nimport axios from 'axios';\r\n\r\n// Add some basic styling\r\nconst homeStyles = {\r\n  display: 'flex',\r\n  flexDirection: 'column',\r\n  alignItems: 'center',\r\n  padding: '2rem',\r\n  fontFamily: 'Arial, sans-serif'\r\n};\r\n\r\nconst textareaStyles = {\r\n  width: '80%',\r\n  minHeight: '300px',\r\n  padding: '10px',\r\n  fontSize: '1rem',\r\n  borderRadius: '8px',\r\n  border: '1px solid #ccc'\r\n};\r\n\r\nconst buttonStyles = {\r\n  marginTop: '1rem',\r\n  padding: '10px 20px',\r\n  fontSize: '1.1rem',\r\n  backgroundColor: '#007bff',\r\n  color: 'white',\r\n  border: 'none',\r\n  borderRadius: '5px',\r\n  cursor: 'pointer'\r\n};\r\n\r\nfunction Home() {\r\n  const [text, setText] = useState('');\r\n  const [isLoading, setIsLoading] = useState(false);\r\n  const [error, setError] = useState('');\r\n  const navigate = useNavigate();\r\n\r\n  const handleSubmit = () => {\r\n    if (!text.trim()) {\r\n      setError('Please enter some text to analyze.');\r\n      return;\r\n    }\r\n\r\n    setIsLoading(true);\r\n    setError('');\r\n\r\n    // Call your Flask NLP service\r\n    axios.post('http://localhost:5001/api/analyze', { text })\r\n      .then(response => {\r\n        setIsLoading(false);\r\n        // On success, navigate to the dashboard and pass the report data\r\n        navigate('/dashboard', { state: { report: response.data } });\r\n      })\r\n      .catch(err => {\r\n        setIsLoading(false);\r\n        console.error('Error analyzing document:', err);\r\n        setError('Failed to analyze document. Please check the console.');\r\n      });\r\n  };\r\n\r\n  return (\r\n    <div style={homeStyles}>\r\n      <h1>Authintic Plagiarism Checker</h1>\r\n      <p>Paste your text below to check for plagiarism.</p>\r\n      \r\n      <textarea\r\n        style={textareaStyles}\r\n        value={text}\r\n        onChange={(e) => setText(e.target.value)}\r\n        placeholder=\"Start writing or paste your text here...\"\r\n      />\r\n      \r\n      <button \r\n        style={buttonStyles} \r\n        onClick={handleSubmit} \r\n        disabled={isLoading}\r\n      >\r\n        {isLoading ? 'Analyzing...' : 'Analyze Text'}\r\n      </button>\r\n\r\n      {error && <p style={{ color: 'red', marginTop: '1rem' }}>{error}</p>}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default Home;"
+        }
+    ]
+}

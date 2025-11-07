@@ -1,0 +1,22 @@
+# Node.js
+/frontend/node_modules
+/backend/node_modules
+/frontend/build
+npm-debug.log
+
+# Python
+/nlp-service/venv
+/nlp-service/__pycache__
+/nlp-service/report_cache.pkl
+*.pyc
+
+# NLP Generated Data
+/nlp-service/source_data.pkl
+/nlp-service/source_index.faiss
+
+# OS & Editor
+.DS_Store
+.env
+
+# Uploads
+/backend/uploads

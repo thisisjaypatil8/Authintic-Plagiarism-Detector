@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/src/components/Chart/ScoreDonut.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1762447015733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762449632922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,14 @@\n import React from 'react';\r\n import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';\r\n import 'react-circular-progressbar/dist/styles.css';\r\n \r\n-// This component receives the 'score' (a number 0-100) as a prop\r\n function ScoreDonut({ score }) {\r\n   // Determine color based on score\r\n   const getPathColor = (percentage) => {\r\n-    if (percentage > 75) return '#d9534f'; // Red for high plagiarism\r\n-    if (percentage > 40) return '#f0ad4e'; // Yellow for medium\r\n-    return '#5cb85c'; // Green for low/original\r\n+    if (percentage > 75) return '#d9534f'; // Red\r\n+    if (percentage > 40) return '#f0ad4e'; // Yellow\r\n+    return '#5cb85c'; // Green\r\n   };\r\n \r\n   const scoreColor = getPathColor(score);\r\n \r\n@@ -18,25 +17,15 @@\n       <CircularProgressbar\r\n         value={score}\r\n         text={`${score}%`}\r\n         styles={buildStyles({\r\n-          // Rotation of path and trail, in number of turns (0-1)\r\n           rotation: 0.25,\r\n-\r\n-          // Whether to use rounded or flat stroke end caps\r\n           strokeLinecap: 'butt',\r\n-\r\n-          // Text size\r\n           textSize: '16px',\r\n-\r\n-          // How long animation takes to go from one percentage to another, in seconds\r\n           pathTransitionDuration: 0.5,\r\n-\r\n-          // Colors\r\n           pathColor: scoreColor,\r\n           textColor: scoreColor,\r\n           trailColor: '#d6d6d6',\r\n-          backgroundColor: '#3e98c7',\r\n         })}\r\n       />\r\n       <h3 style={{ textAlign: 'center', color: scoreColor, marginTop: '10px' }}>\r\n         Plagiarism Score\r\n"
+                }
+            ],
+            "date": 1762447015733,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport { CircularProgressbar, buildStyles } from 'react-circular-progressbar';\r\nimport 'react-circular-progressbar/dist/styles.css';\r\n\r\n// This component receives the 'score' (a number 0-100) as a prop\r\nfunction ScoreDonut({ score }) {\r\n  // Determine color based on score\r\n  const getPathColor = (percentage) => {\r\n    if (percentage > 75) return '#d9534f'; // Red for high plagiarism\r\n    if (percentage > 40) return '#f0ad4e'; // Yellow for medium\r\n    return '#5cb85c'; // Green for low/original\r\n  };\r\n\r\n  const scoreColor = getPathColor(score);\r\n\r\n  return (\r\n    <div style={{ width: 200, height: 200, margin: 'auto' }}>\r\n      <CircularProgressbar\r\n        value={score}\r\n        text={`${score}%`}\r\n        styles={buildStyles({\r\n          // Rotation of path and trail, in number of turns (0-1)\r\n          rotation: 0.25,\r\n\r\n          // Whether to use rounded or flat stroke end caps\r\n          strokeLinecap: 'butt',\r\n\r\n          // Text size\r\n          textSize: '16px',\r\n\r\n          // How long animation takes to go from one percentage to another, in seconds\r\n          pathTransitionDuration: 0.5,\r\n\r\n          // Colors\r\n          pathColor: scoreColor,\r\n          textColor: scoreColor,\r\n          trailColor: '#d6d6d6',\r\n          backgroundColor: '#3e98c7',\r\n        })}\r\n      />\r\n      <h3 style={{ textAlign: 'center', color: scoreColor, marginTop: '10px' }}>\r\n        Plagiarism Score\r\n      </h3>\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default ScoreDonut;"
+        }
+    ]
+}

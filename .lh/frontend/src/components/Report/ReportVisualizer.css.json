@@ -1,0 +1,22 @@
+{
+    "sourceFile": "frontend/src/components/Report/ReportVisualizer.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1762446758405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1762449663868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,41 +1,52 @@\n+.report-visualizer h2 {\r\n+  border-bottom: 2px solid #eee;\r\n+  padding-bottom: 10px;\r\n+}\r\n+\r\n .report-text-block {\r\n-  line-height: 2;\r\n+  line-height: 2.2;\r\n   font-size: 1.1rem;\r\n+  background-color: #fdfdfd;\r\n+  padding: 1rem;\r\n+  border-radius: 8px;\r\n+  border: 1px solid #f0f0f0;\r\n }\r\n \r\n .sentence {\r\n   transition: background-color 0.3s ease;\r\n-  padding: 2px 0;\r\n+  padding: 3px 2px;\r\n+  border-radius: 3px;\r\n }\r\n \r\n .highlight-red {\r\n   background-color: #ff000033; /* Red with transparency */\r\n   border-bottom: 2px solid #e60000;\r\n }\r\n \r\n .highlight-yellow {\r\n-  background-color: #ffff0033; /* Yellow with transparency */\r\n+  background-color: #ffff004d; /* Yellow with transparency */\r\n   border-bottom: 2px solid #e6e600;\r\n }\r\n \r\n .original {\r\n   background-color: transparent;\r\n }\r\n \r\n .rewrite-btn {\r\n-  /* A small, subtle button */\r\n   margin-left: 5px;\r\n   padding: 2px 6px;\r\n-  font-size: 0.7rem;\r\n+  font-size: 0.8rem;\r\n   border: 1px solid #007bff;\r\n-  background: #007bff;\r\n-  color: white;\r\n+  background: white;\r\n+  color: #007bff;\r\n   border-radius: 4px;\r\n   cursor: pointer;\r\n   opacity: 0.7;\r\n-  transition: opacity 0.2s;\r\n+  transition: all 0.2s;\r\n }\r\n \r\n .sentence:hover .rewrite-btn {\r\n   opacity: 1;\r\n+  background: #007bff;\r\n+  color: white;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1762446758405,
+            "name": "Commit-0",
+            "content": ".report-text-block {\r\n  line-height: 2;\r\n  font-size: 1.1rem;\r\n}\r\n\r\n.sentence {\r\n  transition: background-color 0.3s ease;\r\n  padding: 2px 0;\r\n}\r\n\r\n.highlight-red {\r\n  background-color: #ff000033; /* Red with transparency */\r\n  border-bottom: 2px solid #e60000;\r\n}\r\n\r\n.highlight-yellow {\r\n  background-color: #ffff0033; /* Yellow with transparency */\r\n  border-bottom: 2px solid #e6e600;\r\n}\r\n\r\n.original {\r\n  background-color: transparent;\r\n}\r\n\r\n.rewrite-btn {\r\n  /* A small, subtle button */\r\n  margin-left: 5px;\r\n  padding: 2px 6px;\r\n  font-size: 0.7rem;\r\n  border: 1px solid #007bff;\r\n  background: #007bff;\r\n  color: white;\r\n  border-radius: 4px;\r\n  cursor: pointer;\r\n  opacity: 0.7;\r\n  transition: opacity 0.2s;\r\n}\r\n\r\n.sentence:hover .rewrite-btn {\r\n  opacity: 1;\r\n}"
+        }
+    ]
+}
