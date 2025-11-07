@@ -113,7 +113,7 @@ const Dashboard = () => {
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(211, 47, 47); // Red color
         doc.setFontSize(16);
-        doc.text(`${analysisResult.overall_score}%`, 75, 60);
+        doc.text(`${analysisResult.overall_score.toFixed(2)}%`, 75, 60);
 
         doc.setTextColor(0, 0, 0); // Reset color
         doc.setFontSize(12);
@@ -140,7 +140,7 @@ const Dashboard = () => {
             head: [tableColumn],
             body: tableRows,
             theme: 'striped',
-            headStyles: { fillColor: [41, 128, 185] }, // Blue header
+            headStyles: { fillColor: [67, 56, 202] }, // the project major color violet header
             didDrawCell: (data) => {
                 // Handle text wrapping for long sentences
                 if (data.column.index === 2 || data.column.index === 3) {
@@ -154,7 +154,9 @@ const Dashboard = () => {
         doc.setFont('helvetica', 'bold');
         doc.setFontSize(16);
         doc.text('Full Submitted Text', 14, 20);
-
+        // add some spacing
+        doc.text('', 14, 25);
+        doc.text('', 14, 25);
         doc.setFont('helvetica', 'normal');
         doc.setFontSize(9);
         // Split text to handle page breaks
@@ -231,7 +233,7 @@ const Dashboard = () => {
                                     </p>
                                     <p className="text-sm mt-1">
                                         <span className="font-semibold text-red-700">Similarity:</span>
-                                        <span className="ml-2 text-gray-600">{section.similarity}% ({section.type})</span>
+                                        <span className="ml-2 text-gray-600">{section.similarity.toFixed(2)}% ({section.type})</span>
                                     </p>
                                     <div className="mt-3">
                                         <button
