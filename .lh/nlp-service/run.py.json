@@ -1,0 +1,18 @@
+{
+    "sourceFile": "nlp-service/run.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762593793063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762593793063,
+            "name": "Commit-0",
+            "content": "from project import create_app\r\n\r\n# Create the app instance using our factory\r\napp = create_app()\r\n\r\nif __name__ == '__main__':\r\n    # Run the app\r\n    # Note: We set debug=True here for development\r\n    app.run(debug=True, port=5001)"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "nlp-service/project/__init__.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762593768903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762593768903,
+            "name": "Commit-0",
+            "content": "from flask import Flask\r\nimport nltk\r\n\r\ndef create_app():\r\n    \"\"\"Create and configure an instance of the Flask application.\"\"\"\r\n    app = Flask(__name__)\r\n\r\n    # Download NLTK Tokenizer on startup\r\n    try:\r\n        nltk.data.find('tokenizers/punkt')\r\n    except LookupError:\r\n        nltk.download('punkt')\r\n\r\n    # Register our routes (Blueprints) from main.py\r\n    with app.app_context():\r\n        from . import main\r\n        app.register_blueprint(main.bp)\r\n\r\n    return app"
+        }
+    ]
+}

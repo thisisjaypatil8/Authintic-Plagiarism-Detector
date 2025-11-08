@@ -1,0 +1,18 @@
+{
+    "sourceFile": "nlp-service/project/loader.py",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1762593821559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1762593821559,
+            "name": "Commit-0",
+            "content": "import faiss\r\nimport pickle\r\nfrom sentence_transformers import SentenceTransformer\r\n\r\ndef load_data():\r\n    \"\"\"Loads all models and data from disk.\"\"\"\r\n    print(\"Loading pre-processed sentence embeddings and FAISS index...\")\r\n    try:\r\n        index = faiss.read_index('source_index.faiss')\r\n        with open('source_data.pkl', 'rb') as f:\r\n            source_sentences, source_metadata = pickle.load(f)\r\n        print(\"Data loaded successfully.\")\r\n    except Exception as e:\r\n        print(f\"Error loading preprocessed data: {e}\")\r\n        print(\"Please STOP the server, run preprocess_sources.py, then restart.\")\r\n        return None, [], []\r\n        \r\n    return index, source_sentences, source_metadata\r\n\r\n# Load data once when the module is imported\r\nmodel = SentenceTransformer('all-MiniLM-L6-v2')\r\nindex, source_sentences, source_metadata = load_data()"
+        }
+    ]
+}
