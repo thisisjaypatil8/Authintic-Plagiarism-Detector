@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1762538411558,
@@ -36,6 +36,22 @@
                 {
                     "date": 1762538773158,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <!DOCTYPE html>\r\n <html lang=\"en\">\r\n   <head>\r\n     <meta charset=\"utf-8\" />\r\n-    <link rel=\"icon\" href=\"%PUBLIC_URL%/aut\" />\r\n+    <link rel=\"icon\" href=\"%PUBLIC_URL%/authintic_\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n     <meta name=\"theme-color\" content=\"#000000\" />\r\n     <meta\r\n       name=\"description\"\r\n"
+                },
+                {
+                    "date": 1762569413464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n <!DOCTYPE html>\r\n <html lang=\"en\">\r\n   <head>\r\n     <meta charset=\"utf-8\" />\r\n-    <link rel=\"icon\" href=\"%PUBLIC_URL%/authintic_\" />\r\n+    <link rel=\"icon\" href=\"%PUBLIC_URL%/authintic_logo.ico\" />\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n     <meta name=\"theme-color\" content=\"#000000\" />\r\n     <meta\r\n       name=\"description\"\r\n       content=\"Web site created using create-react-app\"\r\n     />\r\n     <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo.png\" />\r\n     <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\r\n-     <title>React App</title>\r\n+     <title></title>\r\n   </head>\r\n   <body>\r\n     <noscript>You need to enable JavaScript to run this app.</noscript>\r\n     <div id=\"root\"></div>\r\n"
+                },
+                {
+                    "date": 1762569420059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       content=\"Web site created using create-react-app\"\r\n     />\r\n     <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo.png\" />\r\n     <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\r\n-     <title></title>\r\n+     <title>Authinti</title>\r\n   </head>\r\n   <body>\r\n     <noscript>You need to enable JavaScript to run this app.</noscript>\r\n     <div id=\"root\"></div>\r\n"
+                },
+                {
+                    "date": 1762569425268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       content=\"Web site created using create-react-app\"\r\n     />\r\n     <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo.png\" />\r\n     <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\r\n-     <title>Authinti</title>\r\n+     <title>Authintic | </title>\r\n   </head>\r\n   <body>\r\n     <noscript>You need to enable JavaScript to run this app.</noscript>\r\n     <div id=\"root\"></div>\r\n"
+                },
+                {
+                    "date": 1762569449439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       content=\"Web site created using create-react-app\"\r\n     />\r\n     <link rel=\"apple-touch-icon\" href=\"%PUBLIC_URL%/logo.png\" />\r\n     <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\r\n-     <title>Authintic | </title>\r\n+     <title>Authintic | Plagiarism </title>\r\n   </head>\r\n   <body>\r\n     <noscript>You need to enable JavaScript to run this app.</noscript>\r\n     <div id=\"root\"></div>\r\n"
                 }
             ],
             "date": 1762538411558,

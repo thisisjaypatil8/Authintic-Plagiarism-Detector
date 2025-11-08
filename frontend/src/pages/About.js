@@ -14,22 +14,22 @@ const About = () => {
         {
             name: "Prathamesh Mohite",
             role: "Web Developer",
-            image: "./Pratham.jpg" // Update this path
+            image: "./Pratham.jpg" 
         },
         {
             name: "Harsh Pardeshi",
             role: "AI Engineer",
-            image: null // No image yet
+            image: "./Harsh.jpg" 
         },
         {
             name: "Viraj Kamble",
             role: "Web Developer",
-            image: "./Viraj.jpg" // Update this path
+            image: "./Viraj.jpg" 
         },
         {
             name: "Jay Patil",
             role: "AI Engineer",
-            image: null // No image yet
+            image: "./Jay.jpg" 
         }
     ];
 
