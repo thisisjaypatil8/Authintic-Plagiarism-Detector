@@ -39,7 +39,7 @@ const Dashboard = () => {
             {/* Conditionally render the report */}
             {analysisResult && (
                 <AnalysisReport 
-                    result={analysisResult} 
+                    analysisResult={analysisResult} 
                     file={analyzedFile} 
                 />
             )}

@@ -15,7 +15,8 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
     };
 
     const onFileChange = e => {
-        setFile(e.target.files[0]);
+        const selectedFile = e.target.files[0];
+        setFile(selectedFile);
         setMessage('');
         onAnalysisStart(); // Clear parent's old results
     };
@@ -26,9 +27,10 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
         setMessage('Uploading and analyzing...');
 
         if (!file) {
-            setMessage('Please select a file first.');
+            const errorMsg = 'Please select a file first.';
+            setMessage(errorMsg);
             setIsLoading(false);
-            onAnalysisError('Please select a file first.');
+            onAnalysisError(errorMsg);
             return;
         }
 
@@ -37,9 +39,10 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
         const token = getAuthToken();
 
         if (!token) {
-            setMessage('Authorization error. Please log in again.');
+            const errorMsg = 'Authorization error. Please log in again.';
+            setMessage(errorMsg);
             setIsLoading(false);
-            onAnalysisError('Authorization error. Please log in again.');
+            onAnalysisError(errorMsg);
             return;
         }
 

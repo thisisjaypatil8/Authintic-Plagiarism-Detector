@@ -3,9 +3,6 @@ import axios from 'axios';
 
 // This component ONLY renders the visual text and manages its own tooltip
 const VisualReport = ({ structuredText }) => {
-    // --- STATE MODIFICATION ---
-    // We no longer store 'content' (the JSX) in state.
-    // We now store 'item' and 'index' (the data)
     const [tooltip, setTooltip] = useState({
         visible: false,
         item: null,
@@ -13,8 +10,6 @@ const VisualReport = ({ structuredText }) => {
         x: 0,
         y: 0,
     });
-    // --- END MODIFICATION ---
-
     const [rewriteSuggestions, setRewriteSuggestions] = useState({});
     const [rewritingIndex, setRewritingIndex] = useState(null);
 
@@ -47,8 +42,6 @@ const VisualReport = ({ structuredText }) => {
         setRewritingIndex(null);
     };
 
-    // --- CLICK HANDLER MODIFICATION ---
-    // This is now much simpler. It just saves the item, index, and position.
     const handleHighlightClick = (e, item, index) => {
         if (!item.plagiarized) {
             setTooltip({ visible: false });
@@ -58,24 +51,21 @@ const VisualReport = ({ structuredText }) => {
         const rect = e.target.getBoundingClientRect();
         setTooltip({
             visible: true,
-            item: item,     // Store the data, not the JSX
-            index: index,   // Store the data, not the JSX
+            item: item,
+            index: index,
             x: window.scrollX + rect.left + rect.width / 2,
             y: window.scrollY + rect.top,
         });
     };
-    // --- END MODIFICATION ---
 
     return (
+        // This outer div now handles closing the tooltip
         <div onClick={() => setTooltip({ visible: false })}>
-            {/* --- TOOLTIP RENDER MODIFICATION --- */}
-            {/* The tooltip's content is now rendered LIVE, so it always
-                has access to the latest 'rewriteSuggestions' state. */}
             {tooltip.visible && tooltip.item && (
                 <div
                     className="tooltip visible"
                     style={{ left: `${tooltip.x}px`, top: `${tooltip.y}px` }}
-                    onClick={(e) => e.stopPropagation()}
+                    onClick={(e) => e.stopPropagation()} // Clicks inside tooltip don't close it
                 >
                     <div className="p-2 text-sm">
                         <p>
@@ -99,7 +89,6 @@ const VisualReport = ({ structuredText }) => {
                                 {rewritingIndex === tooltip.index ? 'Generating...' : '✨ Suggest Rewrite'}
                             </button>
                             
-                            {/* This block will now correctly update when rewriteSuggestions[tooltip.index] changes */}
                             {rewriteSuggestions[tooltip.index] && (
                                 <div className="mt-2 p-3 bg-gray-700 rounded-md">
                                     <p className="text-sm text-white">{rewriteSuggestions[tooltip.index]}</p>
@@ -109,7 +98,6 @@ const VisualReport = ({ structuredText }) => {
                     </div>
                 </div>
             )}
-            {/* --- END MODIFICATION --- */}
 
             <h3 className="text-xl font-semibold mb-4">Highlighted Document</h3>
             <p className="text-sm text-gray-500 mb-4">Click on a highlighted section for details and rewrite options.</p>
@@ -121,7 +109,7 @@ const VisualReport = ({ structuredText }) => {
                                 key={index}
                                 className={`highlight ${item.type === 'Direct Match' ? 'highlight-direct' : 'highlight-paraphrased'}`}
                                 onClick={(e) => {
-                                    e.stopPropagation();
+                                    e.stopPropagation(); // Stop click from bubbling up
                                     handleHighlightClick(e, item, index);
                                 }}
                             >
