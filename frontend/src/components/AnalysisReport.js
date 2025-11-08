@@ -45,6 +45,13 @@ const AnalysisReport = ({ analysisResult, file }) => {
         doc.setTextColor(211, 47, 47); // Red color
         doc.setFontSize(16);
         doc.text(`${overall_score}%`, 75, margin.top + 45);
+        doc.setFontSize(12);
+        doc.setTextColor(76, 175, 80); // green color
+        doc.text(`Original: ${stats.original_percent.toFixed(1)}%`, margin.left, margin.top + 60);
+        doc.setTextColor(255, 152, 0); // Orange color
+        doc.text(`Paraphrased: ${stats.paraphrased_percent.toFixed(1)}%`, margin.left, margin.top + 70);
+        doc.setTextColor(211, 47, 47); // Red color
+        doc.text(`Direct Match: ${stats.direct_percent.toFixed(1)}%`, margin.left, margin.top + 80);
         doc.setTextColor(0, 0, 0); // Reset color
 
         // Add Chart Image
@@ -53,18 +60,21 @@ const AnalysisReport = ({ analysisResult, file }) => {
             doc.addImage(chartImage, 'PNG', page.width / 2 - 40, margin.top + 55, 80, 80);
         }
         
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(14);
+        doc.text('Statistical Summary:', margin.left, margin.top + 145);
         // Add Stats Summary Table
         autoTable(doc, {
-            startY: margin.top + 145,
-            head: [['Category', 'Sentences', 'Percentage']],
+            startY: margin.top + 150,
+            head: [['Category', 'Sentences']],
             body: [
-                ['Original', stats.original_count, `${stats.original_percent.toFixed(2)}%`],
-                ['Paraphrased', stats.paraphrased_count, `${stats.paraphrased_percent.toFixed(2)}%`],
-                ['Direct Match', stats.direct_count, `${stats.direct_percent.toFixed(2)}%`],
-                ['Total Sentences', stats.total_sentences, '100.00%'],
+                ['Original', stats.original_count],
+                ['Paraphrased', stats.paraphrased_count],
+                ['Direct Match', stats.direct_count],
+                ['Total Sentences', stats.total_sentences],
             ],
             headStyles: { fillColor: [41, 128, 185] }, // Blue header
-            foot: [['Total Plagiarized', stats.direct_count + stats.paraphrased_count, `${(100 - stats.original_percent).toFixed(2)}%`]],
+            foot: [['Total Plagiarized', stats.direct_count + stats.paraphrased_count]],
             footStyles: { fillColor: [231, 76, 60] }, // Red footer
             theme: 'striped',
         });
@@ -79,7 +89,7 @@ const AnalysisReport = ({ analysisResult, file }) => {
             startY: lastTableY + 20,
             head: [['Similarity', 'Type', 'Flagged Text', 'Source']],
             body: flagged_sections.map((section) => [
-                `${section.similarity}%`,
+                `${section.similarity.toFixed(2)}%`,
                 section.type,
                 section.text,
                 section.source,
