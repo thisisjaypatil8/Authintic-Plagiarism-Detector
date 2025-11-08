@@ -23,3 +23,7 @@ npm-debug.log
 
 # frontend
 /frontend/.env
+
+#Logs
+/lh
+/lh/*
