@@ -20,3 +20,6 @@ npm-debug.log
 
 # Uploads
 /backend/uploads
+
+# frontend
+/frontend/.env

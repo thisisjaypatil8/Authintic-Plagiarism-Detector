@@ -249,4 +249,4 @@ This project is released under the **MIT License** — free for personal and edu
 
 ---
 
-### 💡 Developed by [Jay Patil](https://github.com/thisisjaypatil8)
+### 💡 Developed by [Jay Patil](https://github.com/thisisjaypatil8), [Prathmesh Mohite](https://www.linkedin.com/in/prathameshmohite1856/), [Viraj Kamble](https://www.linkedin.com/in/virajkamble0706/), [Harsh Pardeshi](https://www.linkedin.com/in/harsh-pardeshi-4ab64127b/)

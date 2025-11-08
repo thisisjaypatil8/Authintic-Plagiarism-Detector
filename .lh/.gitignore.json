@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 10,
             "patches": [
                 {
                     "date": 1762531815352,
@@ -32,6 +32,22 @@
                 {
                     "date": 1762540698296,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n /nlp-service/source_data.pkl\r\n /nlp-service/source_index.faiss\r\n \r\n # OS & Editor\r\n-b.DS_Store\r\n+/backend/.DS_Store\r\n backend/.env\r\n \r\n # Uploads\r\n /backend/uploads\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762615250340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n /nlp-service/source_index.faiss\r\n \r\n # OS & Editor\r\n /backend/.DS_Store\r\n-backend/.env\r\n+/backend/.env\r\n \r\n # Uploads\r\n\\ No newline at end of file\n-/backend/uploads\n+/backend/uploads\r\n+\r\n"
+                },
+                {
+                    "date": 1762615256124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,4 +19,6 @@\n /backend/.env\r\n \r\n # Uploads\r\n /backend/uploads\r\n+\r\n+# \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762615262573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,5 @@\n \r\n # Uploads\r\n /backend/uploads\r\n \r\n-# \n\\ No newline at end of file\n+# f\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1762615268597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,6 @@\n \r\n # Uploads\r\n /backend/uploads\r\n \r\n-# f\n\\ No newline at end of file\n+# frontend\r\n+/frontend/.env\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1762531815352,
