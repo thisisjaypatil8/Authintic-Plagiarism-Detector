@@ -66,7 +66,15 @@ router.post('/login', async (req, res) => {
             { expiresIn: '5h' }, // Token expires in 5 hours
             (err, token) => {
                 if (err) throw err;
-                res.json({ token });
+                // Return token along with user info for PDF display
+                res.json({ 
+                    token,
+                    user: {
+                        id: user.id,
+                        name: user.name,
+                        email: user.email
+                    }
+                });
             }
         );
 
