@@ -4,13 +4,9 @@ import autoTable from 'jspdf-autotable';
 import VisualReport from './VisualReport';
 import DoughnutChart from './DoughnutChart';
 
-// This component ONLY displays the results.
-// It receives the 'analysisResult' and 'file' objects as props.
 const AnalysisReport = ({ analysisResult, file }) => {
-    // 1. Create a ref to hold the chart instance
     const chartRef = useRef(null);
 
-    // This check is important. It ensures we don't try to read 'null'
     if (!analysisResult) {
         return null; 
     }
@@ -20,162 +16,273 @@ const AnalysisReport = ({ analysisResult, file }) => {
     const handleDownloadPDF = () => {
         const doc = new jsPDF();
         const user = JSON.parse(localStorage.getItem('user'));
-        const page = {
-            width: doc.internal.pageSize.getWidth(),
-            height: doc.internal.pageSize.getHeight(),
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const pageHeight = doc.internal.pageSize.getHeight();
+        const margin = { top: 20, right: 15, bottom: 20, left: 15 };
+        const contentWidth = pageWidth - margin.left - margin.right;
+
+        // Helper to add page header
+        const addPageHeader = (pageNum) => {
+            doc.setFontSize(8);
+            doc.setTextColor(150);
+            doc.text('Authintic Plagiarism Checker', margin.left, 10);
+            doc.text(`Page ${pageNum}`, pageWidth - margin.right, 10, { align: 'right' });
+            doc.setTextColor(0);
         };
-        const margin = { top: 20, right: 14, bottom: 20, left: 14 };
 
-        // --- PAGE 1: SUMMARY & CHART ---
-        doc.setFont('helvetica', 'bold');
-        doc.setFontSize(20);
-        doc.text('Plagiarism Analysis Report', page.width / 2, margin.top, {
-            align: 'center',
-        });
+        let currentPage = 1;
 
-        doc.setFont('helvetica', 'normal');
-        doc.setFontSize(12);
-        doc.text(`Report for: ${user?.name || 'User'}`, margin.left, margin.top + 20);
-        doc.text(`Analyzed File: ${file?.name || 'N/A'}`, margin.left, margin.top + 27);
-        doc.text(`Date: ${new Date().toLocaleString()}`, margin.left, margin.top + 34);
-
-        doc.setFont('helvetica', 'bold');
-        doc.text('Overall Similarity Score:', margin.left, margin.top + 45);
-        doc.setFont('helvetica', 'bold');
-        doc.setTextColor(211, 47, 47); // Red color
-        doc.setFontSize(16);
-        doc.text(`${overall_score}%`, 75, margin.top + 45);
-        doc.setFontSize(12);
-        doc.setTextColor(76, 175, 80); // green color
-        doc.text(`Original: ${stats.original_percent.toFixed(1)}%`, margin.left, margin.top + 60);
-        doc.setTextColor(255, 152, 0); // Orange color
-        doc.text(`Paraphrased: ${stats.paraphrased_percent.toFixed(1)}%`, margin.left, margin.top + 70);
-        doc.setTextColor(211, 47, 47); // Red color
-        doc.text(`Direct Match: ${stats.direct_percent.toFixed(1)}%`, margin.left, margin.top + 80);
-        doc.setTextColor(0, 0, 0); // Reset color
-
-        // Add Chart Image
-        if (chartRef.current) {
-            const chartImage = chartRef.current.toBase64Image();
-            doc.addImage(chartImage, 'PNG', page.width / 2 - 40, margin.top + 55, 80, 80);
-        }
+        // === PAGE 1: COVER & SUMMARY ===
+        addPageHeader(currentPage);
         
+        // Title
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(24);
+        doc.setTextColor(79, 70, 229); // Indigo
+        doc.text('Plagiarism Analysis Report', pageWidth / 2, 35, { align: 'center' });
+        
+        // Decorative line
+        doc.setDrawColor(79, 70, 229);
+        doc.setLineWidth(0.5);
+        doc.line(margin.left, 42, pageWidth - margin.right, 42);
+        
+        // Report Info - FIXED USER NAME
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(11);
+        doc.setTextColor(60);
+        let yPos = 55;
+        doc.text(`Analyzed for: ${user?.user?.name || user?.name || 'User'}`, margin.left, yPos);
+        doc.text(`File: ${file?.name || 'N/A'}`, margin.left, yPos + 7);
+        doc.text(`Date: ${new Date().toLocaleString()}`, margin.left, yPos + 14);
+        
+        // Similarity Score Box
+        yPos = 85;
+        doc.setFillColor(254, 226, 226); // Light red background
+        doc.roundedRect(margin.left, yPos, contentWidth, 25, 3, 3, 'F');
         doc.setFont('helvetica', 'bold');
         doc.setFontSize(14);
-        doc.text('Statistical Summary:', margin.left, margin.top + 145);
-        // Add Stats Summary Table
-        autoTable(doc, {
-            startY: margin.top + 150,
-            head: [['Category', 'Sentences']],
-            body: [
-                ['Original', stats.original_count],
-                ['Paraphrased', stats.paraphrased_count],
-                ['Direct Match', stats.direct_count],
-                ['Total Sentences', stats.total_sentences],
-            ],
-            headStyles: { fillColor: [41, 128, 185] }, // Blue header
-            foot: [['Total Plagiarized', stats.direct_count + stats.paraphrased_count]],
-            footStyles: { fillColor: [231, 76, 60] }, // Red footer
-            theme: 'striped',
-        });
-
-        // Add Flagged Sections Table
-        const lastTableY = doc.lastAutoTable.finalY;
-        doc.setFontSize(12);
+        doc.setTextColor(60);
+        doc.text('Overall Similarity Score:', margin.left + 5, yPos + 10);
+        doc.setFontSize(20);
+        doc.setTextColor(220, 38, 38); // Red
+        doc.text(`${overall_score}%`, margin.left + 5, yPos + 20);
+        
+        // Score Breakdown
+        yPos = 120;
+        const scoreBoxWidth = contentWidth / 3 - 4;
+        
+        // Original
+        doc.setFillColor(220, 252, 231); // Light green
+        doc.roundedRect(margin.left, yPos, scoreBoxWidth, 20, 2, 2, 'F');
+        doc.setFontSize(10);
+        doc.setTextColor(60);
+        doc.text('Original', margin.left + 3, yPos + 8);
         doc.setFont('helvetica', 'bold');
-        doc.text('Flagged Sections Details:', margin.left, lastTableY + 15);
-
+        doc.setFontSize(14);
+        doc.setTextColor(34, 197, 94); // Green
+        doc.text(`${stats.original_percent.toFixed(1)}%`, margin.left + 3, yPos + 16);
+        
+        // Paraphrased
+        doc.setFillColor(254, 249, 195); // Light yellow
+        doc.roundedRect(margin.left + scoreBoxWidth + 2, yPos, scoreBoxWidth, 20, 2, 2, 'F');
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        doc.setTextColor(60);
+        doc.text('Paraphrased', margin.left + scoreBoxWidth + 5, yPos + 8);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(14);
+        doc.setTextColor(234, 179, 8); // Yellow
+        doc.text(`${stats.paraphrased_percent.toFixed(1)}%`, margin.left + scoreBoxWidth + 5, yPos + 16);
+        
+        // Direct Match
+        doc.setFillColor(254, 226, 226); // Light red
+        doc.roundedRect(margin.left + (scoreBoxWidth + 2) * 2, yPos, scoreBoxWidth, 20, 2, 2, 'F');
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        doc.setTextColor(60);
+        doc.text('Direct Match', margin.left + (scoreBoxWidth + 2) * 2 + 3, yPos + 8);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(14);
+        doc.setTextColor(220, 38, 38); // Red
+        doc.text(`${stats.direct_percent.toFixed(1)}%`, margin.left + (scoreBoxWidth + 2) * 2 + 3, yPos + 16);
+        
+        // Chart
+        if (chartRef.current) {
+            const chartImage = chartRef.current.toBase64Image();
+            doc.addImage(chartImage, 'PNG', pageWidth / 2 - 35, 150, 70, 70);
+        }
+        
+        // Statistical Summary Table
+        yPos = 230;
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(13);
+        doc.setTextColor(0);
+        doc.text('Statistical Summary', margin.left, yPos);
+        
         autoTable(doc, {
-            startY: lastTableY + 20,
-            head: [['Similarity', 'Type', 'Flagged Text', 'Source']],
-            body: flagged_sections.map((section) => [
-                `${section.similarity.toFixed(2)}%`,
-                section.type,
-                section.text,
-                section.source,
-            ]),
-            headStyles: { fillColor: [41, 128, 185] },
-            theme: 'striped',
+            startY: yPos + 5,
+            head: [['Category', 'Count', 'Percentage']],
+            body: [
+                ['Original Sentences', stats.original_count, `${stats.original_percent.toFixed(1)}%`],
+                ['Paraphrased Sentences', stats.paraphrased_count, `${stats.paraphrased_percent.toFixed(1)}%`],
+                ['Direct Match Sentences', stats.direct_count, `${stats.direct_percent.toFixed(1)}%`],
+                ['Total Sentences', stats.total_sentences, '100%'],
+            ],
+            headStyles: { fillColor: [79, 70, 229], fontSize: 10, fontStyle: 'bold' },
+            bodyStyles: { fontSize: 9 },
+            foot: [['Total Plagiarized', stats.direct_count + stats.paraphrased_count, `${(stats.direct_percent + stats.paraphrased_percent).toFixed(1)}%`]],
+            footStyles: { fillColor: [220, 38, 38], textColor: 255, fontStyle: 'bold' },
+            theme: 'grid',
+            margin: { left: margin.left, right: margin.right }
         });
 
-        // --- NEW PAGE: FULL TEXT APPENDIX ---
+        // === PAGE 2: FLAGGED SECTIONS ===
         doc.addPage();
+        currentPage++;
+        addPageHeader(currentPage);
+        
         doc.setFont('helvetica', 'bold');
         doc.setFontSize(16);
-        doc.text('Appendix: Full Submitted Text (with Highlighting)', margin.left, margin.top);
+        doc.setTextColor(79, 70, 229);
+        doc.text('Flagged Sections Details', margin.left, 30);
+        
+        doc.setDrawColor(79, 70, 229);
+        doc.line(margin.left, 35, pageWidth - margin.right, 35);
+        
+        autoTable(doc, {
+            startY: 40,
+            head: [['#', 'Similarity', 'Type', 'Flagged Text', 'Source']],
+            body: flagged_sections.map((section, idx) => [
+                idx + 1,
+                `${section.similarity.toFixed(1)}%`,
+                section.type,
+                section.text.substring(0, 100) + (section.text.length > 100 ? '...' : ''),
+                section.source.substring(0, 50) + (section.source.length > 50 ? '...' : '')
+            ]),
+            headStyles: { 
+                fillColor: [79, 70, 229], 
+                fontSize: 9, 
+                fontStyle: 'bold',
+                halign: 'center'
+            },
+            bodyStyles: { fontSize: 8 },
+            columnStyles: {
+                0: { cellWidth: 10, halign: 'center' },
+                1: { cellWidth: 20, halign: 'center' },
+                2: { cellWidth: 25 },
+                3: { cellWidth: 70 },
+                4: { cellWidth: 55 }
+            },
+            theme: 'striped',
+            margin: { left: margin.left, right: margin.right }
+        });
 
-        // --- CUSTOM TEXT RENDERER WITH HIGHLIGHTING & PAGINATION ---
+        // === PAGE 3+: FULL TEXT WITH CONTINUOUS HIGHLIGHTING ===
+        doc.addPage();
+        currentPage++;
+        addPageHeader(currentPage);
+        
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(16);
+        doc.setTextColor(79, 70, 229);
+        doc.text('Full Document with Highlighted Matches', margin.left, 30);
+        
+        doc.setDrawColor(79, 70, 229);
+        doc.line(margin.left, 35, pageWidth - margin.right, 35);
+        
+        // Legend
+        yPos = 42;
+        doc.setFontSize(9);
+        doc.setTextColor(60);
+        doc.text('Legend:', margin.left, yPos);
+        
+        doc.setFillColor(220, 252, 231);
+        doc.rect(margin.left + 20, yPos - 3, 15, 4, 'F');
+        doc.text('Original', margin.left + 37, yPos);
+        
+        doc.setFillColor(254, 249, 195);
+        doc.rect(margin.left + 60, yPos - 3, 20, 4, 'F');
+        doc.text('Paraphrased', margin.left + 82, yPos);
+        
+        doc.setFillColor(254, 226, 226);
+        doc.rect(margin.left + 115, yPos - 3, 20, 4, 'F');
+        doc.text('Direct Match', margin.left + 137, yPos);
+        
+        // Merge consecutive segments for continuous highlighting
+        const mergedSegments = [];
+        let currentMerged = null;
+
+        full_text_structured.forEach((segment) => {
+            const segmentKey = segment.plagiarized ? `${segment.type}` : 'original';
+            
+            if (currentMerged && currentMerged.key === segmentKey) {
+                currentMerged.text += segment.text;
+            } else {
+                if (currentMerged) {
+                    mergedSegments.push(currentMerged);
+                }
+                currentMerged = {
+                    key: segmentKey,
+                    text: segment.text,
+                    plagiarized: segment.plagiarized || false,
+                    type: segment.type || null
+                };
+            }
+        });
+        
+        if (currentMerged) {
+            mergedSegments.push(currentMerged);
+        }
+
+        // Render with continuous line-based highlighting
         doc.setFont('helvetica', 'normal');
         const fontSize = 10;
-        const lineHeight = fontSize * 0.35 * 1.5;
+        const lineHeight = 5;
         doc.setFontSize(fontSize);
+        yPos = 52;
+        const maxWidth = contentWidth;
 
-        let currentX = margin.left;
-        let currentY = margin.top + 15;
-        const pageHeight = page.height - margin.bottom;
-        const pageWidth = page.width - margin.right;
-
-        const addNewPage = () => {
-            doc.addPage();
-            currentY = margin.top;
-            doc.setFontSize(fontSize);
-        };
-        
-        full_text_structured.forEach((segment) => {
-            const words = segment.text.split(/(\s+)/); // Split but keep whitespace
-            
-            let highlightColor = null;
+        mergedSegments.forEach((segment) => {
+            let bgColor = null;
             if (segment.plagiarized) {
-                highlightColor = segment.type === 'Direct Match' ? [239, 68, 68] : [245, 158, 11]; // Red-500 or Yellow-600
+                bgColor = segment.type === 'Direct Match' 
+                    ? [254, 226, 226]    // Light red
+                    : [254, 249, 195];   // Light yellow
+            } else {
+                bgColor = [220, 252, 231]; // Light green for original
             }
 
-            words.forEach((word) => {
-                if (!word) return;
-
-                const wordWidth = doc.getStringUnitWidth(word) * fontSize / doc.internal.scaleFactor;
-
-                // Handle newlines explicitly
-                if (word.includes('\n')) {
-                    const parts = word.split('\n');
-                    parts.forEach((part, i) => {
-                        if (i > 0) { // If it's a part after a newline
-                            currentX = margin.left;
-                            currentY += lineHeight;
-                            if (currentY + lineHeight > pageHeight) addNewPage();
-                        }
-                        const partWidth = doc.getStringUnitWidth(part) * fontSize / doc.internal.scaleFactor;
-                        if (highlightColor && part.trim().length > 0) {
-                            doc.setFillColor(highlightColor[0], highlightColor[1], highlightColor[2]);
-                            doc.rect(currentX, currentY - (lineHeight * 0.7) + 1, partWidth, lineHeight, 'F');
-                        }
-                        doc.setTextColor(0, 0, 0);
-                        doc.text(part, currentX, currentY);
-                        currentX += partWidth;
-                    });
-                } else {
-                    // Word doesn't fit on the current line
-                    if (currentX + wordWidth > pageWidth) {
-                        currentX = margin.left;
-                        currentY += lineHeight;
-                    }
-                    // Line doesn't fit on the current page
-                    if (currentY + lineHeight > pageHeight) {
-                        addNewPage();
-                    }
-
-                    // Draw highlight
-                    if (highlightColor && word.trim().length > 0) {
-                        doc.setFillColor(highlightColor[0], highlightColor[1], highlightColor[2]);
-                        doc.rect(currentX, currentY - (lineHeight * 0.7) + 1, wordWidth, lineHeight, 'F');
-                    }
-
-                    // Draw text
-                    doc.setTextColor(0, 0, 0);
-                    doc.text(word, currentX, currentY);
-                    currentX += wordWidth;
+            // Split text into lines that fit within maxWidth - THIS CREATES CONTINUOUS HIGHLIGHTING
+            const lines = doc.splitTextToSize(segment.text, maxWidth);
+            
+            lines.forEach((line) => {
+                // Check if we need a new page
+                if (yPos + lineHeight > pageHeight - margin.bottom) {
+                    doc.addPage();
+                    currentPage++;
+                    addPageHeader(currentPage);
+                    yPos = margin.top + 5;
                 }
+
+                // Draw continuous background highlight for the entire line
+                const lineWidth = doc.getTextWidth(line);
+                if (bgColor) {
+                    doc.setFillColor(bgColor[0], bgColor[1], bgColor[2]);
+                    doc.rect(margin.left, yPos - 3.5, lineWidth + 1, lineHeight, 'F');
+                }
+
+                // Draw text
+                doc.setTextColor(0);
+                doc.text(line, margin.left, yPos);
+                yPos += lineHeight;
             });
         });
+
+        // Footer on last page
+        doc.setFontSize(8);
+        doc.setTextColor(150);
+        doc.text('Generated by Authintic Plagiarism Checker', pageWidth / 2, pageHeight - 10, { align: 'center' });
+        doc.text('© 2025 MES Pillai College of Engineering', pageWidth / 2, pageHeight - 6, { align: 'center' });
 
         doc.save(`Plagiarism_Report_${file?.name || 'analysis'}.pdf`);
     };
@@ -186,9 +293,12 @@ const AnalysisReport = ({ analysisResult, file }) => {
                 <h2 className="text-2xl font-semibold">Analysis Report</h2>
                 <button
                     onClick={handleDownloadPDF}
-                    className="px-4 py-2 bg-green-600 text-white font-medium rounded-md hover:bg-green-700"
+                    className="px-4 py-2 bg-green-600 text-white font-medium rounded-md hover:bg-green-700 flex items-center gap-2"
                 >
-                    Download Report (PDF)
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                    </svg>
+                    Download PDF Report
                 </button>
             </div>
             
@@ -196,7 +306,7 @@ const AnalysisReport = ({ analysisResult, file }) => {
                 <div className="md:col-span-1 flex flex-col items-center justify-center">
                     <div className="relative w-48 h-48">
                         <DoughnutChart 
-                            ref={chartRef} // Pass the ref here
+                            ref={chartRef}
                             direct={stats.direct_percent}
                             paraphrased={stats.paraphrased_percent}
                             original={stats.original_percent}
