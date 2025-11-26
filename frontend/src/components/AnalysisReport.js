@@ -366,7 +366,7 @@ const AnalysisReport = ({ analysisResult, file }) => {
             </div>
             
             {full_text_structured && (
-                <VisualReport structuredText={full_text_structured} />
+                <VisualReport structuredText={full_text_structured} analysisResult={analysisResult} />
             )}
         </div>
     );
