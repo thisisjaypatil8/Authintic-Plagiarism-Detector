@@ -5,15 +5,17 @@ import DashboardHero from '../components/dashboard/DashboardHero';
 import HowToUse from '../components/dashboard/HowToUse';
 import TipsSection from '../components/dashboard/TipsSection';
 import FAQSection from '../components/dashboard/FAQSection';
+import ModeSelector from '../components/dashboard/ModeSelector';
 
 /**
- * Dashboard Page - Enhanced with informational content
- * Features: File upload, analysis results, how-to guide, tips, and FAQ
+ * Dashboard Page - Enhanced with informational content and dual-mode analysis
+ * Features: Mode selection, file upload, analysis results, how-to guide, tips, and FAQ
  */
 const Dashboard = () => {
     const [analysisResult, setAnalysisResult] = useState(null);
     const [analyzedFile, setAnalyzedFile] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
+    const [selectedMode, setSelectedMode] = useState('deep'); // Default to deep mode
 
     const handleAnalysisStart = () => {
         setAnalysisResult(null);
@@ -49,8 +51,22 @@ const Dashboard = () => {
 
                 {/* Main Content Grid */}
                 <div className="grid lg:grid-cols-3 gap-8 mb-8">
-                    {/* Left Column - Upload & Results */}
+                    {/* Left Column - Mode Selection, Upload & Results */}
                     <div className="lg:col-span-2 space-y-8">
+                        {/* Analysis Mode Selection */}
+                        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                                <svg className="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                                Choose Analysis Mode
+                            </h2>
+                            <ModeSelector 
+                                selectedMode={selectedMode}
+                                onModeChange={setSelectedMode}
+                            />
+                        </div>
+
                         {/* Upload Section */}
                         <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
@@ -63,6 +79,7 @@ const Dashboard = () => {
                                 onAnalysisStart={handleAnalysisStart}
                                 onAnalysisComplete={handleAnalysisComplete}
                                 onAnalysisError={handleAnalysisError}
+                                mode={selectedMode}
                             />
                         </div>
 
@@ -108,8 +125,8 @@ const Dashboard = () => {
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                     </svg>
                                     <div>
-                                        <p className="font-semibold">Hybrid AI Detection</p>
-                                        <p className="text-sm text-indigo-100">Catches both direct copies and paraphrasing</p>
+                                        <p className="font-semibold">Dual-Mode Detection</p>
+                                        <p className="text-sm text-indigo-100">Choose between fast or deep analysis</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">

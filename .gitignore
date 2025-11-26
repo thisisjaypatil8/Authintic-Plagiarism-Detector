@@ -9,6 +9,9 @@ npm-debug.log
 /nlp-service/__pycache__
 /nlp-service/report_cache.pkl
 *.pyc
+/nlp-service/test_gemini.py
+/nlp-service/.env
+
 
 # NLP Generated Data
 /nlp-service/source_data.pkl

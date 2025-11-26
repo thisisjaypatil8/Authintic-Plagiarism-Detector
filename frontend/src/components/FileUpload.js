@@ -3,7 +3,8 @@ import axios from 'axios';
 
 // This component now handles all upload logic
 // It takes a function prop 'onAnalysisComplete' to send data to the parent
-const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) => {
+// Also accepts 'mode' prop to determine analysis type
+const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError, mode = 'deep' }) => {
     const [file, setFile] = useState(null);
     const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -24,7 +25,12 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
     const onFormSubmit = async e => {
         e.preventDefault();
         setIsLoading(true);
-        setMessage('Uploading and analyzing...');
+        
+        // Show mode-specific loading message
+        const loadingMsg = mode === 'fast' 
+            ? 'Analyzing... (~1-3 seconds)' 
+            : 'Deep analysis in progress... (~10-30 seconds)';
+        setMessage(loadingMsg);
 
         if (!file) {
             const errorMsg = 'Please select a file first.';
@@ -36,6 +42,7 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
 
         const formData = new FormData();
         formData.append('document', file);
+        formData.append('mode', mode); // Include mode in the request
         const token = getAuthToken();
 
         if (!token) {
@@ -53,9 +60,15 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
                     'x-auth-token': token
                 }
             });
-            // Pass the full result (and the file) up to the parent
+            
+            // Check if result was cached
+            const cached = response.data.cached;
+            const completionMsg = cached 
+                ? 'Analysis complete. (Loaded from cache)' 
+                : 'Analysis complete.';
+            
+            setMessage(completionMsg);
             onAnalysisComplete(response.data, file);
-            setMessage('Analysis complete.');
         } catch (error) {
             console.error('Upload error:', error.response?.data || error.message);
             const errorMsg = 'Analysis failed: ' + (error.response?.data?.error || error.response?.data || 'Server error.');
@@ -65,14 +78,32 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
         setIsLoading(false);
     };
 
+    // Get mode-specific UI text
+    const getModeDisplay = () => {
+        if (mode === 'fast') {
+            return { icon: '⚡', text: 'Fast Mode', color: 'text-blue-600' };
+        }
+        return { icon: '🔍', text: 'Deep Mode', color: 'text-purple-600' };
+    };
+
+    const modeDisplay = getModeDisplay();
+
     return (
-        <form onSubmit={onFormSubmit} className="bg-white p-6 rounded-lg shadow-md mb-8">
-            <h2 className="text-xl font-semibold mb-4">Check a New Document</h2>
-            <div className="flex items-center space-x-4">
+        <div>
+            {/* Mode Indicator */}
+            <div className="mb-4 flex items-center gap-2">
+                <span className="text-sm text-gray-600">Selected mode:</span>
+                <span className={`font-semibold ${modeDisplay.color} flex items-center gap-1`}>
+                    <span>{modeDisplay.icon}</span>
+                    {modeDisplay.text}
+                </span>
+            </div>
+
+            <div className="flex items-center space-x-4 mb-4">
                 <button
                     type="button"
                     onClick={() => fileInputRef.current.click()}
-                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 border border-gray-300"
+                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 border border-gray-300 transition-colors"
                 >
                     Choose File
                 </button>
@@ -85,17 +116,25 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError }) =>
                     accept=".txt,.pdf,.doc,.docx"
                 />
             </div>
-            <p className="text-xs text-gray-400 mt-2">Accepted formats: .txt, .pdf, .docx, .doc</p>
+            <p className="text-xs text-gray-400 mb-4">Accepted formats: .txt, .pdf, .docx, .doc</p>
             
             <button
-                type="submit"
+                onClick={onFormSubmit}
                 disabled={isLoading || !file}
-                className="mt-4 w-full px-4 py-2 font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-4 py-2 font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-                {isLoading ? 'Analyzing...' : 'Start Analysis'}
+                {isLoading ? (
+                    <span className="flex items-center justify-center gap-2">
+                        <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        </svg>
+                        Analyzing...
+                    </span>
+                ) : 'Start Analysis'}
             </button>
             {message && <p className="mt-4 text-center text-gray-600">{message}</p>}
-        </form>
+        </div>
     );
 };
 

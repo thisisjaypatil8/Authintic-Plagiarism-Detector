@@ -161,3 +161,51 @@ def rewrite_sentence():
     except Exception as e:
         print(f"Generic error in rewrite: {e}")
         return jsonify({'error': f'Failed to communicate with the rewrite service: {e}'}), 500
+
+
+@bp.route('/api/guidance', methods=['POST'])
+def generate_guidance():
+    """Generate educational guidance for flagged plagiarism"""
+    from .guidance_engine import generate_personalized_guidance
+    
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'No data provided'}), 400
+    
+    required_fields = ['text', 'similarity', 'type']
+    for field in required_fields:
+        if field not in data:
+            return jsonify({'error': f'Missing required field: {field}'}), 400
+    
+    flagged_section = {
+        'text': data['text'],
+        'similarity': data['similarity'],
+        'type': data['type'],
+        'source': data.get('source', 'unknown source')
+    }
+    
+    try:
+        guidance = generate_personalized_guidance(flagged_section)
+        return jsonify(guidance)
+    except Exception as e:
+        print(f"Error generating guidance: {e}")
+        return jsonify({'error': 'Failed to generate guidance'}), 500
+
+@bp.route('/api/guidance/summary', methods=['POST'])
+def generate_summary_guidance():
+    """Generate overall document summary guidance"""
+    from .guidance_engine import generate_overall_summary
+    
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'No data provided'}), 400
+    
+    flagged_sections = data.get('flagged_sections', [])
+    overall_score = data.get('overall_score', 0)
+    
+    try:
+        summary = generate_overall_summary(flagged_sections, overall_score)
+        return jsonify(summary)
+    except Exception as e:
+        print(f"Error generating summary: {e}")
+        return jsonify({'error': 'Failed to generate summary'}), 500

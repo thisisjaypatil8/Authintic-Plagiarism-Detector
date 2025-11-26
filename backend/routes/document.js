@@ -92,4 +92,34 @@ router.post('/rewrite', async (req, res) => {
     }
 });
 
+// @route   POST /api/documents/guidance
+router.post('/guidance', async (req, res) => {
+    const { text, similarity, type, source } = req.body;
+    if (!text || similarity === undefined || !type) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+    try {
+        const nlpResponse = await axios.post('http://localhost:5001/api/guidance', {
+            text, similarity, type, source: source || 'unknown source'
+        });
+        res.json(nlpResponse.data);
+    } catch (error) {
+        console.error('Error calling guidance service:', error.message);
+        res.status(500).send('Error generating guidance.');
+    }
+});
+
+// @route   POST /api/documents/guidance/summary
+router.post('/guidance/summary', async (req, res) => {
+    const { flagged_sections, overall_score } = req.body;
+    try {
+        const nlpResponse = await axios.post('http://localhost:5001/api/guidance/summary', {
+            flagged_sections, overall_score
+        });
+        res.json(nlpResponse.data);
+    } catch (error) {
+        console.error('Error calling summary service:', error.message);
+        res.status(500).send('Error generating summary.');
+    }
+});
 module.exports = router;
