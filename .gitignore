@@ -12,6 +12,7 @@ npm-debug.log
 /nlp-service/test_gemini.py
 /nlp-service/.env
 
+
 # NLP Generated Data
 /nlp-service/source_data.pkl
 /nlp-service/source_index.faiss
