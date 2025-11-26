@@ -31,3 +31,7 @@ npm-debug.log
 #Logs
 /lh
 /lh/*
+
+.env
+/nlp-service/.env
+/backend/.env
