@@ -7,31 +7,26 @@ npm-debug.log
 # Python
 /nlp-service/venv
 /nlp-service/__pycache__
-/nlp-service/report_cache.pkl
 *.pyc
-/nlp-service/test_gemini.py
-/nlp-service/.env
 
-
-
-# NLP Generated Data
-/nlp-service/source_data.pkl
+# NLP Generated Data (large files — regenerate with scripts/)
 /nlp-service/source_index.faiss
+/nlp-service/source_data.pkl
+/nlp-service/bert_model/
+/nlp-service/source_texts/
+/nlp-service/cache/
 
-# OS & Editor
-/backend/.DS_Store
+# Environment
+.env
+/nlp-service/.env
 /backend/.env
+/frontend/.env
 
 # Uploads
 /backend/uploads
 
-# frontend
-/frontend/.env
+# OS & Editor
+.DS_Store
 
-#Logs
-/lh
-/lh/*
-
-.env
-/nlp-service/.env
-/backend/.env
+# Docs
+docs/

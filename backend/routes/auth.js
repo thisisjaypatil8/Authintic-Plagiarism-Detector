@@ -31,9 +31,7 @@ router.post('/register', async (req, res) => {
         res.status(500).send('Server error');
     }
 });
-const jwt = require('jsonwebtoken'); // Make sure this is at the top of the file
-
-// ... your existing /register route code is here ...
+const jwt = require('jsonwebtoken');
 
 // @route   POST /api/auth/login
 // @desc    Authenticate user & get token

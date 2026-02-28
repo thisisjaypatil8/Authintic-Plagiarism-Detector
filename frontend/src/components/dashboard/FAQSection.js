@@ -13,8 +13,8 @@ const FAQSection = () => {
             answer: "We currently support .docx (Microsoft Word), .txt (Plain Text), and .pdf (PDF) files. Maximum file size is 10MB."
         },
         {
-            question: "How accurate is the plagiarism detection?",
-            answer: "Our hybrid AI model combines syntactic analysis (TF-IDF) with semantic understanding (transformer models) to achieve high accuracy in detecting both direct copying and sophisticated paraphrasing."
+            question: "How does the detection work?",
+            answer: "Authintic uses a 3-layer hybrid approach: Layer 1 (TF-IDF) catches verbatim copies, Layer 2 (FAISS semantic search with 1.77M indexed vectors) detects paraphrasing, and Layer 3 (BERT classifier fine-tuned on the PAN25 dataset) catches AI-generated plagiarism. The system was evaluated on the PAN25 benchmark of 62,160 annotated document pairs."
         },
         {
             question: "What does the similarity score mean?",

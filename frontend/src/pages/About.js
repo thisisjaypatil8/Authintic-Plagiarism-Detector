@@ -1,200 +1,233 @@
-import React, { lazy, Suspense, useEffect } from 'react';
+import React, { lazy, Suspense } from 'react';
+import { IconStar, IconMicroscope, IconTarget, IconBolt, IconGradCap } from '../components/Icons';
 import ErrorBoundary from '../components/common/ErrorBoundary';
-import AboutHeroSection from '../components/about/sections/AboutHeroSection';
-import FeatureHighlightsSection from '../components/about/sections/FeatureHighlightsSection';
-import TechStackSection from '../components/about/sections/TechStackSection';
+import TechStackSection from '../components/about/TechStackSection';
+import AnimatedName from '../components/AnimatedName';
 
-// Lazy load the TeamSection (contains images)
-const TeamSection = lazy(() => import('../components/about/sections/TeamSection'));
+const TeamSection = lazy(() => import('../components/about/TeamSection'));
 
-/**
- * About Page - Refactored to use modular components
- * Uses lazy loading for image-heavy sections
- */
 const About = () => {
     const websiteName = "Authintic";
 
-    // Load Google Fonts
-    useEffect(() => {
-        const link = document.createElement('link');
-        link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap';
-        link.rel = 'stylesheet';
-        document.head.appendChild(link);
-    }, []);
-
     return (
         <ErrorBoundary>
-            <div className="min-h-screen bg-gradient-to-br from-indigo-200 via-purple-100 to-pink-200 pt-32 pb-16" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <div className="container mx-auto px-6">
-                    {/* Hero Section */}
-                    <AboutHeroSection />
+            <div className="min-h-screen bg-white" style={{ fontFamily: "'Inter', sans-serif" }}>
 
-                    {/* Feature Highlights */}
-                    <FeatureHighlightsSection />
-
-                    {/* Main Content Grid */}
-                    <div className="max-w-6xl mx-auto space-y-10">
-                        {/* Introduction Card */}
-                        <div className="bg-white p-10 rounded-3xl shadow-2xl border border-indigo-100 hover:shadow-3xl transition-all relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full blur-3xl opacity-30 -mr-32 -mt-32"></div>
-                            <div className="relative flex items-start gap-5 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                    <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                    </svg>
+                {/* HERO — Large headline + right illustration */}
+                <section className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #E6F9F8 0%, #fff 100%)' }}>
+                    <div className="container mx-auto px-6 max-w-6xl pt-28 pb-20">
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6 border" style={{ borderColor: '#0ABAB5', color: '#0ABAB5', background: 'rgba(10,186,181,0.05)' }}>
+                                    <span className="inline-flex items-center gap-2"><IconStar className="w-5 h-5" style={{ color: '#0ABAB5' }} /> About Our Project</span>
                                 </div>
-                                <div>
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>Our Journey</h2>
-                                    <p className="text-indigo-600 font-medium">Final Year Project - Electronics & Computer Science</p>
-                                </div>
+                                <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                                    Meet <span style={{ color: '#0ABAB5' }}>{websiteName}</span>
+                                </h1>
+                                <p className="text-xl text-gray-500 leading-relaxed">
+                                    A groundbreaking plagiarism detection system developed at MES Pillai College of Engineering, combining TF-IDF, FAISS, and BERT in a single hybrid pipeline.
+                                </p>
                             </div>
-                            <p className="text-lg text-gray-700 leading-relaxed relative">
-                                Welcome to <strong className="text-indigo-600">{websiteName}</strong> — a groundbreaking plagiarism detection system developed by <strong>Prathamesh Mohite</strong>, <strong>Harsh Pardeshi</strong>, <strong>Viraj Kamble</strong>, and <strong>Jay Patil</strong> at MES's Pillai College of Engineering. Born from our passion for technology and commitment to academic excellence, this project showcases the power of AI in preserving the integrity of scholarly work.
-                            </p>
-                        </div>
-
-                        {/* Mission Section */}
-                        <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-10 rounded-3xl shadow-2xl text-white relative overflow-hidden">
-                            <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl opacity-10 -ml-48 -mb-48"></div>
-                            <div className="relative flex items-start gap-5 mb-6">
-                                <div className="w-16 h-16 bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                    <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                    </svg>
-                                </div>
-                                <div className="flex-1">
-                                    <h2 className="text-3xl font-bold mb-5">Our Mission</h2>
-                                    <p className="text-purple-50 text-lg leading-relaxed">
-                                        In an era dominated by AI writing assistants and unprecedented access to information, academic integrity faces new challenges. Our mission is clear: provide students, educators, and researchers with an intelligent, intuitive tool to verify originality and combat the evolving landscape of plagiarism. We're not just detecting copied content — we're building a smarter system that stays ahead of those who try to bypass it.
-                                    </p>
+                            <div className="hidden md:flex justify-center">
+                                <div className="relative">
+                                    <div className="w-72 h-72 rounded-3xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #0ABAB5, #099D99)' }}>
+                                        <img src="/logo.png" alt="Authintic" className="w-36 h-36 object-contain brightness-0 invert" />
+                                    </div>
+                                    <div className="absolute -top-4 -right-4 bg-white shadow-lg rounded-2xl px-4 py-3 text-sm font-bold text-gray-900">
+                                        <span className="inline-flex items-center gap-1"><IconMicroscope className="w-4 h-4" /> 3-Layer Hybrid</span>
+                                    </div>
+                                    <div className="absolute -bottom-4 -left-4 bg-white shadow-lg rounded-2xl px-4 py-3 text-sm font-bold text-gray-900">
+                                        <span className="inline-flex items-center gap-1"><IconTarget className="w-4 h-4" /> PAN25 Evaluated</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
 
-                        {/* Technology Section */}
-                        <div className="bg-white p-10 rounded-3xl shadow-2xl border border-blue-100 hover:shadow-3xl transition-all">
-                            <div className="flex items-start gap-5 mb-8">
-                                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                    <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <div className="flex-1">
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-4">Hybrid AI Technology</h2>
-                                    <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                                        {websiteName} goes beyond simple text matching. Our platform leverages a <strong className="text-indigo-600">Hybrid AI Model</strong> combining multiple detection strategies for unparalleled accuracy:
-                                    </p>
-                                    <div className="grid md:grid-cols-2 gap-8">
-                                        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl border-2 border-indigo-200 hover:border-indigo-300 transition-all hover:shadow-lg">
-                                            <div className="flex items-center gap-4 mb-4">
-                                                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
-                                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                                    </svg>
-                                                </div>
-                                                <h3 className="font-bold text-xl text-indigo-900">Syntactic Analysis</h3>
-                                            </div>
-                                            <p className="text-gray-700 leading-relaxed">
-                                                Employs advanced NLP algorithms including TF-IDF to detect direct word-for-word plagiarism with exceptional precision and recall.
-                                            </p>
+                {/* SECTION 1 — Our Journey (text left, visual right) */}
+                <section className="py-20">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div className="grid md:grid-cols-2 gap-16 items-center">
+                            <div>
+                                <p className="text-sm font-bold uppercase tracking-wide mb-3" style={{ color: '#0ABAB5' }}>Our Journey</p>
+                                <h2 className="text-3xl font-extrabold text-gray-900 mb-6 leading-snug">
+                                    Building the future of <br/>academic integrity
+                                </h2>
+                                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                    Welcome to <strong style={{ color: '#0ABAB5' }}>{websiteName}</strong> — developed by <strong>Prathamesh Mohite</strong>, <strong>Harsh Pardeshi</strong>, <strong>Viraj Kamble</strong>, and <AnimatedName /> at MES's Pillai College of Engineering. Born from our passion for technology and commitment to academic excellence, this project showcases the power of AI in preserving the integrity of scholarly work.
+                                </p>
+                                <p className="text-gray-600 leading-relaxed">
+                                    In an era dominated by AI writing assistants and unprecedented access to information, academic integrity faces new challenges. Our mission is to provide students, educators, and researchers with an intelligent, intuitive tool to verify originality.
+                                </p>
+                            </div>
+                            <div className="flex justify-center">
+                                <div className="relative p-8 rounded-3xl" style={{ background: '#F0FDFA' }}>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                                            <div className="text-3xl font-extrabold" style={{ color: '#0ABAB5' }}>3</div>
+                                            <div className="text-sm text-gray-500 mt-1">Detection Layers</div>
                                         </div>
-                                        <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border-2 border-purple-200 hover:border-purple-300 transition-all hover:shadow-lg">
-                                            <div className="flex items-center gap-4 mb-4">
-                                                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                                                    </svg>
-                                                </div>
-                                                <h3 className="font-bold text-xl text-purple-900">Semantic Analysis</h3>
-                                            </div>
-                                            <p className="text-gray-700 leading-relaxed">
-                                                Utilizes state-of-the-art sentence-transformer models to understand context, meaning, and intent — catching sophisticated paraphrasing attempts.
-                                            </p>
+                                        <div className="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                                            <div className="text-3xl font-extrabold" style={{ color: '#0ABAB5' }}>1.77M</div>
+                                            <div className="text-sm text-gray-500 mt-1">FAISS Vectors</div>
+                                        </div>
+                                        <div className="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                                            <div className="text-3xl font-extrabold" style={{ color: '#0ABAB5' }}>1.00</div>
+                                            <div className="text-sm text-gray-500 mt-1">BERT F1 Score</div>
+                                        </div>
+                                        <div className="bg-white rounded-2xl p-6 shadow-sm text-center border border-gray-100">
+                                            <div className="text-3xl font-extrabold" style={{ color: '#0ABAB5' }}>PAN25</div>
+                                            <div className="text-sm text-gray-500 mt-1">Benchmark</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
 
-                        {/* Gemini Integration */}
-                        <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-10 rounded-3xl shadow-2xl text-white">
-                            <div className="flex items-start gap-5 mb-6">
-                                <div className="w-16 h-16 bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                    <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
+                {/* SECTION 2 — Technology (visual left, text right) */}
+                <section className="py-20" style={{ background: '#FAFBFC' }}>
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div className="grid md:grid-cols-2 gap-16 items-center">
+                            {/* Visual left */}
+                            <div className="flex justify-center order-2 md:order-1">
+                                <div className="space-y-4 w-full max-w-sm">
+                                    {[
+                                        { num: '1', title: 'TF-IDF Cosine Similarity', desc: 'Syntactic analysis — direct match detection', score: 'F1: 0.78', bg: '#FEF2F2', border: '#FCA5A5' },
+                                        { num: '2', title: 'FAISS Semantic Search', desc: 'Semantic analysis — paraphrase detection', score: 'F1: 0.71', bg: '#FEF9C3', border: '#FDE047' },
+                                        { num: '3', title: 'BERT Classifier', desc: 'AI-generated text identification', score: 'F1: 1.00', bg: '#F3E8FF', border: '#C4B5FD' },
+                                    ].map(layer => (
+                                        <div key={layer.num} className="flex items-center gap-4 p-5 bg-white rounded-2xl border shadow-sm hover:shadow-md transition-all" style={{ borderColor: layer.border }}>
+                                            <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white text-lg font-bold flex-shrink-0" style={{ background: '#0ABAB5' }}>
+                                                {layer.num}
+                                            </div>
+                                            <div className="flex-1">
+                                                <h3 className="font-bold text-gray-900">{layer.title}</h3>
+                                                <p className="text-xs text-gray-500">{layer.desc}</p>
+                                            </div>
+                                            <span className="text-xs font-bold px-3 py-1 rounded-full" style={{ background: layer.bg, color: '#333' }}>{layer.score}</span>
+                                        </div>
+                                    ))}
                                 </div>
-                                <div className="flex-1">
-                                    <h2 className="text-3xl font-bold mb-5">AI-Powered Learning Assistant</h2>
-                                    <p className="text-green-50 text-lg leading-relaxed mb-6">
-                                        We believe in empowerment, not just enforcement. Through <strong className="text-white">Google Gemini API</strong> integration, flagged content comes with intelligent rewrite suggestions. This transforms {websiteName} from a mere detector into an educational companion that helps users understand proper citation, paraphrasing, and authentic expression.
+                            </div>
+                            {/* Text right */}
+                            <div className="order-1 md:order-2">
+                                <p className="text-sm font-bold uppercase tracking-wide mb-3" style={{ color: '#0ABAB5' }}>Hybrid AI Technology</p>
+                                <h2 className="text-3xl font-extrabold text-gray-900 mb-6 leading-snug">
+                                    Three layers, one <br/>powerful pipeline
+                                </h2>
+                                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                    {websiteName} goes beyond simple text matching. Our platform leverages a <strong style={{ color: '#0ABAB5' }}>Hybrid AI Model</strong> combining three complementary detection strategies in a cascading pipeline.
+                                </p>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Each layer is optimized to catch different types of plagiarism — TF-IDF for direct copies, FAISS for meaning-level similarities across 1.77M indexed vectors, and BERT for AI-generated content identification.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* SECTION 3 — Gemini Integration (text left, visual right) */}
+                <section className="py-20">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div className="grid md:grid-cols-2 gap-16 items-center">
+                            <div>
+                                <p className="text-sm font-bold uppercase tracking-wide mb-3" style={{ color: '#0ABAB5' }}>AI-Powered Learning</p>
+                                <h2 className="text-3xl font-extrabold text-gray-900 mb-6 leading-snug">
+                                    From detection to <br/>education
+                                </h2>
+                                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                                    Through <strong style={{ color: '#0ABAB5' }}>Google Gemini API</strong> integration, flagged content comes with intelligent rewrite suggestions — transforming {websiteName} from a detector into an educational companion.
+                                </p>
+                                <div className="p-5 rounded-2xl border border-gray-200" style={{ background: '#F0FDFA' }}>
+                                    <p className="text-gray-500 italic text-sm leading-relaxed">
+                                        "Learn to express ideas in your own voice while maintaining academic standards — that's the future of education."
                                     </p>
-                                    <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-30">
-                                        <p className="text-green-50 italic">
-                                            "Learn to express ideas in your own voice while maintaining academic standards — that's the future of education."
-                                        </p>
+                                </div>
+                            </div>
+                            <div className="flex justify-center">
+                                <div className="p-8 rounded-3xl text-white relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0D3B4A 0%, #0F2B35 100%)' }}>
+                                    <div className="absolute top-0 right-0 w-40 h-40 bg-white rounded-full blur-3xl opacity-5 -mr-20 -mt-20"></div>
+                                    <div className="relative space-y-4">
+                                        <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                            <p className="text-xs text-gray-400 mb-1">AI Suggestion</p>
+                                            <p className="text-sm text-white/80">"Consider rephrasing this sentence to better express your original interpretation..."</p>
+                                        </div>
+                                        <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                                            <p className="text-xs text-gray-400 mb-1">Originality Tips</p>
+                                            <p className="text-sm text-white/80">"Add a citation for this source and paraphrase in your own words."</p>
+                                        </div>
+                                        <div className="flex items-center gap-2 text-sm text-white/60">
+                                            <IconBolt className="w-5 h-5" />
+                                            <span>Powered by Google Gemini</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </section>
 
-                        {/* Tech Stack */}
+                {/* Tech Stack */}
+                <section className="py-16" style={{ background: '#FAFBFC' }}>
+                    <div className="container mx-auto px-6 max-w-6xl">
                         <TechStackSection />
+                    </div>
+                </section>
 
-                        {/* Guide Section */}
-                        <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-10 rounded-3xl shadow-2xl border-2 border-amber-200">
-                            <div className="flex items-start gap-5 mb-8">
-                                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                    <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* Guide + Team */}
+                <section className="py-16">
+                    <div className="container mx-auto px-6 max-w-6xl space-y-10">
+                        
+                        {/* Guide — Compact inline layout */}
+                        <div className="bg-white rounded-2xl border border-gray-100 p-8">
+                            <div className="flex flex-col md:flex-row items-center gap-6">
+                                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0" style={{ background: '#E6F9F8' }}>
+                                    <svg className="w-7 h-7" style={{ color: '#0ABAB5' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                                     </svg>
                                 </div>
-                                <div className="flex-1">
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>Project Guide</h2>
-                                    <p className="text-gray-600 text-lg mb-8">Under the guidance and mentorship of</p>
-                                    <div className="bg-white p-8 rounded-2xl border-2 border-amber-300 hover:shadow-xl transition-all max-w-md mx-auto text-center">
-                                        <h3 className="font-bold text-gray-900 text-xl mb-2">Prof. Seema Mishra</h3>
-                                        <p className="text-amber-600 font-medium text-lg">Assistant Professor</p>
-                                        <p className="text-gray-500 text-sm mt-1">Project Guide</p>
-                                    </div>
+                                <div className="text-center md:text-left flex-1">
+                                    <p className="text-sm font-bold uppercase tracking-wide mb-0.5" style={{ color: '#0ABAB5' }}>Project Guide</p>
+                                    <p className="text-gray-400 text-sm">Under the guidance and mentorship of</p>
+                                </div>
+                                <div className="bg-gray-50 border border-gray-100 rounded-xl px-8 py-4 text-center hover:shadow-md transition-all">
+                                    <h3 className="font-bold text-gray-900 text-lg">Prof. Seema Mishra</h3>
+                                    <p className="text-sm font-medium" style={{ color: '#0ABAB5' }}>Assistant Professor</p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Team Section - Lazy Loaded */}
-                        <Suspense 
+                        {/* Team */}
+                        <Suspense
                             fallback={
-                                <div className="bg-white p-10 rounded-3xl shadow-2xl border border-indigo-100 flex items-center justify-center min-h-[300px]">
-                                    <div className="text-center">
-                                        <svg className="animate-spin h-10 w-10 text-indigo-600 mx-auto mb-3" fill="none" viewBox="0 0 24 24">
-                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                        </svg>
-                                        <p className="text-gray-600 font-semibold">Loading team...</p>
-                                    </div>
+                                <div className="flex items-center justify-center min-h-[150px]">
+                                    <div className="w-8 h-8 border-2 border-gray-200 border-t-[#0ABAB5] rounded-full animate-spin"></div>
                                 </div>
                             }
                         >
                             <TeamSection />
                         </Suspense>
+                    </div>
+                </section>
 
-                        {/* Institution */}
-                        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-12 rounded-3xl shadow-2xl text-white text-center relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-full h-full bg-white opacity-5">
-                                <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-                                <div className="absolute bottom-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-                            </div>
+                {/* Institution Banner */}
+                <section className="py-16">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div className="p-12 rounded-3xl text-white text-center relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0ABAB5 0%, #099D99 60%, #0D3B4A 100%)' }}>
                             <div className="relative">
-                                <div className="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                                    🎓 Proudly Presented By
+                                <div className="inline-flex items-center gap-2 bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                    <span className="inline-flex items-center gap-2"><IconGradCap className="w-5 h-5" /> Proudly Presented By</span>
                                 </div>
-                                <h3 className="text-4xl font-bold mb-3">MES's Pillai College of Engineering</h3>
-                                <p className="text-purple-100 text-xl mb-2">Department of Electronics & Computer Science</p>
-                                <p className="text-indigo-200 font-medium mt-6">Final Year Project • Academic Year 2024-2025</p>
+                                <h3 className="text-3xl font-bold mb-2">MES's Pillai College of Engineering</h3>
+                                <p className="text-white/80 text-lg mb-1">Department of Electronics & Computer Science</p>
+                                <p className="text-white/60 font-medium mt-4">Final Year Project • Academic Year 2024-2025</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </ErrorBoundary>
     );

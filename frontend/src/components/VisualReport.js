@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { IconCheck, IconStar, IconClipboard, IconChart, IconTarget, IconLightbulb, IconBookOpen } from './Icons';
 
 const VisualReport = ({ structuredText, analysisResult }) => {
     const [overallGuidance, setOverallGuidance] = useState(null);
     const [loading, setLoading] = useState(false);
     const [showGuidance, setShowGuidance] = useState(true);
 
+    // Convert **bold** markdown to <strong> HTML
+    const renderMarkdown = (text) => {
+        if (!text) return '';
+        return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    };
+
     const getAuthToken = () => {
         const user = JSON.parse(localStorage.getItem('user'));
         return user ? user.token : null;
     };
 
-    // Auto-fetch overall guidance when component mounts
     useEffect(() => {
         if (analysisResult && analysisResult.flagged_sections && analysisResult.flagged_sections.length > 0) {
             fetchOverallGuidance();
@@ -30,7 +36,6 @@ const VisualReport = ({ structuredText, analysisResult }) => {
                 },
                 { headers: { 'x-auth-token': token } }
             );
-            
             setOverallGuidance(response.data);
         } catch (error) {
             console.error('Summary guidance error:', error);
@@ -47,19 +52,32 @@ const VisualReport = ({ structuredText, analysisResult }) => {
 
     const flaggedCount = structuredText.filter(item => item.plagiarized).length;
     
+    // Color mapping for 4 types
+    const getHighlightStyle = (type) => {
+        switch (type) {
+            case 'Direct Match':
+                return { bg: 'bg-red-100 border-red-300', dot: 'bg-red-500', text: 'text-red-700' };
+            case 'AI-Paraphrased':
+                return { bg: 'bg-purple-100 border-purple-300', dot: 'bg-purple-500', text: 'text-purple-700' };
+            case 'Paraphrased':
+            default:
+                return { bg: 'bg-yellow-100 border-yellow-300', dot: 'bg-yellow-500', text: 'text-yellow-700' };
+        }
+    };
+
     if (flaggedCount === 0) {
         return (
             <div>
                 <h3 className="text-xl font-semibold mb-4">Document Analysis</h3>
-                <div className="text-center py-8 bg-green-50 rounded-lg border-2 border-green-300">
+                <div className="text-center py-8 bg-green-50 rounded-xl border-2 border-green-300">
                     <p className="text-lg font-semibold text-green-700">
-                        🎉 Excellent! No plagiarism detected.
+                        <span className="inline-flex items-center gap-2"><IconCheck className="w-5 h-5 text-green-600" /> Excellent! No plagiarism detected.</span>
                     </p>
                     <p className="text-sm text-green-600 mt-2">
                         This document appears to be original content.
                     </p>
                 </div>
-                <div className="mt-6 border p-4 rounded-md bg-gray-50 leading-relaxed whitespace-pre-wrap">
+                <div className="mt-6 border p-4 rounded-xl bg-gray-50 whitespace-pre-wrap visual-report-text">
                     {structuredText.map((item, index) => (
                         <span key={index}>{item.text} </span>
                     ))}
@@ -74,19 +92,18 @@ const VisualReport = ({ structuredText, analysisResult }) => {
             
             {/* Overall Guidance Summary */}
             {loading ? (
-                <div className="bg-blue-50 border-2 border-blue-300 rounded-lg p-6 mb-6">
+                <div className="bg-blue-50 border-2 border-blue-300 rounded-xl p-6 mb-6">
                     <div className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mr-3"></div>
                         <p className="text-blue-700">Generating personalized guidance...</p>
                     </div>
                 </div>
             ) : overallGuidance && showGuidance ? (
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-300 rounded-lg p-6 mb-6 shadow-md">
-                    {/* Header */}
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-300 rounded-xl p-6 mb-6 shadow-md">
                     <div className="flex justify-between items-start mb-4">
                         <div>
                             <h4 className="text-lg font-bold text-indigo-900 flex items-center gap-2">
-                                {overallGuidance.ai_generated ? '✨ AI-Powered Guidance' : '📋 Analysis Summary'}
+                                {overallGuidance.ai_generated ? <span className="inline-flex items-center gap-2"><IconStar className="w-5 h-5" style={{ color: '#0ABAB5' }} /> AI-Powered Guidance</span> : <span className="inline-flex items-center gap-2"><IconClipboard className="w-5 h-5" /> Analysis Summary</span>}
                             </h4>
                             <p className="text-sm text-indigo-600">Overall document assessment and improvement plan</p>
                         </div>
@@ -122,16 +139,16 @@ const VisualReport = ({ structuredText, analysisResult }) => {
                     {/* Summary */}
                     <div className="bg-white rounded-lg p-4 mb-4 shadow-sm">
                         <h5 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
-                            <span>📊</span> Summary
+                            <IconChart className="w-5 h-5" style={{ color: '#0ABAB5' }} /> Summary
                         </h5>
-                        <p className="text-gray-700 text-sm leading-relaxed">{overallGuidance.summary}</p>
+                        <p className="text-gray-700 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: renderMarkdown(overallGuidance.summary) }}></p>
                     </div>
 
                     {/* Priority Areas */}
                     {overallGuidance.priority_areas && overallGuidance.priority_areas.length > 0 && (
                         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4 rounded-r-lg">
                             <h5 className="font-semibold text-yellow-900 mb-2 flex items-center gap-2">
-                                <span>🎯</span> Priority Areas
+                                <IconTarget className="w-5 h-5" style={{ color: '#F59E0B' }} /> Priority Areas
                             </h5>
                             <div className="flex flex-wrap gap-2">
                                 {overallGuidance.priority_areas.map((area, i) => (
@@ -146,7 +163,7 @@ const VisualReport = ({ structuredText, analysisResult }) => {
                     {/* Improvement Tips */}
                     <div className="bg-white rounded-lg p-4 shadow-sm">
                         <h5 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                            <span>💡</span> How to Improve This Document
+                            <IconLightbulb className="w-5 h-5" style={{ color: '#0ABAB5' }} /> How to Improve This Document
                         </h5>
                         <ol className="space-y-2">
                             {overallGuidance.tips.map((tip, i) => (
@@ -154,13 +171,12 @@ const VisualReport = ({ structuredText, analysisResult }) => {
                                     <span className="flex-shrink-0 w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-sm font-bold">
                                         {i + 1}
                                     </span>
-                                    <span className="text-gray-700 text-sm pt-0.5">{tip}</span>
+                                    <span className="text-gray-700 text-sm pt-0.5" dangerouslySetInnerHTML={{ __html: renderMarkdown(tip) }}></span>
                                 </li>
                             ))}
                         </ol>
                     </div>
 
-                    {/* Copy Button */}
                     <div className="mt-4 flex justify-end">
                         <button
                             onClick={() => {
@@ -170,7 +186,7 @@ const VisualReport = ({ structuredText, analysisResult }) => {
                             }}
                             className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors flex items-center gap-2 text-sm font-medium"
                         >
-                            <span>📋</span> Copy All Guidance
+                            <IconClipboard className="w-4 h-4" /> Copy All Guidance
                         </button>
                     </div>
                 </div>
@@ -180,7 +196,7 @@ const VisualReport = ({ structuredText, analysisResult }) => {
                         onClick={() => setShowGuidance(true)}
                         className="text-blue-600 hover:text-blue-700 font-medium"
                     >
-                        📖 Show Guidance
+                        <span className="inline-flex items-center gap-2"><IconBookOpen className="w-4 h-4" /> Show Guidance</span>
                     </button>
                 </div>
             )}
@@ -188,22 +204,37 @@ const VisualReport = ({ structuredText, analysisResult }) => {
             {/* Highlighted Document */}
             <div className="mt-6">
                 <h4 className="text-lg font-semibold mb-3">Document with Highlights</h4>
-                <p className="text-sm text-gray-600 mb-4">
-                    <span className="inline-block w-4 h-4 bg-red-200 mr-1"></span> Direct Match
-                    <span className="inline-block w-4 h-4 bg-yellow-200 ml-3 mr-1"></span> Paraphrased
-                    <span className="inline-block w-4 h-4 bg-green-100 ml-3 mr-1"></span> Original
+                <p className="text-sm text-gray-600 mb-4 flex flex-wrap gap-3">
+                    <span className="inline-flex items-center gap-1">
+                        <span className="inline-block w-4 h-4 bg-red-200 rounded"></span> Direct Match
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                        <span className="inline-block w-4 h-4 bg-yellow-200 rounded"></span> Paraphrased
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                        <span className="inline-block w-4 h-4 bg-purple-200 rounded"></span> AI-Paraphrased (BERT)
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                        <span className="inline-block w-4 h-4 bg-green-100 rounded"></span> Original
+                    </span>
                 </p>
-                <div className="border-2 border-gray-300 p-6 rounded-lg bg-white leading-relaxed">
+                <div className="border-2 border-gray-200 p-6 rounded-xl bg-white visual-report-text">
                     {structuredText.map((item, index) => {
                         if (item.plagiarized) {
-                            const bgColor = item.type === 'Direct Match' ? 'bg-red-200' : 'bg-yellow-200';
+                            const style = getHighlightStyle(item.type);
                             return (
                                 <span
                                     key={index}
-                                    className={`${bgColor} px-1 py-0.5 rounded hover:opacity-75 transition-opacity`}
-                                    title={`${item.type} - ${item.similarity}%`}
+                                    className={`${style.bg} border px-1 py-0.5 rounded hover:opacity-80 transition-opacity cursor-help relative group`}
+                                    title={`${item.type} — ${item.similarity}%${item.layer ? ` | ${item.layer}` : ''}`}
                                 >
                                     {item.text}{' '}
+                                    {/* Layer badge on hover */}
+                                    {item.layer && (
+                                        <span className="hidden group-hover:inline-block absolute -top-7 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10">
+                                            {item.layer}
+                                        </span>
+                                    )}
                                 </span>
                             );
                         } else {

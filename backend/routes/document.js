@@ -32,9 +32,7 @@ const getTextFromFile = async (file) => {
     } 
 
     else if (ext === '.doc') {
-        // .doc is a complex, proprietary format.
-        // For this project, we'll ask users to re-save as .docx or .pdf
-        throw new Error('".doc" files are not supported. Please save as .docx or .pdf');
+        throw new Error('".doc" files are not supported. Please save as .docx');
     }
 
     else {

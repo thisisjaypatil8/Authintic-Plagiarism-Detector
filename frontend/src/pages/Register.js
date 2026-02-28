@@ -1,5 +1,3 @@
-// frontend/src/pages/Register.js
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import authService from '../services/authService';
@@ -117,7 +115,7 @@ const Register = () => {
         <button
           type="button"
           onClick={() => navigate('/login')}
-          className="font-semibold text-indigo-600 hover:text-indigo-500 transition-colors"
+          className="font-semibold text-[#0ABAB5] hover:text-[#099D99] transition-colors"
         >
           Sign in
         </button>

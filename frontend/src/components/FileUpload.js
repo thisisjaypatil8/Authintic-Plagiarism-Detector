@@ -1,13 +1,15 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 
-// This component now handles all upload logic
-// It takes a function prop 'onAnalysisComplete' to send data to the parent
-// Also accepts 'mode' prop to determine analysis type
+/**
+ * FileUpload — Clean drop zone with document icon, drag & drop
+ * Inspired by T-detector file upload area
+ */
 const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError, mode = 'deep' }) => {
     const [file, setFile] = useState(null);
-    const [message, setMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
+    const [isDragOver, setIsDragOver] = useState(false);
+    const [loadingMessage, setLoadingMessage] = useState('');
     const fileInputRef = useRef(null);
 
     const getAuthToken = () => {
@@ -15,126 +17,138 @@ const FileUpload = ({ onAnalysisStart, onAnalysisComplete, onAnalysisError, mode
         return user ? user.token : null;
     };
 
-    const onFileChange = e => {
-        const selectedFile = e.target.files[0];
-        setFile(selectedFile);
-        setMessage('');
-        onAnalysisStart(); // Clear parent's old results
-    };
-
-    const onFormSubmit = async e => {
+    const onFormSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
-        
-        // Show mode-specific loading message
-        const loadingMsg = mode === 'fast' 
-            ? 'Analyzing... (~1-3 seconds)' 
-            : 'Deep analysis in progress... (~10-30 seconds)';
-        setMessage(loadingMsg);
+        if (!file) return;
 
-        if (!file) {
-            const errorMsg = 'Please select a file first.';
-            setMessage(errorMsg);
-            setIsLoading(false);
-            onAnalysisError(errorMsg);
-            return;
-        }
+        setIsLoading(true);
+        onAnalysisStart();
+        setLoadingMessage('Uploading document...');
 
         const formData = new FormData();
         formData.append('document', file);
-        formData.append('mode', mode); // Include mode in the request
+        formData.append('mode', mode);
+
         const token = getAuthToken();
 
-        if (!token) {
-            const errorMsg = 'Authorization error. Please log in again.';
-            setMessage(errorMsg);
-            setIsLoading(false);
-            onAnalysisError(errorMsg);
-            return;
-        }
-
         try {
-            const response = await axios.post('http://localhost:5000/api/documents/upload', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                    'x-auth-token': token
+            setLoadingMessage(mode === 'deep' ? 'Running 3-layer analysis (TF-IDF → FAISS → BERT)...' : 'Running TF-IDF analysis...');
+
+            const response = await axios.post(
+                'http://localhost:5000/api/documents/upload',
+                formData,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                        'x-auth-token': token
+                    },
+                    timeout: 300000
                 }
-            });
-            
-            // Check if result was cached
-            const cached = response.data.cached;
-            const completionMsg = cached 
-                ? 'Analysis complete. (Loaded from cache)' 
-                : 'Analysis complete.';
-            
-            setMessage(completionMsg);
+            );
             onAnalysisComplete(response.data, file);
         } catch (error) {
-            console.error('Upload error:', error.response?.data || error.message);
-            const errorMsg = 'Analysis failed: ' + (error.response?.data?.error || error.response?.data || 'Server error.');
-            setMessage(errorMsg);
-            onAnalysisError(errorMsg);
+            const msg = error.response?.data?.error || error.message || 'Server error. Please try again.';
+            onAnalysisError(msg);
         }
+
         setIsLoading(false);
+        setLoadingMessage('');
     };
 
-    // Get mode-specific UI text
-    const getModeDisplay = () => {
-        if (mode === 'fast') {
-            return { icon: '⚡', text: 'Fast Mode', color: 'text-blue-600' };
-        }
-        return { icon: '🔍', text: 'Deep Mode', color: 'text-purple-600' };
+    const handleDragOver = (e) => {
+        e.preventDefault();
+        setIsDragOver(true);
     };
 
-    const modeDisplay = getModeDisplay();
+    const handleDragLeave = () => {
+        setIsDragOver(false);
+    };
+
+    const handleDrop = (e) => {
+        e.preventDefault();
+        setIsDragOver(false);
+        const droppedFile = e.dataTransfer.files[0];
+        if (droppedFile) setFile(droppedFile);
+    };
 
     return (
-        <div>
-            {/* Mode Indicator */}
-            <div className="mb-4 flex items-center gap-2">
-                <span className="text-sm text-gray-600">Selected mode:</span>
-                <span className={`font-semibold ${modeDisplay.color} flex items-center gap-1`}>
-                    <span>{modeDisplay.icon}</span>
-                    {modeDisplay.text}
-                </span>
-            </div>
-
-            <div className="flex items-center space-x-4 mb-4">
-                <button
-                    type="button"
-                    onClick={() => fileInputRef.current.click()}
-                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 border border-gray-300 transition-colors"
-                >
-                    Choose File
-                </button>
-                <span className="text-gray-500">{file ? file.name : 'No file selected.'}</span>
+        <form onSubmit={onFormSubmit}>
+            {/* Drop Zone */}
+            <div
+                className={`drop-zone ${isDragOver ? 'drag-over' : ''}`}
+                onClick={() => !isLoading && fileInputRef.current.click()}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                onDrop={handleDrop}
+            >
                 <input
                     type="file"
                     className="hidden"
-                    onChange={onFileChange}
                     ref={fileInputRef}
+                    onChange={(e) => setFile(e.target.files[0])}
                     accept=".txt,.pdf,.doc,.docx"
+                    disabled={isLoading}
                 />
-            </div>
-            <p className="text-xs text-gray-400 mb-4">Accepted formats: .txt, .pdf, .docx, .doc</p>
-            
-            <button
-                onClick={onFormSubmit}
-                disabled={isLoading || !file}
-                className="w-full px-4 py-2 font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
+
                 {isLoading ? (
-                    <span className="flex items-center justify-center gap-2">
-                        <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                        </svg>
-                        Analyzing...
-                    </span>
-                ) : 'Start Analysis'}
-            </button>
-            {message && <p className="mt-4 text-center text-gray-600">{message}</p>}
-        </div>
+                    <div className="flex flex-col items-center">
+                        <div className="relative mb-4">
+                            <div className="w-16 h-16 rounded-full border-4 border-gray-200 border-t-[#0ABAB5] animate-spin"></div>
+                        </div>
+                        <p className="text-gray-700 font-medium">{loadingMessage}</p>
+                        <p className="text-gray-400 text-sm mt-1">This may take a moment...</p>
+                    </div>
+                ) : (
+                    <>
+                        {/* Document Icon */}
+                        <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{ background: '#E6F9F8' }}>
+                            <svg className="w-10 h-10" style={{ color: '#0ABAB5' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+
+                        {file ? (
+                            <div>
+                                <p className="text-gray-900 font-semibold">{file.name}</p>
+                                <p className="text-gray-400 text-sm mt-1">{(file.size / 1024).toFixed(1)} KB — Click to change</p>
+                            </div>
+                        ) : (
+                            <div>
+                                <p className="text-gray-900 font-semibold text-lg">Choose a File or Drag It Here</p>
+                                <p className="text-gray-400 text-sm mt-1">Supported formats: .docx, or .txt</p>
+                            </div>
+                        )}
+                    </>
+                )}
+            </div>
+
+            {/* Start Checking Button */}
+            <div className="flex items-center justify-end gap-4 mt-6">
+                <a href="#file-requirements" className="text-sm font-medium hover:underline" style={{ color: '#0ABAB5' }}>
+                    File Requirements &gt;&gt;
+                </a>
+                <button
+                    type="submit"
+                    disabled={!file || isLoading}
+                    className="flex items-center gap-2 px-8 py-3 text-white font-semibold rounded-full transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{ background: !file || isLoading ? '#ccc' : '#0ABAB5' }}
+                >
+                    {isLoading ? (
+                        <>
+                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            Analyzing...
+                        </>
+                    ) : (
+                        <>
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            Start Checking
+                        </>
+                    )}
+                </button>
+            </div>
+        </form>
     );
 };
 

@@ -52,7 +52,7 @@ const FormInput = ({
                     autoComplete={autoComplete}
                     disabled={disabled}
                     placeholder={placeholder}
-                    className={`w-full ${icon ? 'pl-10' : 'pl-4'} pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all disabled:bg-gray-50 disabled:cursor-not-allowed`}
+                    className={`w-full ${icon ? 'pl-10' : 'pl-4'} pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0ABAB5] focus:border-transparent transition-all disabled:bg-gray-50 disabled:cursor-not-allowed`}
                     {...props}
                 />
             </div>

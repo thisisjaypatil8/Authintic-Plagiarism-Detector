@@ -21,7 +21,6 @@ const login = async (email, password) => {
   return response.data;
 };
 
-// This is the function that was missing
 const logout = () => {
   localStorage.removeItem('user');
 };

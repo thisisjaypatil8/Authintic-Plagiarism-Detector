@@ -22,7 +22,8 @@ const AuthButton = ({
         <button
             type={type}
             disabled={loading || disabled}
-            className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all transform hover:scale-105 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
+            className="w-full flex items-center justify-center px-4 py-3 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0ABAB5] transition-all transform hover:scale-105 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none shadow-lg"
+            style={{ background: '#0ABAB5' }}
             {...props}
         >
             {loading ? (

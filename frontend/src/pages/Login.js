@@ -1,5 +1,3 @@
-// frontend/src/pages/Login.js
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import authService from '../services/authService';
@@ -102,7 +100,7 @@ const Login = () => {
               type="checkbox"
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
-              className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded cursor-pointer"
+              className="h-4 w-4 text-[#0ABAB5] focus:ring-[#0ABAB5] border-gray-300 rounded cursor-pointer"
             />
             <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700 cursor-pointer">
               Remember me
@@ -110,7 +108,7 @@ const Login = () => {
           </div>
           <button
             type="button"
-            className="text-sm font-medium text-indigo-600 hover:text-indigo-500 transition-colors"
+            className="text-sm font-medium text-[#0ABAB5] hover:text-[#099D99] transition-colors"
           >
             Forgot password?
           </button>
