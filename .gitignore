@@ -34,3 +34,4 @@ docs/
 # Large files
 /nlp-service/tfidf_index.joblib
 
+/docs.zip
