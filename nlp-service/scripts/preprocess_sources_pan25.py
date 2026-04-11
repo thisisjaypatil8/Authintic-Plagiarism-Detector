@@ -45,7 +45,7 @@ except ImportError:
     raise
 
 # ── PATHS ──────────────────────────────────────────────────────────────────────
-PAN25_SRC_DIR = r"C:\Users\Jay_Patil\Downloads\pan25-generated-plagiarism-detection\01_train\src"
+PAN25_SRC_DIR = os.path.join(os.path.dirname(__file__), "..", "source_texts")
 DATA_FILE     = "source_data.pkl"
 FAISS_FILE    = "source_index.faiss"
 

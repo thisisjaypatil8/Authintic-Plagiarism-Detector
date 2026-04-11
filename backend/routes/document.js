@@ -5,8 +5,6 @@ const path = require('path');
 const axios = require('axios');
 const router = express.Router();
 
-// New libraries
-const pdf = require('pdf-parse');
 const mammoth = require('mammoth');
 
 const upload = multer({ dest: 'uploads/' });
@@ -18,12 +16,6 @@ const getTextFromFile = async (file) => {
 
     if (ext === '.txt') {
         return fs.readFileSync(filePath, 'utf8');
-    } 
-
-    else if (ext === '.pdf') {
-        const dataBuffer = fs.readFileSync(filePath);
-        const data = await pdf(dataBuffer);
-        return data.text;
     } 
 
     else if (ext === '.docx') {

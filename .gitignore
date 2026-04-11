@@ -30,3 +30,7 @@ npm-debug.log
 
 # Docs
 docs/
+
+# Large files
+/nlp-service/tfidf_index.joblib
+

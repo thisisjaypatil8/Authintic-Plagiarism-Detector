@@ -13,7 +13,7 @@ Called from main.py for sentences that fall in the ambiguous range
 
 import os
 import torch
-from transformers import BertTokenizer, BertForSequenceClassification
+from transformers import AutoTokenizer, BertForSequenceClassification
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 BERT_MODEL_DIR  = "bert_model"
@@ -21,7 +21,7 @@ MAX_LENGTH      = 256
 BERT_THRESHOLD  = 0.60   # probability ≥ this → plagiarized
 
 # ── Module-level globals ───────────────────────────────────────────────────────
-_tokenizer:   BertTokenizer                  | None = None
+_tokenizer:   AutoTokenizer                   | None = None
 _bert_model:  BertForSequenceClassification  | None = None
 _device:      torch.device                         = torch.device("cpu")
 _bert_ready:  bool = False
@@ -41,7 +41,7 @@ def load_bert_model() -> bool:
 
     print(f"[BERT] Loading fine-tuned classifier from {BERT_MODEL_DIR}/ ...")
     _device     = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    _tokenizer  = BertTokenizer.from_pretrained(BERT_MODEL_DIR)
+    _tokenizer  = AutoTokenizer.from_pretrained(BERT_MODEL_DIR)
     _bert_model = BertForSequenceClassification.from_pretrained(BERT_MODEL_DIR)
     _bert_model.to(_device)
     _bert_model.eval()

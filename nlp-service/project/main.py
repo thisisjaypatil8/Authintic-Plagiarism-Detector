@@ -8,7 +8,7 @@ from .bert_classifier import is_bert_plagiarized
 
 # ── spaCy sentencizer ─────────────────────────────────────────
 try:
-    _nlp = spacy.load("en_core_web_sm", disable=["ner", "parser", "tagger"])
+    _nlp = spacy.load("en_core_web_sm", disable=["ner", "parser"])
     _nlp.add_pipe("sentencizer")
 except OSError:
     # Fallback: basic split on ". " if model not downloaded yet
@@ -30,6 +30,7 @@ DIRECT_THRESHOLD     = 0.95   # FAISS cosine ≥ 95% → Direct Match
 PARAPHRASED_THRESHOLD = 0.75  # FAISS cosine 75–94% → Paraphrased
 BERT_AMBIGUOUS_LOW   = 0.40   # If FAISS score is in this range, also run BERT
 BERT_AMBIGUOUS_HIGH  = PARAPHRASED_THRESHOLD
+TFIDF_BERT_FLOOR     = 0.30   # If FAISS < 0.40 but TF-IDF ≥ 0.30, run BERT fallback
 
 bp = Blueprint('main', __name__)
 
@@ -119,6 +120,20 @@ def analyze_document():
                     match_type         = "AI-Paraphrased"
                     plagiarized        = True
                     detection_layer    = "Layer 3 (BERT)"
+                    ai_paraphrased_count += 1
+
+        elif faiss_score < BERT_AMBIGUOUS_LOW and tfidf_score >= TFIDF_BERT_FLOOR:
+            # ── Layer 3 fallback: FAISS too low but TF-IDF shows lexical signal ──
+            # Catches heavily rewritten AI text that retains some vocabulary
+            # overlap (TF-IDF ≥ 0.30) but was scrambled enough to drop below
+            # the FAISS embedding threshold (< 0.40).
+            if bert_ready and faiss_available and source_index < len(source_sentences):
+                matched_src = source_sentences[source_index]
+                bert_hit, bert_prob = is_bert_plagiarized(sentence, matched_src)
+                if bert_hit:
+                    match_type         = "AI-Paraphrased"
+                    plagiarized        = True
+                    detection_layer    = "Layer 3 (BERT fallback)"
                     ai_paraphrased_count += 1
 
         if not plagiarized:

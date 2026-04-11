@@ -5,22 +5,22 @@
 export const teamMembers = [
     {
         name: "Prathamesh Mohite",
-        role: "Web Developer",
+        role: "AI Engineer",
         image: "./Pratham.jpg"
     },
     {
         name: "Harsh Pardeshi",
-        role: "AI Engineer",
+        role: "Web Developer",
         image: "./Harsh.jpg"
     },
     {
         name: "Viraj Kamble",
-        role: "Web Developer",
+        role: "AI Engineer",
         image: "./Viraj.jpg"
     },
     {
-        name: "Jay Patil",
-        role: "AI Engineer",
+        name: "Jay Indrapal Patil",
+        role: "Web Developer",
         image: "./Jay.jpg"
     }
 ];

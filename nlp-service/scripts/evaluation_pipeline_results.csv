@@ -1,0 +1,5 @@
+label,TP,FP,TN,FN,Precision,Recall,F1,Accuracy
+Layer 1 — TF-IDF (τ = 0.45),0,0,1000,1000,0.0,0.0,0.0,50.0
+Layer 2 — FAISS Semantic (τ = 0.75),67,67,933,933,0.5,0.067,0.1182,50.0
+Layer 3 — Fine-tuned BERT (τ = 0.60),990,3,997,10,0.997,0.99,0.9935,99.35
+Combined — 3-Layer Cascade,668,668,332,332,0.5,0.668,0.5719,50.0
